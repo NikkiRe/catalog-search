@@ -1,5 +1,7 @@
 # Catalog Search
 
+[![checks](https://github.com/NikkiRe/catalog-search/actions/workflows/check.yml/badge.svg)](https://github.com/NikkiRe/catalog-search/actions/workflows/check.yml)
+
 Product search with explicit evidence about **size, power, capacity and model**.
 BM25 retrieves candidates; LightGBM LambdaRank reranks them. The browser compares
 three search modes and shows which requested properties match, conflict or lack
@@ -32,6 +34,10 @@ the fitted encoder and a 30,000-product demonstration index. Dataset text and
 models are downloaded once; inference then runs offline. The bundle's checksum
 is pinned in `scripts/demo_release.json`. Joblib artifacts use pickle: use this
 verified release or your own training output.
+
+If you unpacked the ready-to-run project archive with an `artifacts/` folder,
+skip the download command. The separate release ZIP contains runtime artifacts;
+the source repository contains their documentation and complete evaluation files.
 
 Alternatively open the repository in GitHub Codespaces. Its dev container installs
 the package and bundle; run `uv run --no-sync catalog-search serve --host 0.0.0.0`
@@ -73,6 +79,8 @@ Read the [measured results](reports/results.md),
 The application also has an experiment page backed by the same saved report.
 
 ![ESCI ranking results and paired interval](docs/figures/esci_results.png)
+
+[See the actual side-by-side search](docs/figures/search-comparison.png).
 
 **Scope:** these scores measure reranking inside judged pools. They do not measure
 full-catalog retrieval recall, purchases or compatibility safety. Attribute

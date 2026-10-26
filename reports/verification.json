@@ -44,5 +44,16 @@
     "first_product": "B07HKV5RLG"
   },
   "docker_build": "not run locally; Dockerfile reviewed; installed wheel and API tested",
-  "note": "Quality results are from the frozen experiment. These are functional/package/UI checks, not new model quality selection."
+  "note": "Quality results are from the frozen experiment. These are functional/package/UI checks, not new model quality selection.",
+  "github_actions": {
+    "run_url": "https://github.com/NikkiRe/catalog-search/actions/runs/40324530097",
+    "status": "success",
+    "event": "workflow_dispatch",
+    "includes": "Ubuntu Python 3.12 tests, download published bundle, real-model smoke, build and installed-wheel assets"
+  },
+  "published_release": {
+    "url": "https://github.com/NikkiRe/catalog-search/releases/tag/v0.1.0",
+    "download_and_checksum_verification": "passed",
+    "installed_model_smoke": "passed"
+  }
 }
