@@ -158,8 +158,6 @@ repeating their complete extraction. See [`reports/replay_training.json`](report
 - `web/`: buildless interface, mode comparison, evidence drawer and experiment page.
 - `reports/`: protocol, selection, scores, per-query metrics and result interpretation.
 - `docs/design.md`: retrieval/ranking boundary, serving and artifact decisions.
-- `docs/interview.md`: questions to explain using the actual code and results.
-- `docs/role_fit.md`: evidence against the supplied internship's technical criteria.
 - `docs/production_evaluation.md`: proposed labeling, online testing and release work,
   clearly separated from the implemented offline experiment.
 - `docs/references.md`: original papers, dataset releases and ranking documentation.
