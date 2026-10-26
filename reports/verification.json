@@ -50,10 +50,10 @@
     "returned": 3,
     "first_product": "B07HKV5RLG"
   },
-  "docker_build": "pending new manual GitHub Actions Docker job; local Docker daemon unavailable",
+  "docker_build": "passed in Ubuntu GitHub Actions; container health/search/report verified through real HTTP",
   "note": "Quality results are from the frozen experiment. These are functional/package/UI checks, not new model quality selection.",
   "published_release": {
-    "url": "https://github.com/NikkiRe/catalog-search/releases/tag/v0.1.0",
+    "url": "https://github.com/NikkiRe/catalog-search/releases/tag/v0.1.1",
     "download_and_checksum_verification": "passed",
     "installed_model_smoke": "passed"
   },
@@ -80,7 +80,13 @@
     "includes": "Ubuntu Python 3.12 tests, download published bundle, real-model smoke, build and installed-wheel assets"
   },
   "github_actions": {
-    "status": "pending_new_release_ci",
-    "note": "Current local checks passed; new workflow also includes real Docker HTTP smoke on manual dispatch"
+    "status": "success",
+    "run_url": "https://github.com/NikkiRe/catalog-search/actions/runs/40333139924",
+    "source_commit": "e3d998699c6fd8fad5980c53ea0836aa8cc4bd77",
+    "jobs": [
+      "test",
+      "docker-smoke"
+    ],
+    "includes": "185 tests, independent SQL NDCG, published bundle real-model smoke, wheel assets, complete Docker build and real container HTTP"
   }
 }
