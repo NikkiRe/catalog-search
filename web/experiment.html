@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f5f2eb" />
+    <meta
+      name="description"
+      content="Результаты эксперимента: сравнение поиска с атрибутами, базовой модели и лексических методов на ESCI и WANDS."
+    />
+    <title>Эксперимент — Catalog</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script type="module" src="/report.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#report-main">Перейти к результатам</a>
+    <svg
+      class="svg-library"
+      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <symbol id="icon-arrow" viewBox="0 0 24 24">
+        <path d="M4 12h15m-6-6 6 6-6 6" />
+      </symbol>
+      <symbol id="icon-download" viewBox="0 0 24 24">
+        <path d="M12 3v12m-4-4 4 4 4-4M4 17v4h16v-4" />
+      </symbol>
+    </svg>
+    <header class="site-header page-width">
+      <a class="wordmark" href="/"
+        >catalog<span class="wordmark-period">.</span></a
+      ><span class="header-caption">Эксперимент</span>
+      <nav>
+        <a class="quiet-link" href="/"
+          >Открыть поиск
+          <svg class="icon icon-small" aria-hidden="true">
+            <use href="#icon-arrow" /></svg
+        ></a>
+      </nav>
+    </header>
+    <main id="report-main" class="report-main page-width">
+      <section class="report-hero">
+        <div class="eyebrow">
+          <span class="eyebrow-line"></span> Результаты эксперимента
+        </div>
+        <h1>Что изменили<br /><em>атрибуты.</em></h1>
+        <p>
+          Сравниваем ранжирование на размеченных списках товаров.<br
+            class="desktop-break"
+          />
+          Главный результат — разница с той же моделью без признаков атрибутов.
+        </p>
+        <div class="report-completion" id="report-completion" role="status">
+          <span class="status-dot is-pending" aria-hidden="true"></span
+          ><span>Загружаем отчёт</span>
+        </div>
+      </section>
+      <div id="report-loading" class="report-state">
+        <div class="drawer-loading">Получаем сохранённые результаты</div>
+      </div>
+      <div id="report-error" class="report-state" hidden>
+        <h2>Отчёт пока недоступен</h2>
+        <p id="report-error-message">
+          Результаты появятся после завершения эксперимента.
+        </p>
+        <button id="report-retry" class="outline-button" type="button">
+          Попробовать ещё раз
+          <svg class="icon icon-small" aria-hidden="true">
+            <use href="#icon-arrow" />
+          </svg>
+        </button>
+      </div>
+      <div id="report-content" hidden>
+        <section class="report-primary" aria-labelledby="primary-title">
+          <div class="report-section-heading">
+            <div>
+              <div class="eyebrow">01 / Основная проверка · ESCI</div>
+              <h2 id="primary-title">Атрибуты против baseline</h2>
+            </div>
+            <span class="report-small-note">Среднее NDCG@10 по запросам</span>
+          </div>
+          <div class="report-primary-grid">
+            <div class="report-difference">
+              <div class="difference-label">Разница NDCG@10</div>
+              <div class="difference-value" id="primary-value"></div>
+              <p class="difference-verdict" id="primary-verdict"></p>
+              <div id="primary-ci" class="confidence-panel"></div>
+              <p id="primary-bootstrap-note" class="report-footnote"></p>
+            </div>
+            <div class="report-question">
+              <span class="guide-index">ЧТО ПРОВЕРЯЕМ</span>
+              <h3>Помогают ли<br />явные свойства?</h3>
+              <p>
+                Основная и базовая модели используют один тип алгоритма и те же
+                исходные тексты. Отличие — признаки сопоставления атрибутов.
+              </p>
+              <p>
+                Положительная разница означает более высокое среднее качество на
+                этой выборке. Интервал показывает неопределённость оценки.
+              </p>
+              <div class="report-sample-stats" id="primary-sample"></div>
+            </div>
+          </div>
+        </section>
+        <section class="report-methods" aria-labelledby="methods-title">
+          <div class="report-section-heading">
+            <div>
+              <div class="eyebrow">02 / Все методы · тот же test</div>
+              <h2 id="methods-title">Сравнение без отбора победителей</h2>
+            </div>
+            <span class="report-small-note">NDCG@10 · шкала от 0 до 1</span>
+          </div>
+          <div id="method-bars" class="method-bars"></div>
+          <p class="report-footnote">
+            NDCG учитывает релевантность и место товара в выдаче; выше — лучше.
+            Значения усреднены по запросам. Проверка «Атрибуты запроса» —
+            вторичная абляция без признаков совпадения с товаром.
+          </p>
+          <div class="gain-map" id="gain-map"></div>
+        </section>
+        <section class="report-data" aria-labelledby="data-title">
+          <div class="report-section-heading">
+            <div>
+              <div class="eyebrow">03 / Данные и границы проверки</div>
+              <h2 id="data-title">Что именно измерено</h2>
+            </div>
+          </div>
+          <div class="report-data-grid">
+            <div>
+              <div class="table-scroll">
+                <table class="report-table">
+                  <caption>
+                    Разбиение ESCI по семействам запросов
+                  </caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">Часть</th>
+                      <th scope="col">Запросы</th>
+                      <th scope="col">Семейства</th>
+                      <th scope="col">Пары</th>
+                    </tr>
+                  </thead>
+                  <tbody id="split-rows"></tbody>
+                </table>
+              </div>
+              <p class="report-footnote" id="data-overlap"></p>
+            </div>
+            <aside class="report-scope">
+              <span class="report-scope-icon" aria-hidden="true">↗</span>
+              <h3>Ранжирование<br />готовых кандидатов</h3>
+              <p>
+                Оценка использует товары с известной разметкой. Полнота поиска
+                по всему каталогу, клики, конверсия и выручка здесь не измерены.
+              </p>
+              <p>
+                Публичный test сохранён для финальной оценки после выбора модели
+                на development-части.
+              </p>
+            </aside>
+          </div>
+        </section>
+        <section
+          class="report-transfer"
+          id="wands-section"
+          aria-labelledby="wands-title"
+          hidden
+        >
+          <div class="report-section-heading">
+            <div>
+              <div class="eyebrow">04 / Перенос · WANDS</div>
+              <h2 id="wands-title">Другой каталог. Те же модели.</h2>
+            </div>
+            <span class="report-small-note"
+              >Exact против остальных · вторичная проверка</span
+            >
+          </div>
+          <p class="report-section-intro">
+            Модели проверены на каталоге Wayfair без обучения и выбора настроек
+            по WANDS. Основная шкала переноса считает релевантными только Exact;
+            Partial и Irrelevant получают нулевой вес.
+          </p>
+          <div class="transfer-summary" id="wands-summary"></div>
+          <div class="table-scroll">
+            <table class="report-table method-table">
+              <caption>
+                WANDS · очищенный consensus_main, exact_binary
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Метод</th>
+                  <th scope="col">NDCG@10</th>
+                  <th scope="col">Exact Recall@10</th>
+                  <th scope="col">MRR</th>
+                </tr>
+              </thead>
+              <tbody id="wands-rows"></tbody>
+            </table>
+          </div>
+          <p class="report-footnote">
+            Абсолютные NDCG между ESCI и WANDS не сопоставимы: разметка и веса
+            отличаются. Неоднозначные пары и другие веса Partial показаны в
+            проверках чувствительности.
+          </p>
+          <details class="report-details" id="sensitivity-details" hidden>
+            <summary>Проверки чувствительности к разметке</summary>
+            <div class="table-scroll">
+              <table class="report-table sensitivity-table">
+                <caption>
+                  Заранее заданные варианты · без выбора лучшего исхода
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Пары</th>
+                    <th scope="col">Вес Partial</th>
+                    <th scope="col">Baseline</th>
+                    <th scope="col">Атрибуты</th>
+                    <th scope="col">Разница</th>
+                  </tr>
+                </thead>
+                <tbody id="sensitivity-rows"></tbody>
+              </table>
+            </div>
+          </details>
+        </section>
+        <section class="report-boundaries" aria-labelledby="boundaries-title">
+          <div class="report-section-heading">
+            <div>
+              <div class="eyebrow">Ограничения и воспроизводимость</div>
+              <h2 id="boundaries-title">Как читать этот результат</h2>
+            </div>
+          </div>
+          <ul id="limitations" class="report-limitations"></ul>
+          <details class="report-details">
+            <summary>Зафиксированная версия эксперимента</summary>
+            <dl class="provenance-list" id="provenance"></dl>
+          </details>
+          <div class="report-download">
+            <div>
+              <h3>Исходный отчёт</h3>
+              <p>Все значения, настройки и контрольные суммы — в JSON.</p>
+            </div>
+            <a class="outline-button" href="/api/report" download="summary.json"
+              >Скачать JSON
+              <svg class="icon icon-small" aria-hidden="true">
+                <use href="#icon-download" /></svg
+            ></a>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="site-footer page-width">
+      <a class="wordmark wordmark-small" href="/"
+        >catalog<span class="wordmark-period">.</span></a
+      >
+      <p>Проверяем детали.</p>
+      <a class="quiet-link" href="/"
+        >К поиску
+        <svg class="icon icon-small" aria-hidden="true">
+          <use href="#icon-arrow" /></svg
+      ></a>
+    </footer>
+  </body>
+</html>

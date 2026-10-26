@@ -1,0 +1,1302 @@
+{
+  "status": "completed",
+  "completed_at_utc": "2026-10-26T12:29:45.455499+00:00",
+  "dataset": {
+    "name": "ESCI",
+    "locale": "us",
+    "subset": "small_version == 1",
+    "source_revision": "7916cdf6ab75a462e77f20ab40428a10923998d5",
+    "products": 481483,
+    "queries": 29764,
+    "pairs": 599602,
+    "excluded_official_train_queries": 80,
+    "excluded_families": 50,
+    "test_products_seen_in_train": 31164
+  },
+  "splits": [
+    {
+      "partition": "dev",
+      "pairs": 63566,
+      "queries": 3145,
+      "families": 3138
+    },
+    {
+      "partition": "test",
+      "pairs": 181701,
+      "queries": 8956,
+      "families": 8938
+    },
+    {
+      "partition": "train",
+      "pairs": 354335,
+      "queries": 17663,
+      "families": 17610
+    }
+  ],
+  "gains": {
+    "I": 0,
+    "C": 0.01,
+    "S": 0.1,
+    "E": 1
+  },
+  "models": {
+    "baseline": {
+      "features": 28,
+      "num_leaves": 15,
+      "trees": 150,
+      "sha256": "720a07445ae114dbb02f52e22b0eab02bf64a6f7367c9c31f164c97b1b5697f2"
+    },
+    "attribute": {
+      "features": 58,
+      "num_leaves": 15,
+      "trees": 217,
+      "sha256": "75ba6e48ddcac199a5c8305f82dd3160b7f73a9e5c74e9d59fb35769ad4cb0db"
+    },
+    "no_product_evidence": {
+      "features": 35,
+      "num_leaves": 15,
+      "trees": 150,
+      "sha256": "abea68c6d1e9be232cc3a2f8401018d3454e001773b2d7622f34e9ec8b68af05"
+    }
+  },
+  "esci": {
+    "baseline": {
+      "ndcg10": 0.7350054604206361,
+      "ndcg_all": 0.8446218520421521,
+      "exact_recall10": 0.6958736949405833,
+      "mrr": 0.7974569849870595,
+      "ndcg_at_10": 0.7350054604206361
+    },
+    "attribute": {
+      "ndcg10": 0.7364232255288593,
+      "ndcg_all": 0.8455567243103762,
+      "exact_recall10": 0.6967040667817695,
+      "mrr": 0.7981679100401069,
+      "ndcg_at_10": 0.7364232255288593
+    },
+    "no_product_evidence": {
+      "ndcg10": 0.7348485537125354,
+      "ndcg_all": 0.8445076663178006,
+      "exact_recall10": 0.6956800179060393,
+      "mrr": 0.7970868518354842,
+      "ndcg_at_10": 0.7348485537125354
+    },
+    "bm25": {
+      "ndcg10": 0.6875871219508719,
+      "ndcg_all": 0.8154925147273466,
+      "exact_recall10": 0.656758582294263,
+      "mrr": 0.7392483403801597,
+      "ndcg_at_10": 0.6875871219508719
+    },
+    "tfidf": {
+      "ndcg10": 0.667631841410359,
+      "ndcg_all": 0.8014585146486249,
+      "exact_recall10": 0.6466634814664409,
+      "mrr": 0.7109595027206354,
+      "ndcg_at_10": 0.667631841410359
+    },
+    "rule": {
+      "ndcg10": 0.7351896813458725,
+      "ndcg_all": 0.8447655770455333,
+      "exact_recall10": 0.6956826986717666,
+      "mrr": 0.7975103616510884,
+      "ndcg_at_10": 0.7351896813458725
+    }
+  },
+  "primary_difference": {
+    "difference": 0.0014177651082230836,
+    "ci_low": 0.00044372781425344797,
+    "ci_high": 0.0023975805187740184,
+    "families": 8938,
+    "queries": 8956,
+    "bootstrap_repeats": 5000,
+    "unit": "normalized query family",
+    "metric": "mean query NDCG@10"
+  },
+  "slices": {
+    "attribute_mentioned": {
+      "queries": 606,
+      "families": 602,
+      "metrics": {
+        "baseline": {
+          "ndcg10": 0.760232054673972,
+          "ndcg_all": 0.8552325746711612,
+          "exact_recall10": 0.7556594388129605,
+          "mrr": 0.8218390176929781
+        },
+        "attribute": {
+          "ndcg10": 0.769296079325782,
+          "ndcg_all": 0.860729373756236,
+          "exact_recall10": 0.7620108116599039,
+          "mrr": 0.8337834561844462
+        },
+        "no_product_evidence": {
+          "ndcg10": 0.7608349105429745,
+          "ndcg_all": 0.8553537432969002,
+          "exact_recall10": 0.7580010713278602,
+          "mrr": 0.8237171038532426
+        },
+        "bm25": {
+          "ndcg10": 0.6640466418707548,
+          "ndcg_all": 0.7939924401496709,
+          "exact_recall10": 0.6705825492527443,
+          "mrr": 0.7096725102913223
+        },
+        "tfidf": {
+          "ndcg10": 0.6426325547626082,
+          "ndcg_all": 0.778291074882248,
+          "exact_recall10": 0.6596038240929465,
+          "mrr": 0.6740643981980617
+        },
+        "rule": {
+          "ndcg10": 0.7629546332324152,
+          "ndcg_all": 0.8573566689455534,
+          "exact_recall10": 0.7528370434544576,
+          "mrr": 0.8226278648927164
+        }
+      },
+      "status": "predeclared descriptive slice; no multiple-testing claim"
+    },
+    "no_attribute_mentioned": {
+      "queries": 8350,
+      "families": 8336,
+      "metrics": {
+        "baseline": {
+          "ndcg10": 0.7331746441191366,
+          "ndcg_all": 0.8438517804357832,
+          "exact_recall10": 0.691534233833066,
+          "mrr": 0.7956874626134324
+        },
+        "attribute": {
+          "ndcg10": 0.7340374830856335,
+          "ndcg_all": 0.8444555715481975,
+          "exact_recall10": 0.6919638718606832,
+          "mrr": 0.7955831171103501
+        },
+        "no_product_evidence": {
+          "ndcg10": 0.7329625977557395,
+          "ndcg_all": 0.8437205139047067,
+          "exact_recall10": 0.6911565350489758,
+          "mrr": 0.79515416528186
+        },
+        "bm25": {
+          "ndcg10": 0.6892955687686625,
+          "ndcg_all": 0.8170528794212473,
+          "exact_recall10": 0.655755189794941,
+          "mrr": 0.7413948018213374
+        },
+        "tfidf": {
+          "ndcg10": 0.6694461608964113,
+          "ndcg_all": 0.8031398881214902,
+          "exact_recall10": 0.645724225551761,
+          "mrr": 0.713637159408142
+        },
+        "rule": {
+          "ndcg10": 0.7331746441191366,
+          "ndcg_all": 0.8438517804357832,
+          "exact_recall10": 0.691534233833066,
+          "mrr": 0.7956874626134324
+        }
+      },
+      "status": "predeclared descriptive slice; no multiple-testing claim"
+    },
+    "all_candidates_new_to_final_fit": {
+      "queries": 1507,
+      "families": 1506,
+      "metrics": {
+        "baseline": {
+          "ndcg10": 0.767809589360179,
+          "ndcg_all": 0.8583747441427956,
+          "exact_recall10": 0.7662767552193183,
+          "mrr": 0.815057236872101
+        },
+        "attribute": {
+          "ndcg10": 0.7672467840272001,
+          "ndcg_all": 0.8578383928988783,
+          "exact_recall10": 0.7657776268771981,
+          "mrr": 0.8149455480742805
+        },
+        "no_product_evidence": {
+          "ndcg10": 0.7669352293358604,
+          "ndcg_all": 0.8572250827565937,
+          "exact_recall10": 0.7668994045097787,
+          "mrr": 0.8128716450547904
+        },
+        "bm25": {
+          "ndcg10": 0.7212277658604725,
+          "ndcg_all": 0.8276892240744612,
+          "exact_recall10": 0.7287622836604698,
+          "mrr": 0.7630162232517906
+        },
+        "tfidf": {
+          "ndcg10": 0.7054435276365721,
+          "ndcg_all": 0.8157302914801102,
+          "exact_recall10": 0.7222310705520893,
+          "mrr": 0.7348703488136137
+        },
+        "rule": {
+          "ndcg10": 0.7676388797470268,
+          "ndcg_all": 0.8586638633338031,
+          "exact_recall10": 0.7646882867604555,
+          "mrr": 0.8159419968809484
+        }
+      },
+      "status": "predeclared descriptive slice; no multiple-testing claim"
+    },
+    "some_candidate_seen_in_final_fit": {
+      "queries": 7449,
+      "families": 7432,
+      "metrics": {
+        "baseline": {
+          "ndcg10": 0.7283688887584142,
+          "ndcg_all": 0.8418395177159782,
+          "exact_recall10": 0.6816286074217789,
+          "mrr": 0.7938962950164922
+        },
+        "attribute": {
+          "ndcg10": 0.7301873411608903,
+          "ndcg_all": 0.843072031792874,
+          "exact_recall10": 0.6827279852748133,
+          "mrr": 0.7947736422836966
+        },
+        "no_product_evidence": {
+          "ndcg10": 0.72835712933821,
+          "ndcg_all": 0.8419348180733033,
+          "exact_recall10": 0.6812697580226029,
+          "mrr": 0.793893445555246
+        },
+        "bm25": {
+          "ndcg10": 0.6807813157524871,
+          "ndcg_all": 0.8130250102319644,
+          "exact_recall10": 0.6421896271440383,
+          "mrr": 0.7344398829378791
+        },
+        "tfidf": {
+          "ndcg10": 0.6599821956669166,
+          "ndcg_all": 0.7985712052533976,
+          "exact_recall10": 0.6313734228262593,
+          "mrr": 0.7061221225270364
+        },
+        "rule": {
+          "ndcg10": 0.7286249153382821,
+          "ndcg_all": 0.8419538281615995,
+          "exact_recall10": 0.6817203703621998,
+          "mrr": 0.7937814753185067
+        }
+      },
+      "status": "predeclared descriptive slice; no multiple-testing claim"
+    }
+  },
+  "wands": {
+    "status": "frozen external evaluation; no target fitting/selection",
+    "primary": "consensus_main/exact_binary",
+    "scenarios": {
+      "consensus_main": {
+        "exact_binary": {
+          "models": {
+            "baseline": {
+              "ndcg10": 0.5060552606786024,
+              "ndcg_all": 0.6120118511252218,
+              "exact_recall10": 0.29688573376070604,
+              "mrr": 0.5890263545427648,
+              "ndcg_at_10": 0.5060552606786024
+            },
+            "attribute": {
+              "ndcg10": 0.505911971303253,
+              "ndcg_all": 0.6119101672166742,
+              "exact_recall10": 0.29373878418692956,
+              "mrr": 0.5901269397991411,
+              "ndcg_at_10": 0.505911971303253
+            },
+            "no_product_evidence": {
+              "ndcg10": 0.5062886375476489,
+              "ndcg_all": 0.6113617602739272,
+              "exact_recall10": 0.29848109894659686,
+              "mrr": 0.5878105839199125,
+              "ndcg_at_10": 0.5062886375476489
+            },
+            "bm25": {
+              "ndcg10": 0.4120164135095691,
+              "ndcg_all": 0.5381152315802533,
+              "exact_recall10": 0.19359830772014433,
+              "mrr": 0.4925265517376853,
+              "ndcg_at_10": 0.4120164135095691
+            },
+            "tfidf": {
+              "ndcg10": 0.3049256306587035,
+              "ndcg_all": 0.48573053728675897,
+              "exact_recall10": 0.1396697336916094,
+              "mrr": 0.38676229958354896,
+              "ndcg_at_10": 0.3049256306587035
+            },
+            "rule": {
+              "ndcg10": 0.5060552606786024,
+              "ndcg_all": 0.6120120295567837,
+              "exact_recall10": 0.29688573376070604,
+              "mrr": 0.5890263545427648,
+              "ndcg_at_10": 0.5060552606786024
+            }
+          },
+          "primary_difference": {
+            "difference": -0.0001432893753493588,
+            "ci_low": -0.004371331031102119,
+            "ci_high": 0.003969681773620154,
+            "families": 480,
+            "queries": 480,
+            "bootstrap_repeats": 5000,
+            "unit": "normalized query family",
+            "metric": "mean query NDCG@10"
+          },
+          "gain_map": {
+            "Irrelevant": 0,
+            "Partial": 0,
+            "Exact": 1
+          },
+          "queries": 480,
+          "families": 480,
+          "pairs": 231859,
+          "zero_idcg_queries": 101
+        },
+        "partial_0.1": {
+          "models": {
+            "baseline": {
+              "ndcg10": 0.724885757429466,
+              "ndcg_all": 0.8907921613262102,
+              "exact_recall10": 0.29688573376070604,
+              "mrr": 0.5890263545427648,
+              "ndcg_at_10": 0.724885757429466
+            },
+            "attribute": {
+              "ndcg10": 0.7251025934071248,
+              "ndcg_all": 0.8907290792059712,
+              "exact_recall10": 0.29373878418692956,
+              "mrr": 0.5901269397991411,
+              "ndcg_at_10": 0.7251025934071248
+            },
+            "no_product_evidence": {
+              "ndcg10": 0.7254144040784128,
+              "ndcg_all": 0.8906302734252329,
+              "exact_recall10": 0.29848109894659686,
+              "mrr": 0.5878105839199125,
+              "ndcg_at_10": 0.7254144040784128
+            },
+            "bm25": {
+              "ndcg10": 0.6520767473542433,
+              "ndcg_all": 0.8649677610855823,
+              "exact_recall10": 0.19359830772014433,
+              "mrr": 0.4925265517376853,
+              "ndcg_at_10": 0.6520767473542433
+            },
+            "tfidf": {
+              "ndcg10": 0.5572895893270549,
+              "ndcg_all": 0.8363123093555788,
+              "exact_recall10": 0.1396697336916094,
+              "mrr": 0.38676229958354896,
+              "ndcg_at_10": 0.5572895893270549
+            },
+            "rule": {
+              "ndcg10": 0.724885757429466,
+              "ndcg_all": 0.8907956046461958,
+              "exact_recall10": 0.29688573376070604,
+              "mrr": 0.5890263545427648,
+              "ndcg_at_10": 0.724885757429466
+            }
+          },
+          "primary_difference": {
+            "difference": 0.00021683597765883021,
+            "ci_low": -0.003618996833460557,
+            "ci_high": 0.004030445722435083,
+            "families": 480,
+            "queries": 480,
+            "bootstrap_repeats": 5000,
+            "unit": "normalized query family",
+            "metric": "mean query NDCG@10"
+          },
+          "gain_map": {
+            "Irrelevant": 0.0,
+            "Partial": 0.1,
+            "Exact": 1.0
+          },
+          "queries": 480,
+          "families": 480,
+          "pairs": 231859,
+          "zero_idcg_queries": 1
+        },
+        "partial_0.5": {
+          "models": {
+            "baseline": {
+              "ndcg10": 0.8275550950030733,
+              "ndcg_all": 0.9449636966175655,
+              "exact_recall10": 0.29688573376070604,
+              "mrr": 0.5890263545427648,
+              "ndcg_at_10": 0.8275550950030733
+            },
+            "attribute": {
+              "ndcg10": 0.8283954190331245,
+              "ndcg_all": 0.9449341865288214,
+              "exact_recall10": 0.29373878418692956,
+              "mrr": 0.5901269397991411,
+              "ndcg_at_10": 0.8283954190331245
+            },
+            "no_product_evidence": {
+              "ndcg10": 0.8283440506226143,
+              "ndcg_all": 0.9450023440030975,
+              "exact_recall10": 0.29848109894659686,
+              "mrr": 0.5878105839199125,
+              "ndcg_at_10": 0.8283440506226143
+            },
+            "bm25": {
+              "ndcg10": 0.7912365076272317,
+              "ndcg_all": 0.9375978672677625,
+              "exact_recall10": 0.19359830772014433,
+              "mrr": 0.4925265517376853,
+              "ndcg_at_10": 0.7912365076272317
+            },
+            "tfidf": {
+              "ndcg10": 0.7304646771584267,
+              "ndcg_all": 0.9272085141424189,
+              "exact_recall10": 0.1396697336916094,
+              "mrr": 0.38676229958354896,
+              "ndcg_at_10": 0.7304646771584267
+            },
+            "rule": {
+              "ndcg10": 0.8275550950030733,
+              "ndcg_all": 0.9449679022094091,
+              "exact_recall10": 0.29688573376070604,
+              "mrr": 0.5890263545427648,
+              "ndcg_at_10": 0.8275550950030733
+            }
+          },
+          "primary_difference": {
+            "difference": 0.0008403240300511292,
+            "ci_low": -0.00181306054380378,
+            "ci_high": 0.0035741072654586334,
+            "families": 480,
+            "queries": 480,
+            "bootstrap_repeats": 5000,
+            "unit": "normalized query family",
+            "metric": "mean query NDCG@10"
+          },
+          "gain_map": {
+            "Irrelevant": 0.0,
+            "Partial": 0.5,
+            "Exact": 1.0
+          },
+          "queries": 480,
+          "families": 480,
+          "pairs": 231859,
+          "zero_idcg_queries": 1
+        }
+      },
+      "ambiguous_min": {
+        "exact_binary": {
+          "models": {
+            "baseline": {
+              "ndcg10": 0.5060552606786024,
+              "ndcg_all": 0.6119885429072671,
+              "exact_recall10": 0.29688573376070604,
+              "mrr": 0.5890263545427648,
+              "ndcg_at_10": 0.5060552606786024
+            },
+            "attribute": {
+              "ndcg10": 0.505911971303253,
+              "ndcg_all": 0.6118864131884203,
+              "exact_recall10": 0.29373878418692956,
+              "mrr": 0.5901269397991411,
+              "ndcg_at_10": 0.505911971303253
+            },
+            "no_product_evidence": {
+              "ndcg10": 0.5062886375476489,
+              "ndcg_all": 0.6113370224678716,
+              "exact_recall10": 0.29848109894659686,
+              "mrr": 0.5878105839199125,
+              "ndcg_at_10": 0.5062886375476489
+            },
+            "bm25": {
+              "ndcg10": 0.4120164135095691,
+              "ndcg_all": 0.5381060919114584,
+              "exact_recall10": 0.19359830772014433,
+              "mrr": 0.4925265517376853,
+              "ndcg_at_10": 0.4120164135095691
+            },
+            "tfidf": {
+              "ndcg10": 0.3049256306587035,
+              "ndcg_all": 0.48572153209208896,
+              "exact_recall10": 0.1396697336916094,
+              "mrr": 0.38676229958354896,
+              "ndcg_at_10": 0.3049256306587035
+            },
+            "rule": {
+              "ndcg10": 0.5060552606786024,
+              "ndcg_all": 0.6119887213388289,
+              "exact_recall10": 0.29688573376070604,
+              "mrr": 0.5890263545427648,
+              "ndcg_at_10": 0.5060552606786024
+            }
+          },
+          "primary_difference": {
+            "difference": -0.0001432893753493588,
+            "ci_low": -0.004371331031102119,
+            "ci_high": 0.003969681773620154,
+            "families": 480,
+            "queries": 480,
+            "bootstrap_repeats": 5000,
+            "unit": "normalized query family",
+            "metric": "mean query NDCG@10"
+          },
+          "gain_map": {
+            "Irrelevant": 0,
+            "Partial": 0,
+            "Exact": 1
+          },
+          "queries": 480,
+          "families": 480,
+          "pairs": 231873,
+          "zero_idcg_queries": 101
+        },
+        "partial_0.1": {
+          "models": {
+            "baseline": {
+              "ndcg10": 0.724885757429466,
+              "ndcg_all": 0.8907756939528627,
+              "exact_recall10": 0.29688573376070604,
+              "mrr": 0.5890263545427648,
+              "ndcg_at_10": 0.724885757429466
+            },
+            "attribute": {
+              "ndcg10": 0.7251025934071248,
+              "ndcg_all": 0.8907128104592222,
+              "exact_recall10": 0.29373878418692956,
+              "mrr": 0.5901269397991411,
+              "ndcg_at_10": 0.7251025934071248
+            },
+            "no_product_evidence": {
+              "ndcg10": 0.7254144040784128,
+              "ndcg_all": 0.8906126703263826,
+              "exact_recall10": 0.29848109894659686,
+              "mrr": 0.5878105839199125,
+              "ndcg_at_10": 0.7254144040784128
+            },
+            "bm25": {
+              "ndcg10": 0.6520767473542433,
+              "ndcg_all": 0.8649640830667708,
+              "exact_recall10": 0.19359830772014433,
+              "mrr": 0.4925265517376853,
+              "ndcg_at_10": 0.6520767473542433
+            },
+            "tfidf": {
+              "ndcg10": 0.5572895893270549,
+              "ndcg_all": 0.836308413106038,
+              "exact_recall10": 0.1396697336916094,
+              "mrr": 0.38676229958354896,
+              "ndcg_at_10": 0.5572895893270549
+            },
+            "rule": {
+              "ndcg10": 0.724885757429466,
+              "ndcg_all": 0.8907791372728485,
+              "exact_recall10": 0.29688573376070604,
+              "mrr": 0.5890263545427648,
+              "ndcg_at_10": 0.724885757429466
+            }
+          },
+          "primary_difference": {
+            "difference": 0.00021683597765883021,
+            "ci_low": -0.003618996833460557,
+            "ci_high": 0.004030445722435083,
+            "families": 480,
+            "queries": 480,
+            "bootstrap_repeats": 5000,
+            "unit": "normalized query family",
+            "metric": "mean query NDCG@10"
+          },
+          "gain_map": {
+            "Irrelevant": 0.0,
+            "Partial": 0.1,
+            "Exact": 1.0
+          },
+          "queries": 480,
+          "families": 480,
+          "pairs": 231873,
+          "zero_idcg_queries": 1
+        },
+        "partial_0.5": {
+          "models": {
+            "baseline": {
+              "ndcg10": 0.8275550950030733,
+              "ndcg_all": 0.9449545607691735,
+              "exact_recall10": 0.29688573376070604,
+              "mrr": 0.5890263545427648,
+              "ndcg_at_10": 0.8275550950030733
+            },
+            "attribute": {
+              "ndcg10": 0.8283954190331245,
+              "ndcg_all": 0.9449253814982611,
+              "exact_recall10": 0.29373878418692956,
+              "mrr": 0.5901269397991411,
+              "ndcg_at_10": 0.8283954190331245
+            },
+            "no_product_evidence": {
+              "ndcg10": 0.8283440506226143,
+              "ndcg_all": 0.9449927496883394,
+              "exact_recall10": 0.29848109894659686,
+              "mrr": 0.5878105839199125,
+              "ndcg_at_10": 0.8283440506226143
+            },
+            "bm25": {
+              "ndcg10": 0.7912365076272317,
+              "ndcg_all": 0.9375980862492159,
+              "exact_recall10": 0.19359830772014433,
+              "mrr": 0.4925265517376853,
+              "ndcg_at_10": 0.7912365076272317
+            },
+            "tfidf": {
+              "ndcg10": 0.7304646771584267,
+              "ndcg_all": 0.9272060089660615,
+              "exact_recall10": 0.1396697336916094,
+              "mrr": 0.38676229958354896,
+              "ndcg_at_10": 0.7304646771584267
+            },
+            "rule": {
+              "ndcg10": 0.8275550950030733,
+              "ndcg_all": 0.9449587663610169,
+              "exact_recall10": 0.29688573376070604,
+              "mrr": 0.5890263545427648,
+              "ndcg_at_10": 0.8275550950030733
+            }
+          },
+          "primary_difference": {
+            "difference": 0.0008403240300511292,
+            "ci_low": -0.00181306054380378,
+            "ci_high": 0.0035741072654586334,
+            "families": 480,
+            "queries": 480,
+            "bootstrap_repeats": 5000,
+            "unit": "normalized query family",
+            "metric": "mean query NDCG@10"
+          },
+          "gain_map": {
+            "Irrelevant": 0.0,
+            "Partial": 0.5,
+            "Exact": 1.0
+          },
+          "queries": 480,
+          "families": 480,
+          "pairs": 231873,
+          "zero_idcg_queries": 1
+        }
+      },
+      "ambiguous_max": {
+        "exact_binary": {
+          "models": {
+            "baseline": {
+              "ndcg10": 0.5060440365536101,
+              "ndcg_all": 0.6120699385023037,
+              "exact_recall10": 0.296781861656329,
+              "mrr": 0.5890263545427648,
+              "ndcg_at_10": 0.5060440365536101
+            },
+            "attribute": {
+              "ndcg10": 0.505911971303253,
+              "ndcg_all": 0.6119756424168498,
+              "exact_recall10": 0.29366976130746525,
+              "mrr": 0.5901269397991411,
+              "ndcg_at_10": 0.505911971303253
+            },
+            "no_product_evidence": {
+              "ndcg10": 0.5062774134226566,
+              "ndcg_all": 0.6114212391015208,
+              "exact_recall10": 0.2983748025857977,
+              "mrr": 0.5878105839199125,
+              "ndcg_at_10": 0.5062774134226566
+            },
+            "bm25": {
+              "ndcg10": 0.4119609645139763,
+              "ndcg_all": 0.5381158805058436,
+              "exact_recall10": 0.19340630540002537,
+              "mrr": 0.4925265517376853,
+              "ndcg_at_10": 0.4119609645139763
+            },
+            "tfidf": {
+              "ndcg10": 0.30491320207998596,
+              "ndcg_all": 0.4857757681673063,
+              "exact_recall10": 0.13954513749145359,
+              "mrr": 0.38676229958354896,
+              "ndcg_at_10": 0.30491320207998596
+            },
+            "rule": {
+              "ndcg10": 0.5060440365536101,
+              "ndcg_all": 0.6120701169338655,
+              "exact_recall10": 0.296781861656329,
+              "mrr": 0.5890263545427648,
+              "ndcg_at_10": 0.5060440365536101
+            }
+          },
+          "primary_difference": {
+            "difference": -0.0001320652503570612,
+            "ci_low": -0.0043502124596320624,
+            "ci_high": 0.003975842384432962,
+            "families": 480,
+            "queries": 480,
+            "bootstrap_repeats": 5000,
+            "unit": "normalized query family",
+            "metric": "mean query NDCG@10"
+          },
+          "gain_map": {
+            "Irrelevant": 0,
+            "Partial": 0,
+            "Exact": 1
+          },
+          "queries": 480,
+          "families": 480,
+          "pairs": 231873,
+          "zero_idcg_queries": 101
+        },
+        "partial_0.1": {
+          "models": {
+            "baseline": {
+              "ndcg10": 0.7248619387578853,
+              "ndcg_all": 0.8908080214223298,
+              "exact_recall10": 0.296781861656329,
+              "mrr": 0.5890263545427648,
+              "ndcg_at_10": 0.7248619387578853
+            },
+            "attribute": {
+              "ndcg10": 0.7250876721201045,
+              "ndcg_all": 0.890747551572527,
+              "exact_recall10": 0.29366976130746525,
+              "mrr": 0.5901269397991411,
+              "ndcg_at_10": 0.7250876721201045
+            },
+            "no_product_evidence": {
+              "ndcg10": 0.7253905854068324,
+              "ndcg_all": 0.8906472154732824,
+              "exact_recall10": 0.2983748025857977,
+              "mrr": 0.5878105839199125,
+              "ndcg_at_10": 0.7253905854068324
+            },
+            "bm25": {
+              "ndcg10": 0.6520178715462595,
+              "ndcg_all": 0.8649541970203157,
+              "exact_recall10": 0.19340630540002537,
+              "mrr": 0.4925265517376853,
+              "ndcg_at_10": 0.6520178715462595
+            },
+            "tfidf": {
+              "ndcg10": 0.5572648158827871,
+              "ndcg_all": 0.8363219718693767,
+              "exact_recall10": 0.13954513749145359,
+              "mrr": 0.38676229958354896,
+              "ndcg_at_10": 0.5572648158827871
+            },
+            "rule": {
+              "ndcg10": 0.7248619387578853,
+              "ndcg_all": 0.8908114647423154,
+              "exact_recall10": 0.296781861656329,
+              "mrr": 0.5890263545427648,
+              "ndcg_at_10": 0.7248619387578853
+            }
+          },
+          "primary_difference": {
+            "difference": 0.00022573336221911252,
+            "ci_low": -0.003609877014286268,
+            "ci_high": 0.004038549047421998,
+            "families": 480,
+            "queries": 480,
+            "bootstrap_repeats": 5000,
+            "unit": "normalized query family",
+            "metric": "mean query NDCG@10"
+          },
+          "gain_map": {
+            "Irrelevant": 0.0,
+            "Partial": 0.1,
+            "Exact": 1.0
+          },
+          "queries": 480,
+          "families": 480,
+          "pairs": 231873,
+          "zero_idcg_queries": 1
+        },
+        "partial_0.5": {
+          "models": {
+            "baseline": {
+              "ndcg10": 0.8275144532857983,
+              "ndcg_all": 0.9449642376754883,
+              "exact_recall10": 0.296781861656329,
+              "mrr": 0.5890263545427648,
+              "ndcg_at_10": 0.8275144532857983
+            },
+            "attribute": {
+              "ndcg10": 0.8283573026849018,
+              "ndcg_all": 0.9449333084882452,
+              "exact_recall10": 0.29366976130746525,
+              "mrr": 0.5901269397991411,
+              "ndcg_at_10": 0.8283573026849018
+            },
+            "no_product_evidence": {
+              "ndcg10": 0.828303408905339,
+              "ndcg_all": 0.9450033908860236,
+              "exact_recall10": 0.2983748025857977,
+              "mrr": 0.5878105839199125,
+              "ndcg_at_10": 0.828303408905339
+            },
+            "bm25": {
+              "ndcg10": 0.7911859155468203,
+              "ndcg_all": 0.9375891884413154,
+              "exact_recall10": 0.19340630540002537,
+              "mrr": 0.4925265517376853,
+              "ndcg_at_10": 0.7911859155468203
+            },
+            "tfidf": {
+              "ndcg10": 0.7304237644454024,
+              "ndcg_all": 0.9272041340731657,
+              "exact_recall10": 0.13954513749145359,
+              "mrr": 0.38676229958354896,
+              "ndcg_at_10": 0.7304237644454024
+            },
+            "rule": {
+              "ndcg10": 0.8275144532857983,
+              "ndcg_all": 0.9449684432673318,
+              "exact_recall10": 0.296781861656329,
+              "mrr": 0.5890263545427648,
+              "ndcg_at_10": 0.8275144532857983
+            }
+          },
+          "primary_difference": {
+            "difference": 0.0008428493991035402,
+            "ci_low": -0.001811157807531111,
+            "ci_high": 0.0035778262903116745,
+            "families": 480,
+            "queries": 480,
+            "bootstrap_repeats": 5000,
+            "unit": "normalized query family",
+            "metric": "mean query NDCG@10"
+          },
+          "gain_map": {
+            "Irrelevant": 0.0,
+            "Partial": 0.5,
+            "Exact": 1.0
+          },
+          "queries": 480,
+          "families": 480,
+          "pairs": 231873,
+          "zero_idcg_queries": 1
+        }
+      }
+    },
+    "feature_compute": {
+      "rows": 231859,
+      "features": 58,
+      "seconds": 72.26172454200423,
+      "sha256": "f0ad89a1a2ca4c6a24ad82811c9b23201b405c4085212514cb81cea205a8c8a9"
+    },
+    "ambiguity_note": "Min/max are predetermined label scenarios, not adjudicated truth or sharp metric bounds."
+  },
+  "selection": {
+    "status": "selected_before_any_test_quality",
+    "selected_at_utc": "2026-10-26T12:26:50.999977+00:00",
+    "protocol_sha256": "d4c553702f8960fbe623286dae844ded6870bde06c61383091f67c8aed09a907",
+    "config_sha256": "ecb3b35e56e0e2ffb5c4df1c07345d5afbdcacc27aa4a083e27a1464fb861f61",
+    "models": {
+      "baseline": {
+        "num_leaves": 15,
+        "trees": 150,
+        "dev_ndcg10": 0.7389297763424368,
+        "fit_seconds": 4.024935625006037,
+        "trials": [
+          {
+            "num_leaves": 15,
+            "trees": 150,
+            "dev_ndcg10": 0.7389297763424368,
+            "fit_seconds": 4.024935625006037
+          },
+          {
+            "num_leaves": 31,
+            "trees": 117,
+            "dev_ndcg10": 0.7377245583485669,
+            "fit_seconds": 4.14049683399935
+          }
+        ],
+        "columns": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27
+        ],
+        "feature_names": [
+          "title_tfidf",
+          "body_tfidf",
+          "title_char_tfidf",
+          "title_bm25",
+          "body_bm25",
+          "query_tokens",
+          "query_chars",
+          "title_tokens",
+          "body_tokens",
+          "title_chars",
+          "title_coverage",
+          "body_coverage",
+          "title_jaccard",
+          "body_jaccard",
+          "title_idf_coverage",
+          "body_idf_coverage",
+          "title_phrase",
+          "body_phrase",
+          "brand_mentioned",
+          "brand_token_coverage",
+          "query_numeric_count",
+          "title_numeric_coverage",
+          "body_numeric_coverage",
+          "query_has_negation",
+          "title_prefix_coverage",
+          "title_suffix_coverage",
+          "body_empty",
+          "brand_empty"
+        ]
+      },
+      "attribute": {
+        "num_leaves": 15,
+        "trees": 217,
+        "dev_ndcg10": 0.7399436012962856,
+        "fit_seconds": 5.852849499999138,
+        "trials": [
+          {
+            "num_leaves": 15,
+            "trees": 217,
+            "dev_ndcg10": 0.7399436012962856,
+            "fit_seconds": 5.852849499999138
+          },
+          {
+            "num_leaves": 31,
+            "trees": 220,
+            "dev_ndcg10": 0.7396292298072437,
+            "fit_seconds": 6.890189834004559
+          }
+        ],
+        "columns": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57
+        ],
+        "feature_names": [
+          "title_tfidf",
+          "body_tfidf",
+          "title_char_tfidf",
+          "title_bm25",
+          "body_bm25",
+          "query_tokens",
+          "query_chars",
+          "title_tokens",
+          "body_tokens",
+          "title_chars",
+          "title_coverage",
+          "body_coverage",
+          "title_jaccard",
+          "body_jaccard",
+          "title_idf_coverage",
+          "body_idf_coverage",
+          "title_phrase",
+          "body_phrase",
+          "brand_mentioned",
+          "brand_token_coverage",
+          "query_numeric_count",
+          "title_numeric_coverage",
+          "body_numeric_coverage",
+          "query_has_negation",
+          "title_prefix_coverage",
+          "title_suffix_coverage",
+          "body_empty",
+          "brand_empty",
+          "attr_query_count",
+          "attr_product_count",
+          "attr_match_count",
+          "attr_conflict_count",
+          "attr_unknown_count",
+          "attr_match_fraction",
+          "attr_conflict_fraction",
+          "attr_unknown_fraction",
+          "attr_has_conflict",
+          "attr_ambiguous_query_count",
+          "attr_storage_query_count",
+          "attr_storage_match_count",
+          "attr_storage_conflict_count",
+          "attr_storage_unknown_count",
+          "attr_power_query_count",
+          "attr_power_match_count",
+          "attr_power_conflict_count",
+          "attr_power_unknown_count",
+          "attr_length_query_count",
+          "attr_length_match_count",
+          "attr_length_conflict_count",
+          "attr_length_unknown_count",
+          "attr_model_query_count",
+          "attr_model_match_count",
+          "attr_model_conflict_count",
+          "attr_model_unknown_count",
+          "attr_brand_query_count",
+          "attr_brand_match_count",
+          "attr_brand_conflict_count",
+          "attr_brand_unknown_count"
+        ]
+      },
+      "no_product_evidence": {
+        "num_leaves": 15,
+        "trees": 150,
+        "dev_ndcg10": 0.7389297763424368,
+        "fit_seconds": 4.37154316699889,
+        "trials": [
+          {
+            "num_leaves": 15,
+            "trees": 150,
+            "dev_ndcg10": 0.7389297763424368,
+            "fit_seconds": 4.37154316699889
+          },
+          {
+            "num_leaves": 31,
+            "trees": 114,
+            "dev_ndcg10": 0.7373241250400128,
+            "fit_seconds": 4.030171165999491
+          }
+        ],
+        "columns": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          37,
+          38,
+          42,
+          46,
+          50,
+          54
+        ],
+        "feature_names": [
+          "title_tfidf",
+          "body_tfidf",
+          "title_char_tfidf",
+          "title_bm25",
+          "body_bm25",
+          "query_tokens",
+          "query_chars",
+          "title_tokens",
+          "body_tokens",
+          "title_chars",
+          "title_coverage",
+          "body_coverage",
+          "title_jaccard",
+          "body_jaccard",
+          "title_idf_coverage",
+          "body_idf_coverage",
+          "title_phrase",
+          "body_phrase",
+          "brand_mentioned",
+          "brand_token_coverage",
+          "query_numeric_count",
+          "title_numeric_coverage",
+          "body_numeric_coverage",
+          "query_has_negation",
+          "title_prefix_coverage",
+          "title_suffix_coverage",
+          "body_empty",
+          "brand_empty",
+          "attr_query_count",
+          "attr_ambiguous_query_count",
+          "attr_storage_query_count",
+          "attr_power_query_count",
+          "attr_length_query_count",
+          "attr_model_query_count",
+          "attr_brand_query_count"
+        ]
+      }
+    },
+    "examples": [
+      "starter solenoid 18.5 h.p. briggs",
+      "iphone 7 phone cases for little girls",
+      "last of us 2",
+      "20x40 tent",
+      "stero for truck\\",
+      "x 256"
+    ],
+    "encoder_documents": 303198,
+    "encoder_sha256": "c3e31d131ca1e91a2f456b490082377f281f2254841a0a8d980ab01dd3d28dd4"
+  },
+  "feature_compute": {
+    "train": {
+      "rows": 354335,
+      "features": 58,
+      "seconds": 558.5761427500038,
+      "sha256": "eb440ab7a87ddfae855a64308d0f1f1d359d2dc5c48e8f62192f4a02169658da"
+    },
+    "dev": {
+      "rows": 63566,
+      "features": 58,
+      "seconds": 101.3326701670012,
+      "sha256": "80b1003219b9faa78a61a642ff58cb72097f5ac04545e018ae005207483a8209"
+    },
+    "test": {
+      "rows": 181701,
+      "features": 58,
+      "seconds": 89.8988212089971,
+      "sha256": "e7dd5586956dc6e48e2435b21e20549ec20e3abdd39224675871f36b5e6392dd"
+    }
+  },
+  "provenance": {
+    "protocol_sha256": "d4c553702f8960fbe623286dae844ded6870bde06c61383091f67c8aed09a907",
+    "selection_sha256": "7d303e4659b518c312952bbdf42a6c1c4e5de832a1c32110f37c00c4f50be375",
+    "source_sha256": {
+      "src/catalog_search/data.py": "fda863aba83086b6e637cabce6b4452f68e4d0d355c0c135296b4d05821e4e74",
+      "src/catalog_search/text.py": "4d95ec8f67336b3858f8911f791396f596155d41eb5be401ce3b65580265499f",
+      "src/catalog_search/features.py": "83d76b5ca9dc744d7dbb487d23812ae1dc4d794d1e7ae114257d3f0b08759306",
+      "src/catalog_search/attributes.py": "ca958699d4bf1dcf939fd5ef4ddc5eeaa967414e1925adf46b093eaf1ce7cc90",
+      "src/catalog_search/metrics.py": "4b30841cdc498e0690951f9adbf2067dfc28fe3011b9c8fbdb8a9e0193b084cc",
+      "src/catalog_search/experiment.py": "ed39a975b29b1a2a1a2da7ac43304aac4cf2545ed5558c375918657dda1628bd"
+    },
+    "config_sha256": "ecb3b35e56e0e2ffb5c4df1c07345d5afbdcacc27aa4a083e27a1464fb861f61",
+    "esci_input_files": {
+      "shopping_queries_dataset_examples.parquet": "4a735b693b4a424a6fc67f5be6e4c811495c488bbf66d02a602d308b2744263a",
+      "shopping_queries_dataset_products.parquet": "25124442d064d64b26f74082d6fa09438d679efc0c183cf28d19064a2b65a265"
+    },
+    "wands_sources": [
+      {
+        "source_id": "wands_query_csv",
+        "path": "dataset/query.csv",
+        "url": "https://raw.githubusercontent.com/wayfair/WANDS/3b74dcf4ba29ab8ff3e6a50b5b09fc627cb882b5/dataset/query.csv",
+        "bytes": 19942,
+        "sha256": "63b61660560fecc33ec490804c7e2b81402ee3e7c31a9cbb5e03736639f68e95"
+      },
+      {
+        "source_id": "wands_product_csv",
+        "path": "dataset/product.csv",
+        "url": "https://raw.githubusercontent.com/wayfair/WANDS/3b74dcf4ba29ab8ff3e6a50b5b09fc627cb882b5/dataset/product.csv",
+        "bytes": 90621131,
+        "sha256": "d993926254572e6eba96c8fd87cc549a17fb91ad3748308036eee4cf92b10ac6"
+      },
+      {
+        "source_id": "wands_label_csv",
+        "path": "dataset/label.csv",
+        "url": "https://raw.githubusercontent.com/wayfair/WANDS/3b74dcf4ba29ab8ff3e6a50b5b09fc627cb882b5/dataset/label.csv",
+        "bytes": 5736234,
+        "sha256": "c11fe81ad62f17f56f316b0ec9630ebe8fbe1393578cb0ca4f05c17253a180ef"
+      },
+      {
+        "source_id": "wands_license",
+        "path": "LICENSE",
+        "url": "https://raw.githubusercontent.com/wayfair/WANDS/3b74dcf4ba29ab8ff3e6a50b5b09fc627cb882b5/LICENSE",
+        "bytes": 1065,
+        "sha256": "e3ce14610132897db9f64e21d7871a7a60c0bc04364ec61e4faa99643c5072d6"
+      }
+    ]
+  },
+  "runtime_seconds": 1090.1198846670013,
+  "limitations": [
+    "Reranking judged pools; no full-catalogue recall or purchase/profit effect measured",
+    "Challenge-selected queries are not representative traffic",
+    "Current released test is public, with an internally frozen selection protocol",
+    "WANDS Partial is not ESCI Substitute; transfer gain/ambiguity scenarios are descriptive",
+    "Attribute evidence is conservative and soft, not certified physical compatibility",
+    "No new independent human attribute labels are claimed by this experiment"
+  ]
+}

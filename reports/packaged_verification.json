@@ -1,0 +1,40 @@
+{
+  "purpose": "Final installed wheel verification against source-reviewed web and saved real models; no model-quality recomputation",
+  "model_version": "catalog-v1-9840018ee12a",
+  "catalog_size": 30000,
+  "search_requests_passed": 18,
+  "api_report_matches_saved_json": true,
+  "cli_matches_http": true,
+  "outside_source_checkout": true,
+  "pythonpath_present": false,
+  "unknown_label_corrected": true,
+  "direction_independent_compare_copy": true,
+  "metric_labels_localized": true,
+  "packaged_web_assets": {
+    "index.html": {
+      "source_equals_installed": true,
+      "sha256": "8f7941c43b5de0e83a93a45383b3441e137332231a34bce4838205a4e9ebbe82",
+      "bytes": 15782
+    },
+    "styles.css": {
+      "source_equals_installed": true,
+      "sha256": "f912c9ab45098996f537946961f8d7eef9748999e4e0ddfd7e4a73ec0f3115d1",
+      "bytes": 55490
+    },
+    "app.js": {
+      "source_equals_installed": true,
+      "sha256": "58b2313d524289826cbe0280ca8a4e8adbe9d1086ec6a192864865d7c6c85618",
+      "bytes": 34740
+    },
+    "experiment.html": {
+      "source_equals_installed": true,
+      "sha256": "9e9706eab0ddda5c89236fcd6f4384f0bb0e8d672f8ca329c8e0907d42e7849f",
+      "bytes": 12407
+    },
+    "report.js": {
+      "source_equals_installed": true,
+      "sha256": "7472a2ddd75e3b2effb394fbbd68f45004499e841b542b3bc0ea2525f08ccf82",
+      "bytes": 14699
+    }
+  }
+}

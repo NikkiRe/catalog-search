@@ -1,0 +1,666 @@
+{
+  "scope": "Sequential in-process, warm process and shared feature cache; six TRAIN demo queries. Excludes HTTP/browser; not a traffic sample or concurrent load test.",
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "machine": "arm64",
+  "catalog_size": 30000,
+  "model_version": "catalog-v1-9840018ee12a",
+  "model_threads": 1,
+  "query_count": 6,
+  "repeats": 5,
+  "seed": 20261026,
+  "load_ms": 396.47579199663596,
+  "process_peak_rss_mib": 416.875,
+  "memory_scope": "Whole benchmark process including Python, imported libraries, catalog, index and models; not model-only RAM",
+  "methods": {
+    "bm25": {
+      "calls": 30,
+      "p50_ms": 14.150500497635221,
+      "p95_ms": 28.163246349140536,
+      "max_ms": 28.398959002515767
+    },
+    "baseline": {
+      "calls": 30,
+      "p50_ms": 63.34697950296686,
+      "p95_ms": 83.1810748535645,
+      "max_ms": 83.28566700220108
+    },
+    "attribute": {
+      "calls": 30,
+      "p50_ms": 63.83564550196752,
+      "p95_ms": 82.71574389873422,
+      "max_ms": 82.98829100385774
+    }
+  },
+  "calls": [
+    {
+      "query": "floating glass shelf 10 inches wide",
+      "mode": "baseline",
+      "milliseconds": 60.6363750048331,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "vena iphone 11 pro max wallet case",
+      "mode": "attribute",
+      "milliseconds": 70.34816699888324,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "vena iphone 11 pro max wallet case",
+      "mode": "attribute",
+      "milliseconds": 72.18991599802393,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "24 inch monitor",
+      "mode": "baseline",
+      "milliseconds": 53.24441700213356,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "vena iphone 11 pro max wallet case",
+      "mode": "bm25",
+      "milliseconds": 13.72579100279836,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "24 inch monitor",
+      "mode": "attribute",
+      "milliseconds": 53.81995900097536,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "floating glass shelf 10 inches wide",
+      "mode": "baseline",
+      "milliseconds": 59.71887499617878,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "2tb internal ssd hard drive",
+      "mode": "attribute",
+      "milliseconds": 52.0903750002617,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "2tb internal ssd hard drive",
+      "mode": "attribute",
+      "milliseconds": 52.35954200179549,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "asus laptop charger ux305c",
+      "mode": "baseline",
+      "milliseconds": 83.18587500252761,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "15w wireless charger white",
+      "mode": "baseline",
+      "milliseconds": 68.78124999639113,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "asus laptop charger ux305c",
+      "mode": "baseline",
+      "milliseconds": 83.28566700220108,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "asus laptop charger ux305c",
+      "mode": "bm25",
+      "milliseconds": 28.398959002515767,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "floating glass shelf 10 inches wide",
+      "mode": "baseline",
+      "milliseconds": 59.24508300086018,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "2tb internal ssd hard drive",
+      "mode": "attribute",
+      "milliseconds": 53.110582994122524,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "15w wireless charger white",
+      "mode": "attribute",
+      "milliseconds": 69.21687500289408,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "vena iphone 11 pro max wallet case",
+      "mode": "baseline",
+      "milliseconds": 67.88420800148742,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "floating glass shelf 10 inches wide",
+      "mode": "baseline",
+      "milliseconds": 58.73287499707658,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "15w wireless charger white",
+      "mode": "bm25",
+      "milliseconds": 15.959249998559244,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "asus laptop charger ux305c",
+      "mode": "bm25",
+      "milliseconds": 28.19808400090551,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "2tb internal ssd hard drive",
+      "mode": "bm25",
+      "milliseconds": 8.751082998060156,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "15w wireless charger white",
+      "mode": "attribute",
+      "milliseconds": 67.69179199909559,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "floating glass shelf 10 inches wide",
+      "mode": "baseline",
+      "milliseconds": 58.81733400019584,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "15w wireless charger white",
+      "mode": "bm25",
+      "milliseconds": 16.05037500121398,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "15w wireless charger white",
+      "mode": "attribute",
+      "milliseconds": 67.2849580005277,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "24 inch monitor",
+      "mode": "baseline",
+      "milliseconds": 53.278750005119946,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "2tb internal ssd hard drive",
+      "mode": "baseline",
+      "milliseconds": 52.22058300569188,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "floating glass shelf 10 inches wide",
+      "mode": "bm25",
+      "milliseconds": 14.610500002163462,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "vena iphone 11 pro max wallet case",
+      "mode": "bm25",
+      "milliseconds": 13.348459004191682,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "2tb internal ssd hard drive",
+      "mode": "baseline",
+      "milliseconds": 52.00524999963818,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "vena iphone 11 pro max wallet case",
+      "mode": "baseline",
+      "milliseconds": 68.06929099548142,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "vena iphone 11 pro max wallet case",
+      "mode": "attribute",
+      "milliseconds": 70.06533299863804,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "asus laptop charger ux305c",
+      "mode": "attribute",
+      "milliseconds": 82.49870799772907,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "15w wireless charger white",
+      "mode": "bm25",
+      "milliseconds": 16.650292003760114,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "vena iphone 11 pro max wallet case",
+      "mode": "baseline",
+      "milliseconds": 68.13799999508774,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "asus laptop charger ux305c",
+      "mode": "attribute",
+      "milliseconds": 81.36633400135906,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "24 inch monitor",
+      "mode": "attribute",
+      "milliseconds": 52.815166003711056,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "vena iphone 11 pro max wallet case",
+      "mode": "bm25",
+      "milliseconds": 13.852042000507936,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "24 inch monitor",
+      "mode": "bm25",
+      "milliseconds": 11.058000003686175,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "24 inch monitor",
+      "mode": "attribute",
+      "milliseconds": 51.528374999179505,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "asus laptop charger ux305c",
+      "mode": "baseline",
+      "milliseconds": 83.1752080048318,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "2tb internal ssd hard drive",
+      "mode": "bm25",
+      "milliseconds": 8.96150000335183,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "24 inch monitor",
+      "mode": "bm25",
+      "milliseconds": 11.104124998382758,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "15w wireless charger white",
+      "mode": "baseline",
+      "milliseconds": 66.05758400110062,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "vena iphone 11 pro max wallet case",
+      "mode": "attribute",
+      "milliseconds": 68.81449999491451,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "asus laptop charger ux305c",
+      "mode": "attribute",
+      "milliseconds": 82.55516699864529,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "15w wireless charger white",
+      "mode": "bm25",
+      "milliseconds": 16.619208996417,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "floating glass shelf 10 inches wide",
+      "mode": "bm25",
+      "milliseconds": 14.448958994762506,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "vena iphone 11 pro max wallet case",
+      "mode": "attribute",
+      "milliseconds": 69.20804199762642,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "2tb internal ssd hard drive",
+      "mode": "baseline",
+      "milliseconds": 52.79662500106497,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "vena iphone 11 pro max wallet case",
+      "mode": "bm25",
+      "milliseconds": 13.602250000985805,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "vena iphone 11 pro max wallet case",
+      "mode": "baseline",
+      "milliseconds": 67.1000410002307,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "15w wireless charger white",
+      "mode": "bm25",
+      "milliseconds": 16.828040999826044,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "15w wireless charger white",
+      "mode": "attribute",
+      "milliseconds": 67.69650000205729,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "floating glass shelf 10 inches wide",
+      "mode": "attribute",
+      "milliseconds": 58.98695799987763,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "2tb internal ssd hard drive",
+      "mode": "baseline",
+      "milliseconds": 51.64175000390969,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "asus laptop charger ux305c",
+      "mode": "bm25",
+      "milliseconds": 28.120666996983346,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "24 inch monitor",
+      "mode": "bm25",
+      "milliseconds": 11.13108299614396,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "24 inch monitor",
+      "mode": "baseline",
+      "milliseconds": 50.613540995982476,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "15w wireless charger white",
+      "mode": "baseline",
+      "milliseconds": 67.35729200590868,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "floating glass shelf 10 inches wide",
+      "mode": "attribute",
+      "milliseconds": 58.72908300079871,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "vena iphone 11 pro max wallet case",
+      "mode": "bm25",
+      "milliseconds": 13.570458999311086,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "24 inch monitor",
+      "mode": "bm25",
+      "milliseconds": 10.868792000110261,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "24 inch monitor",
+      "mode": "baseline",
+      "milliseconds": 51.48804099735571,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "asus laptop charger ux305c",
+      "mode": "baseline",
+      "milliseconds": 82.48399999865796,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "24 inch monitor",
+      "mode": "baseline",
+      "milliseconds": 52.550458000041544,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "2tb internal ssd hard drive",
+      "mode": "attribute",
+      "milliseconds": 51.67995800002245,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "15w wireless charger white",
+      "mode": "baseline",
+      "milliseconds": 67.34254099865211,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "asus laptop charger ux305c",
+      "mode": "attribute",
+      "milliseconds": 82.84712499880698,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "floating glass shelf 10 inches wide",
+      "mode": "bm25",
+      "milliseconds": 14.86487499641953,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "2tb internal ssd hard drive",
+      "mode": "bm25",
+      "milliseconds": 8.963457999925595,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "floating glass shelf 10 inches wide",
+      "mode": "attribute",
+      "milliseconds": 58.67237499478506,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "vena iphone 11 pro max wallet case",
+      "mode": "baseline",
+      "milliseconds": 68.25562500307569,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "floating glass shelf 10 inches wide",
+      "mode": "bm25",
+      "milliseconds": 14.628624994657002,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "asus laptop charger ux305c",
+      "mode": "baseline",
+      "milliseconds": 82.86316599696875,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "2tb internal ssd hard drive",
+      "mode": "bm25",
+      "milliseconds": 9.153833001619205,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "2tb internal ssd hard drive",
+      "mode": "baseline",
+      "milliseconds": 51.059333003649954,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "2tb internal ssd hard drive",
+      "mode": "bm25",
+      "milliseconds": 8.70862499868963,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "floating glass shelf 10 inches wide",
+      "mode": "bm25",
+      "milliseconds": 14.658374995633494,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "15w wireless charger white",
+      "mode": "attribute",
+      "milliseconds": 68.46495899662841,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "24 inch monitor",
+      "mode": "bm25",
+      "milliseconds": 11.086165999586228,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "15w wireless charger white",
+      "mode": "baseline",
+      "milliseconds": 69.25758300349116,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "floating glass shelf 10 inches wide",
+      "mode": "attribute",
+      "milliseconds": 60.386333003407344,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "asus laptop charger ux305c",
+      "mode": "bm25",
+      "milliseconds": 27.951042000495363,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "asus laptop charger ux305c",
+      "mode": "bm25",
+      "milliseconds": 28.021209000144154,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "2tb internal ssd hard drive",
+      "mode": "attribute",
+      "milliseconds": 52.25008300476475,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "asus laptop charger ux305c",
+      "mode": "attribute",
+      "milliseconds": 82.98829100385774,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "24 inch monitor",
+      "mode": "attribute",
+      "milliseconds": 53.41687500185799,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "floating glass shelf 10 inches wide",
+      "mode": "attribute",
+      "milliseconds": 59.1675839968957,
+      "results": 12,
+      "candidates": 150
+    },
+    {
+      "query": "24 inch monitor",
+      "mode": "attribute",
+      "milliseconds": 53.90550000447547,
+      "results": 12,
+      "candidates": 150
+    }
+  ]
+}

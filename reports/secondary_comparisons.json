@@ -1,0 +1,24 @@
+{
+  "status": "secondary unadjusted diagnostics; primary unchanged",
+  "source_per_query_sha256": "3cd37c2eff9cdb68acb58fb904b2842f954de6e729a58306866543721086a995",
+  "attribute_minus_query_only": {
+    "difference": 0.0015746718163237865,
+    "ci_low": 0.0006322679070882827,
+    "ci_high": 0.0025204965096586457,
+    "families": 8938,
+    "queries": 8956,
+    "bootstrap_repeats": 5000,
+    "unit": "normalized query family",
+    "metric": "mean query NDCG@10"
+  },
+  "query_only_minus_baseline": {
+    "difference": -0.00015690670810070308,
+    "ci_low": -0.0006404976036796476,
+    "ci_high": 0.0003051678799007241,
+    "families": 8938,
+    "queries": 8956,
+    "bootstrap_repeats": 5000,
+    "unit": "normalized query family",
+    "metric": "mean query NDCG@10"
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "source_revision": "7916cdf6ab75a462e77f20ab40428a10923998d5",
+  "created_utc": "2026-10-26T12:10:31.755161+00:00",
+  "input_files": {
+    "shopping_queries_dataset_examples.parquet": "4a735b693b4a424a6fc67f5be6e4c811495c488bbf66d02a602d308b2744263a",
+    "shopping_queries_dataset_products.parquet": "25124442d064d64b26f74082d6fa09438d679efc0c183cf28d19064a2b65a265"
+  },
+  "config": {
+    "seed": 20261026,
+    "locale": "us",
+    "subset": "small_version",
+    "development_fraction": 0.15,
+    "word_features": 60000,
+    "character_features": 40000,
+    "num_leaves": [
+      15,
+      31
+    ],
+    "learning_rate": 0.05,
+    "max_iterations": 500,
+    "early_stopping_rounds": 40,
+    "min_child_samples": 80,
+    "threads": 6,
+    "bootstrap_repeats": 5000,
+    "primary": "attribute minus baseline mean query NDCG@10 on all released US-small test queries",
+    "gain_map": {
+      "I": 0,
+      "C": 0.01,
+      "S": 0.1,
+      "E": 1
+    },
+    "demo_catalog_size": 30000,
+    "candidate_limit": 150,
+    "wands_primary_gain_map": {
+      "Irrelevant": 0,
+      "Partial": 0,
+      "Exact": 1
+    },
+    "wands_sensitivity_partial_gains": [
+      0.1,
+      0.5
+    ],
+    "include_query_only_ablation": true
+  },
+  "normalization_source_sha256": "4d95ec8f67336b3858f8911f791396f596155d41eb5be401ce3b65580265499f",
+  "rows": 599602,
+  "products": 481483,
+  "queries": 29764,
+  "excluded_official_train_queries": 80,
+  "excluded_families": 50,
+  "partition_counts": [
+    {
+      "partition": "dev",
+      "pairs": 63566,
+      "queries": 3145,
+      "families": 3138
+    },
+    {
+      "partition": "test",
+      "pairs": 181701,
+      "queries": 8956,
+      "families": 8938
+    },
+    {
+      "partition": "train",
+      "pairs": 354335,
+      "queries": 17663,
+      "families": 17610
+    }
+  ],
+  "test_product_count": 164900,
+  "test_products_seen_in_train": 31164,
+  "prepared_sha256": {
+    "dev.parquet": "a9f50657faf746c48a8fab01bc2c8db419e56cbee9df3028aa4b9c1d2c51db08",
+    "excluded_overlap_queries.parquet": "4d7dfbc408542aa1080c1e7aaea64410c15d0b2bad2732b117deb68f6f53dc88",
+    "products.parquet": "fa80a0fbd09af8f00e3c9080a93bb80aca707a56c0fd04a91812356ab7f2d38d",
+    "queries.parquet": "0be23b67bc3a24a57c0c3591dc3c56c0cd093c70f9ac2beca0a5bbabd1d22e11",
+    "test.parquet": "b6233eae65f80acfa75458245fc3681f50a7f4a449776c53f2ffce8a57a1b568",
+    "train.parquet": "def7221487e8341e215383e1cb6f005b25eb9ad78cad2bfb272b73b226d0603b"
+  },
+  "text_limits": {
+    "title": 512,
+    "brand": 128,
+    "description": 1536,
+    "attributes": 1536
+  },
+  "note": "Split audit only; no model performance evaluated. All released test queries retained."
+}

@@ -1,0 +1,37 @@
+{
+  "seed": 20261026,
+  "locale": "us",
+  "subset": "small_version",
+  "development_fraction": 0.15,
+  "word_features": 60000,
+  "character_features": 40000,
+  "num_leaves": [
+    15,
+    31
+  ],
+  "learning_rate": 0.05,
+  "max_iterations": 500,
+  "early_stopping_rounds": 40,
+  "min_child_samples": 80,
+  "threads": 6,
+  "bootstrap_repeats": 5000,
+  "primary": "attribute minus baseline mean query NDCG@10 on all released US-small test queries",
+  "gain_map": {
+    "I": 0,
+    "C": 0.01,
+    "S": 0.1,
+    "E": 1
+  },
+  "demo_catalog_size": 30000,
+  "candidate_limit": 150,
+  "wands_primary_gain_map": {
+    "Irrelevant": 0,
+    "Partial": 0,
+    "Exact": 1
+  },
+  "wands_sensitivity_partial_gains": [
+    0.1,
+    0.5
+  ],
+  "include_query_only_ablation": true
+}

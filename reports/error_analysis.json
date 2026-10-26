@@ -1,0 +1,3572 @@
+{
+  "status": "post_hoc_illustrations_only",
+  "selection": "Five largest and five smallest attribute-minus-baseline query NDCG@10 differences; ties by seeded query-ID hash",
+  "seed": 20261026,
+  "limitations": "Outcome-selected examples; not a random audit, causal explanations, attribute accuracy labels or new human annotations. No subsequent training uses these examples.",
+  "examples": {
+    "largest_gains": [
+      {
+        "query_id": "111697",
+        "family": "wildflower phone cases for iphone x",
+        "candidates": 16,
+        "has_exact": true,
+        "zero_idcg": false,
+        "baseline_ndcg10": 0.4272752977562844,
+        "baseline_ndcg_all": 0.688361913275172,
+        "baseline_exact_recall10": 0.42857142857142855,
+        "baseline_mrr": 0.5,
+        "attribute_ndcg10": 0.9827683574718737,
+        "attribute_ndcg_all": 0.9834614020832565,
+        "attribute_exact_recall10": 1.0,
+        "attribute_mrr": 1.0,
+        "no_product_evidence_ndcg10": 0.5163615972783611,
+        "no_product_evidence_ndcg_all": 0.7738652241337454,
+        "no_product_evidence_exact_recall10": 0.42857142857142855,
+        "no_product_evidence_mrr": 1.0,
+        "bm25_ndcg10": 0.5818230677177916,
+        "bm25_ndcg_all": 0.7725369791736336,
+        "bm25_exact_recall10": 0.5714285714285714,
+        "bm25_mrr": 1.0,
+        "tfidf_ndcg10": 0.39484263246378254,
+        "tfidf_ndcg_all": 0.7165320222867173,
+        "tfidf_exact_recall10": 0.2857142857142857,
+        "tfidf_mrr": 0.5,
+        "rule_ndcg10": 0.9476594597881662,
+        "rule_ndcg_all": 0.9497645597106762,
+        "rule_exact_recall10": 1.0,
+        "rule_mrr": 1.0,
+        "delta": 0.5554930597155894,
+        "selection_tie_hash": 2382983717084191734,
+        "query": "wildflower phone cases for iphone x",
+        "top_products": {
+          "baseline": [
+            {
+              "product_id": "B07JNCMMD3",
+              "title": "Wildflower Limited Edition Cases Compatible with iPhone Xs Max (Moo Moo)",
+              "label": "S",
+              "score": 0.7675724167729441,
+              "tie_order": 2936535114393473614,
+              "attribute_evidence": [
+                {
+                  "kind": "model",
+                  "query": {
+                    "text": "iphone x",
+                    "span": [
+                      27,
+                      35
+                    ],
+                    "confidence": "high",
+                    "kind": "model",
+                    "value": "iphonex",
+                    "unit": null,
+                    "operator": "eq",
+                    "explicit": false,
+                    "role": "iphone",
+                    "coverage": true,
+                    "ambiguous": false,
+                    "uncertainty": null
+                  },
+                  "status": "conflict",
+                  "reason": "different identifiers in the same family or role",
+                  "product": [
+                    {
+                      "text": "iPhone Xs Max",
+                      "span": [
+                        49,
+                        62
+                      ],
+                      "confidence": "high",
+                      "kind": "model",
+                      "value": "iphonexsmax",
+                      "unit": null,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "iphone",
+                      "coverage": true,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "title"
+                    },
+                    {
+                      "text": "iPhone Xs Max",
+                      "span": [
+                        49,
+                        62
+                      ],
+                      "confidence": "high",
+                      "kind": "model",
+                      "value": "iphonexsmax",
+                      "unit": null,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "iphone",
+                      "coverage": true,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    },
+                    {
+                      "text": "iPhone XS Max",
+                      "span": [
+                        177,
+                        190
+                      ],
+                      "confidence": "high",
+                      "kind": "model",
+                      "value": "iphonexsmax",
+                      "unit": null,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "iphone",
+                      "coverage": false,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    },
+                    {
+                      "text": "iPhone XS Max",
+                      "span": [
+                        246,
+                        259
+                      ],
+                      "confidence": "high",
+                      "kind": "model",
+                      "value": "iphonexsmax",
+                      "unit": null,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "iphone",
+                      "coverage": true,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    },
+                    {
+                      "text": "iPhone XS Max",
+                      "span": [
+                        424,
+                        437
+                      ],
+                      "confidence": "high",
+                      "kind": "model",
+                      "value": "iphonexsmax",
+                      "unit": null,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "iphone",
+                      "coverage": true,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    },
+                    {
+                      "text": "iPhone XS Max",
+                      "span": [
+                        973,
+                        986
+                      ],
+                      "confidence": "high",
+                      "kind": "model",
+                      "value": "iphonexsmax",
+                      "unit": null,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "iphone",
+                      "coverage": true,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "product_id": "B083V298C4",
+              "title": "Wildflower Blue Tie Dye iPhone X/Xs Case",
+              "label": "E",
+              "score": 0.7634807392909355,
+              "tie_order": 12912611291587143684,
+              "attribute_evidence": [
+                {
+                  "kind": "model",
+                  "query": {
+                    "text": "iphone x",
+                    "span": [
+                      27,
+                      35
+                    ],
+                    "confidence": "high",
+                    "kind": "model",
+                    "value": "iphonex",
+                    "unit": null,
+                    "operator": "eq",
+                    "explicit": false,
+                    "role": "iphone",
+                    "coverage": true,
+                    "ambiguous": false,
+                    "uncertainty": null
+                  },
+                  "status": "match",
+                  "reason": "same identifier",
+                  "product": [
+                    {
+                      "text": "iPhone X",
+                      "span": [
+                        24,
+                        32
+                      ],
+                      "confidence": "high",
+                      "kind": "model",
+                      "value": "iphonex",
+                      "unit": null,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "iphone",
+                      "coverage": false,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "title"
+                    },
+                    {
+                      "text": "iPhone X",
+                      "span": [
+                        24,
+                        32
+                      ],
+                      "confidence": "high",
+                      "kind": "model",
+                      "value": "iphonex",
+                      "unit": null,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "iphone",
+                      "coverage": false,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    },
+                    {
+                      "text": "iPhone X",
+                      "span": [
+                        76,
+                        84
+                      ],
+                      "confidence": "high",
+                      "kind": "model",
+                      "value": "iphonex",
+                      "unit": null,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "iphone",
+                      "coverage": false,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    },
+                    {
+                      "text": "iPhone X",
+                      "span": [
+                        360,
+                        368
+                      ],
+                      "confidence": "high",
+                      "kind": "model",
+                      "value": "iphonex",
+                      "unit": null,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "iphone",
+                      "coverage": false,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "product_id": "B07Y26P8P7",
+              "title": "Wildflower Limited Edition Cases Compatible with iPhone 11 Pro Max (Butterfly)",
+              "label": "S",
+              "score": 0.7497125009377898,
+              "tie_order": 12996102443963169592,
+              "attribute_evidence": [
+                {
+                  "kind": "model",
+                  "query": {
+                    "text": "iphone x",
+                    "span": [
+                      27,
+                      35
+                    ],
+                    "confidence": "high",
+                    "kind": "model",
+                    "value": "iphonex",
+                    "unit": null,
+                    "operator": "eq",
+                    "explicit": false,
+                    "role": "iphone",
+                    "coverage": true,
+                    "ambiguous": false,
+                    "uncertainty": null
+                  },
+                  "status": "conflict",
+                  "reason": "different identifiers in the same family or role",
+                  "product": [
+                    {
+                      "text": "iPhone 11 Pro Max",
+                      "span": [
+                        49,
+                        66
+                      ],
+                      "confidence": "high",
+                      "kind": "model",
+                      "value": "iphone11promax",
+                      "unit": null,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "iphone",
+                      "coverage": true,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "title"
+                    },
+                    {
+                      "text": "iPhone 11 Pro Max",
+                      "span": [
+                        49,
+                        66
+                      ],
+                      "confidence": "high",
+                      "kind": "model",
+                      "value": "iphone11promax",
+                      "unit": null,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "iphone",
+                      "coverage": true,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    },
+                    {
+                      "text": "iPhone 11 Pro Max",
+                      "span": [
+                        181,
+                        198
+                      ],
+                      "confidence": "high",
+                      "kind": "model",
+                      "value": "iphone11promax",
+                      "unit": null,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "iphone",
+                      "coverage": false,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    },
+                    {
+                      "text": "iPhone 11 Pro Max",
+                      "span": [
+                        250,
+                        267
+                      ],
+                      "confidence": "high",
+                      "kind": "model",
+                      "value": "iphone11promax",
+                      "unit": null,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "iphone",
+                      "coverage": true,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    },
+                    {
+                      "text": "iPhone 11 Pro Max",
+                      "span": [
+                        433,
+                        450
+                      ],
+                      "confidence": "high",
+                      "kind": "model",
+                      "value": "iphone11promax",
+                      "unit": null,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "iphone",
+                      "coverage": true,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    },
+                    {
+                      "text": "iPhone 11 Pro Max",
+                      "span": [
+                        985,
+                        1002
+                      ],
+                      "confidence": "high",
+                      "kind": "model",
+                      "value": "iphone11promax",
+                      "unit": null,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "iphone",
+                      "coverage": true,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "attribute": [
+            {
+              "product_id": "B083V298C4",
+              "title": "Wildflower Blue Tie Dye iPhone X/Xs Case",
+              "label": "E",
+              "score": 1.0188755336606194,
+              "tie_order": 12912611291587143684,
+              "attribute_evidence": [
+                {
+                  "kind": "model",
+                  "query": {
+                    "text": "iphone x",
+                    "span": [
+                      27,
+                      35
+                    ],
+                    "confidence": "high",
+                    "kind": "model",
+                    "value": "iphonex",
+                    "unit": null,
+                    "operator": "eq",
+                    "explicit": false,
+                    "role": "iphone",
+                    "coverage": true,
+                    "ambiguous": false,
+                    "uncertainty": null
+                  },
+                  "status": "match",
+                  "reason": "same identifier",
+                  "product": [
+                    {
+                      "text": "iPhone X",
+                      "span": [
+                        24,
+                        32
+                      ],
+                      "confidence": "high",
+                      "kind": "model",
+                      "value": "iphonex",
+                      "unit": null,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "iphone",
+                      "coverage": false,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "title"
+                    },
+                    {
+                      "text": "iPhone X",
+                      "span": [
+                        24,
+                        32
+                      ],
+                      "confidence": "high",
+                      "kind": "model",
+                      "value": "iphonex",
+                      "unit": null,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "iphone",
+                      "coverage": false,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    },
+                    {
+                      "text": "iPhone X",
+                      "span": [
+                        76,
+                        84
+                      ],
+                      "confidence": "high",
+                      "kind": "model",
+                      "value": "iphonex",
+                      "unit": null,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "iphone",
+                      "coverage": false,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    },
+                    {
+                      "text": "iPhone X",
+                      "span": [
+                        360,
+                        368
+                      ],
+                      "confidence": "high",
+                      "kind": "model",
+                      "value": "iphonex",
+                      "unit": null,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "iphone",
+                      "coverage": false,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "product_id": "B07W8TV9Y9",
+              "title": "Wildflower Limited Edition Cases Compatible with iPhone X and XS (Devil Angel)",
+              "label": "E",
+              "score": 0.8834649780626709,
+              "tie_order": 1376961356864261648,
+              "attribute_evidence": [
+                {
+                  "kind": "model",
+                  "query": {
+                    "text": "iphone x",
+                    "span": [
+                      27,
+                      35
+                    ],
+                    "confidence": "high",
+                    "kind": "model",
+                    "value": "iphonex",
+                    "unit": null,
+                    "operator": "eq",
+                    "explicit": false,
+                    "role": "iphone",
+                    "coverage": true,
+                    "ambiguous": false,
+                    "uncertainty": null
+                  },
+                  "status": "match",
+                  "reason": "same identifier",
+                  "product": [
+                    {
+                      "text": "iPhone X",
+                      "span": [
+                        49,
+                        57
+                      ],
+                      "confidence": "high",
+                      "kind": "model",
+                      "value": "iphonex",
+                      "unit": null,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "iphone",
+                      "coverage": true,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "title"
+                    },
+                    {
+                      "text": "iPhone X",
+                      "span": [
+                        49,
+                        57
+                      ],
+                      "confidence": "high",
+                      "kind": "model",
+                      "value": "iphonex",
+                      "unit": null,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "iphone",
+                      "coverage": true,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "product_id": "B0767CZNLD",
+              "title": "Wildflower Limited Edition Cases Compatible with iPhone X and XS (White & Black Checkered)",
+              "label": "E",
+              "score": 0.822929991218542,
+              "tie_order": 8044640776266547914,
+              "attribute_evidence": [
+                {
+                  "kind": "model",
+                  "query": {
+                    "text": "iphone x",
+                    "span": [
+                      27,
+                      35
+                    ],
+                    "confidence": "high",
+                    "kind": "model",
+                    "value": "iphonex",
+                    "unit": null,
+                    "operator": "eq",
+                    "explicit": false,
+                    "role": "iphone",
+                    "coverage": true,
+                    "ambiguous": false,
+                    "uncertainty": null
+                  },
+                  "status": "match",
+                  "reason": "same identifier",
+                  "product": [
+                    {
+                      "text": "iPhone X",
+                      "span": [
+                        49,
+                        57
+                      ],
+                      "confidence": "high",
+                      "kind": "model",
+                      "value": "iphonex",
+                      "unit": null,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "iphone",
+                      "coverage": true,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "title"
+                    },
+                    {
+                      "text": "iPhone X",
+                      "span": [
+                        49,
+                        57
+                      ],
+                      "confidence": "high",
+                      "kind": "model",
+                      "value": "iphonex",
+                      "unit": null,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "iphone",
+                      "coverage": true,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "query_id": "5673",
+        "family": "i want a replacement chrome book with a touch screen so really it would be an upgrade i want a large screen and a good memory",
+        "candidates": 13,
+        "has_exact": true,
+        "zero_idcg": false,
+        "baseline_ndcg10": 0.5038324315244963,
+        "baseline_ndcg_all": 0.5038324315244963,
+        "baseline_exact_recall10": 1.0,
+        "baseline_mrr": 0.3333333333333333,
+        "attribute_ndcg10": 1.0,
+        "attribute_ndcg_all": 1.0,
+        "attribute_exact_recall10": 1.0,
+        "attribute_mrr": 1.0,
+        "no_product_evidence_ndcg10": 0.5067151163730368,
+        "no_product_evidence_ndcg_all": 0.5067151163730368,
+        "no_product_evidence_exact_recall10": 1.0,
+        "no_product_evidence_mrr": 0.3333333333333333,
+        "bm25_ndcg10": 1.0,
+        "bm25_ndcg_all": 1.0,
+        "bm25_exact_recall10": 1.0,
+        "bm25_mrr": 1.0,
+        "tfidf_ndcg10": 0.43479080049106916,
+        "tfidf_ndcg_all": 0.43479080049106916,
+        "tfidf_exact_recall10": 1.0,
+        "tfidf_mrr": 0.25,
+        "rule_ndcg10": 0.5038324315244963,
+        "rule_ndcg_all": 0.5038324315244963,
+        "rule_exact_recall10": 1.0,
+        "rule_mrr": 0.3333333333333333,
+        "delta": 0.4961675684755037,
+        "selection_tie_hash": 793616928189738218,
+        "query": "I want a replacement chrome book with a touch screen. So really it would be an upgrade. I want a large screen and a good memory ",
+        "top_products": {
+          "baseline": [
+            {
+              "product_id": "B083VRH7Y8",
+              "title": "Baby/Toddler/Kid 'I See It, I Like It, I Want It, DAD Bought It Shirt",
+              "label": "I",
+              "score": -0.551566803674874,
+              "tie_order": 9185202596838977716,
+              "attribute_evidence": []
+            },
+            {
+              "product_id": "B07VN9822G",
+              "title": "Jellycat Board Books, If I were a Panda",
+              "label": "I",
+              "score": -0.6290938285348421,
+              "tie_order": 17894959105652537621,
+              "attribute_evidence": []
+            },
+            {
+              "product_id": "B07GM2J11Q",
+              "title": "Lenovo Chromebook C330 2-in-1 Convertible Laptop, 11.6-Inch HD (1366 x 768) IPS Display, MediaTek MT8173C Processor, 4GB LPDDR3, 64 GB eMMC, Chrome OS, 81HY0000US, Blizzard White",
+              "label": "E",
+              "score": -0.6380405562857906,
+              "tie_order": 10800471368306524853,
+              "attribute_evidence": []
+            }
+          ],
+          "attribute": [
+            {
+              "product_id": "B07GM2J11Q",
+              "title": "Lenovo Chromebook C330 2-in-1 Convertible Laptop, 11.6-Inch HD (1366 x 768) IPS Display, MediaTek MT8173C Processor, 4GB LPDDR3, 64 GB eMMC, Chrome OS, 81HY0000US, Blizzard White",
+              "label": "E",
+              "score": -0.39729346373142044,
+              "tie_order": 10800471368306524853,
+              "attribute_evidence": []
+            },
+            {
+              "product_id": "B07GLV1VC7",
+              "title": "Lenovo Chromebook S330 Laptop, 14-Inch FHD (1920 x 1080) Display, MediaTek MT8173C Processor, 4GB LPDDR3, 64GB eMMC, Chrome OS, 81JW0000US, Business Black",
+              "label": "S",
+              "score": -0.6188901116546599,
+              "tie_order": 15912123610263266577,
+              "attribute_evidence": []
+            },
+            {
+              "product_id": "B083VRH7Y8",
+              "title": "Baby/Toddler/Kid 'I See It, I Like It, I Want It, DAD Bought It Shirt",
+              "label": "I",
+              "score": -0.7716196823845483,
+              "tie_order": 9185202596838977716,
+              "attribute_evidence": []
+            }
+          ]
+        }
+      },
+      {
+        "query_id": "20180",
+        "family": "bt number",
+        "candidates": 16,
+        "has_exact": true,
+        "zero_idcg": false,
+        "baseline_ndcg10": 0.38206820940224584,
+        "baseline_ndcg_all": 0.48739385452700884,
+        "baseline_exact_recall10": 1.0,
+        "baseline_mrr": 0.2,
+        "attribute_ndcg10": 0.85613389580686,
+        "attribute_ndcg_all": 0.9317123782103938,
+        "attribute_exact_recall10": 1.0,
+        "attribute_mrr": 1.0,
+        "no_product_evidence_ndcg10": 0.38206820940224584,
+        "no_product_evidence_ndcg_all": 0.48739385452700884,
+        "no_product_evidence_exact_recall10": 1.0,
+        "no_product_evidence_mrr": 0.2,
+        "bm25_ndcg10": 0.40309308192651777,
+        "bm25_ndcg_all": 0.4902949983045119,
+        "bm25_exact_recall10": 1.0,
+        "bm25_mrr": 0.125,
+        "tfidf_ndcg10": 0.40309308192651777,
+        "tfidf_ndcg_all": 0.4902949983045119,
+        "tfidf_exact_recall10": 1.0,
+        "tfidf_mrr": 0.125,
+        "rule_ndcg10": 0.3801189396564711,
+        "rule_ndcg_all": 0.4854839217285967,
+        "rule_exact_recall10": 1.0,
+        "rule_mrr": 0.2,
+        "delta": 0.4740656864046141,
+        "selection_tie_hash": 2919932042778853150,
+        "query": "bt-705",
+        "top_products": {
+          "baseline": [
+            {
+              "product_id": "B0824T3625",
+              "title": "HP EliteDesk 705 G2 Mini Business Desktop PC, AMD A10 PRO-8700B up to 3.2GHz, 8G DDR3, 500G, WiFi, BT 4.0, DVD, Windows 10 64-Multi-Language Support English/Spanish/French(Renewed)",
+              "label": "I",
+              "score": -0.5197515515958661,
+              "tie_order": 7177705499722296826,
+              "attribute_evidence": [
+                {
+                  "kind": "model",
+                  "query": {
+                    "text": "bt-705",
+                    "span": [
+                      0,
+                      6
+                    ],
+                    "confidence": "high",
+                    "kind": "model",
+                    "value": "bt705",
+                    "unit": null,
+                    "operator": "eq",
+                    "explicit": false,
+                    "role": "sku:bt",
+                    "coverage": false,
+                    "ambiguous": false,
+                    "uncertainty": null
+                  },
+                  "status": "unknown",
+                  "reason": "no comparable explicit specification",
+                  "product": []
+                }
+              ]
+            },
+            {
+              "product_id": "B0824T75K4",
+              "title": "HP EliteDesk 705 G2 Mini Business Desktop PC, AMD A10 PRO-8700B up to 3.2GHz, 8G DDR3, 1T, WiFi, BT 4.0, DVD, Windows 10 64-Multi-Language Support English/Spanish/French(Renewed)",
+              "label": "I",
+              "score": -0.5197515515958661,
+              "tie_order": 16236691338080759400,
+              "attribute_evidence": [
+                {
+                  "kind": "model",
+                  "query": {
+                    "text": "bt-705",
+                    "span": [
+                      0,
+                      6
+                    ],
+                    "confidence": "high",
+                    "kind": "model",
+                    "value": "bt705",
+                    "unit": null,
+                    "operator": "eq",
+                    "explicit": false,
+                    "role": "sku:bt",
+                    "coverage": false,
+                    "ambiguous": false,
+                    "uncertainty": null
+                  },
+                  "status": "unknown",
+                  "reason": "no comparable explicit specification",
+                  "product": []
+                }
+              ]
+            },
+            {
+              "product_id": "B0824T43QP",
+              "title": "HP EliteDesk 705 G2 Mini Business Desktop PC, AMD A10 PRO-8700B up to 3.2GHz, 8G DDR3, 512G SSD, WiFi, BT 4.0, DVD, Windows 10 64-Multi-Language Support English/Spanish/French(Renewed)",
+              "label": "I",
+              "score": -0.5550626556803157,
+              "tie_order": 253966391686419099,
+              "attribute_evidence": [
+                {
+                  "kind": "model",
+                  "query": {
+                    "text": "bt-705",
+                    "span": [
+                      0,
+                      6
+                    ],
+                    "confidence": "high",
+                    "kind": "model",
+                    "value": "bt705",
+                    "unit": null,
+                    "operator": "eq",
+                    "explicit": false,
+                    "role": "sku:bt",
+                    "coverage": false,
+                    "ambiguous": false,
+                    "uncertainty": null
+                  },
+                  "status": "unknown",
+                  "reason": "no comparable explicit specification",
+                  "product": []
+                }
+              ]
+            }
+          ],
+          "attribute": [
+            {
+              "product_id": "B01ANF1D7U",
+              "title": "FOXWELL BT705 12V 24V Car Battery Tester Automotive 100-2000 CCA Battery Load Tester Auto Cranking and Charging System Test Scan Tool Digital Battery Analyzer for Vehicle and Heavy Duty Truck",
+              "label": "E",
+              "score": 0.2683788769926327,
+              "tie_order": 6042262530771752395,
+              "attribute_evidence": [
+                {
+                  "kind": "model",
+                  "query": {
+                    "text": "bt-705",
+                    "span": [
+                      0,
+                      6
+                    ],
+                    "confidence": "high",
+                    "kind": "model",
+                    "value": "bt705",
+                    "unit": null,
+                    "operator": "eq",
+                    "explicit": false,
+                    "role": "sku:bt",
+                    "coverage": false,
+                    "ambiguous": false,
+                    "uncertainty": null
+                  },
+                  "status": "match",
+                  "reason": "same identifier",
+                  "product": [
+                    {
+                      "text": "BT705",
+                      "span": [
+                        8,
+                        13
+                      ],
+                      "confidence": "high",
+                      "kind": "model",
+                      "value": "bt705",
+                      "unit": null,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "sku:bt",
+                      "coverage": false,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "title"
+                    },
+                    {
+                      "text": "BT705",
+                      "span": [
+                        8,
+                        13
+                      ],
+                      "confidence": "high",
+                      "kind": "model",
+                      "value": "bt705",
+                      "unit": null,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "sku:bt",
+                      "coverage": false,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    },
+                    {
+                      "text": "BT705",
+                      "span": [
+                        219,
+                        224
+                      ],
+                      "confidence": "high",
+                      "kind": "model",
+                      "value": "bt705",
+                      "unit": null,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "sku:bt",
+                      "coverage": false,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    },
+                    {
+                      "text": "BT705",
+                      "span": [
+                        932,
+                        937
+                      ],
+                      "confidence": "high",
+                      "kind": "model",
+                      "value": "bt705",
+                      "unit": null,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "sku:bt",
+                      "coverage": false,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    },
+                    {
+                      "text": "BT705",
+                      "span": [
+                        1373,
+                        1378
+                      ],
+                      "confidence": "high",
+                      "kind": "model",
+                      "value": "bt705",
+                      "unit": null,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "sku:bt",
+                      "coverage": false,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "product_id": "B0824T75K4",
+              "title": "HP EliteDesk 705 G2 Mini Business Desktop PC, AMD A10 PRO-8700B up to 3.2GHz, 8G DDR3, 1T, WiFi, BT 4.0, DVD, Windows 10 64-Multi-Language Support English/Spanish/French(Renewed)",
+              "label": "I",
+              "score": -0.6355982046066468,
+              "tie_order": 16236691338080759400,
+              "attribute_evidence": [
+                {
+                  "kind": "model",
+                  "query": {
+                    "text": "bt-705",
+                    "span": [
+                      0,
+                      6
+                    ],
+                    "confidence": "high",
+                    "kind": "model",
+                    "value": "bt705",
+                    "unit": null,
+                    "operator": "eq",
+                    "explicit": false,
+                    "role": "sku:bt",
+                    "coverage": false,
+                    "ambiguous": false,
+                    "uncertainty": null
+                  },
+                  "status": "unknown",
+                  "reason": "no comparable explicit specification",
+                  "product": []
+                }
+              ]
+            },
+            {
+              "product_id": "B0824T3625",
+              "title": "HP EliteDesk 705 G2 Mini Business Desktop PC, AMD A10 PRO-8700B up to 3.2GHz, 8G DDR3, 500G, WiFi, BT 4.0, DVD, Windows 10 64-Multi-Language Support English/Spanish/French(Renewed)",
+              "label": "I",
+              "score": -0.6474119405003098,
+              "tie_order": 7177705499722296826,
+              "attribute_evidence": [
+                {
+                  "kind": "model",
+                  "query": {
+                    "text": "bt-705",
+                    "span": [
+                      0,
+                      6
+                    ],
+                    "confidence": "high",
+                    "kind": "model",
+                    "value": "bt705",
+                    "unit": null,
+                    "operator": "eq",
+                    "explicit": false,
+                    "role": "sku:bt",
+                    "coverage": false,
+                    "ambiguous": false,
+                    "uncertainty": null
+                  },
+                  "status": "unknown",
+                  "reason": "no comparable explicit specification",
+                  "product": []
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "query_id": "51904",
+        "family": "huda beauty number",
+        "candidates": 16,
+        "has_exact": true,
+        "zero_idcg": false,
+        "baseline_ndcg10": 0.5226454118481277,
+        "baseline_ndcg_all": 0.5226454118481277,
+        "baseline_exact_recall10": 1.0,
+        "baseline_mrr": 0.3333333333333333,
+        "attribute_ndcg10": 0.9780721869834276,
+        "attribute_ndcg_all": 0.9780721869834276,
+        "attribute_exact_recall10": 1.0,
+        "attribute_mrr": 1.0,
+        "no_product_evidence_ndcg10": 0.5226454118481277,
+        "no_product_evidence_ndcg_all": 0.5226454118481277,
+        "no_product_evidence_exact_recall10": 1.0,
+        "no_product_evidence_mrr": 0.3333333333333333,
+        "bm25_ndcg10": 0.5226454118481277,
+        "bm25_ndcg_all": 0.5226454118481277,
+        "bm25_exact_recall10": 1.0,
+        "bm25_mrr": 0.3333333333333333,
+        "tfidf_ndcg10": 0.9820093020141635,
+        "tfidf_ndcg_all": 0.9820093020141635,
+        "tfidf_exact_recall10": 1.0,
+        "tfidf_mrr": 1.0,
+        "rule_ndcg10": 0.5226454118481277,
+        "rule_ndcg_all": 0.5226454118481277,
+        "rule_exact_recall10": 1.0,
+        "rule_mrr": 0.3333333333333333,
+        "delta": 0.45542677513529983,
+        "selection_tie_hash": 15239516941822840216,
+        "query": "huda beauty 420",
+        "top_products": {
+          "baseline": [
+            {
+              "product_id": "B07CMDGD49",
+              "title": "REVLON Super Lustrous Lip Gloss, 4 Piece Lip Kit Gift Set (205 Snow Pink, 245 Pango Peach, 240 Fatal Apple, 210 Pinkissimo + 1 Free Super Lustrous Lipstick in 420 Blushed), 5.4 Ounce",
+              "label": "I",
+              "score": -0.2629940038255497,
+              "tie_order": 12701283544191468714,
+              "attribute_evidence": []
+            },
+            {
+              "product_id": "B07CJNCGRX",
+              "title": "Revlon Super Lustrous Lipstick, 5 Piece Lip Kit Gift Set (420 Blushed- Pearl, 430 Softsilver Rose- Pearl, 520 Wine with Everything- Pearl, 300 Coffee Bean- Pearl, 535 Rum Raisin- Cream), 3.8 oz",
+              "label": "I",
+              "score": -0.37176318570577327,
+              "tie_order": 11525636015486287051,
+              "attribute_evidence": []
+            },
+            {
+              "product_id": "B07FLMWZ4Y",
+              "title": "Huda Beauty Faux Filter Foundation in Hot Fudge 550R #FauxFilter",
+              "label": "E",
+              "score": -0.3875611852406359,
+              "tie_order": 4040656679031569932,
+              "attribute_evidence": []
+            }
+          ],
+          "attribute": [
+            {
+              "product_id": "B07FLMWZ4Y",
+              "title": "Huda Beauty Faux Filter Foundation in Hot Fudge 550R #FauxFilter",
+              "label": "E",
+              "score": -0.33279653586054825,
+              "tie_order": 4040656679031569932,
+              "attribute_evidence": []
+            },
+            {
+              "product_id": "B07CMDGD49",
+              "title": "REVLON Super Lustrous Lip Gloss, 4 Piece Lip Kit Gift Set (205 Snow Pink, 245 Pango Peach, 240 Fatal Apple, 210 Pinkissimo + 1 Free Super Lustrous Lipstick in 420 Blushed), 5.4 Ounce",
+              "label": "I",
+              "score": -0.36615541227371146,
+              "tie_order": 12701283544191468714,
+              "attribute_evidence": []
+            },
+            {
+              "product_id": "B077C58PJT",
+              "title": "HUDA BEAUTY #FauxFilter Foundation - Amaretti 310G",
+              "label": "S",
+              "score": -0.3864085527946691,
+              "tie_order": 6573017760429960839,
+              "attribute_evidence": []
+            }
+          ]
+        }
+      },
+      {
+        "query_id": "84862",
+        "family": "quadlock case iphone number",
+        "candidates": 16,
+        "has_exact": true,
+        "zero_idcg": false,
+        "baseline_ndcg10": 0.6072414419814282,
+        "baseline_ndcg_all": 0.6298584298071074,
+        "baseline_exact_recall10": 1.0,
+        "baseline_mrr": 0.5,
+        "attribute_ndcg10": 0.9860511999908573,
+        "attribute_ndcg_all": 0.9860511999908573,
+        "attribute_exact_recall10": 1.0,
+        "attribute_mrr": 1.0,
+        "no_product_evidence_ndcg10": 0.609806259739234,
+        "no_product_evidence_ndcg_all": 0.6324232475649131,
+        "no_product_evidence_exact_recall10": 1.0,
+        "no_product_evidence_mrr": 0.5,
+        "bm25_ndcg10": 0.5025757160384605,
+        "bm25_ndcg_all": 0.5259212322155532,
+        "bm25_exact_recall10": 1.0,
+        "bm25_mrr": 0.3333333333333333,
+        "tfidf_ndcg10": 0.473470020400637,
+        "tfidf_ndcg_all": 0.5163750954347199,
+        "tfidf_exact_recall10": 1.0,
+        "tfidf_mrr": 0.3333333333333333,
+        "rule_ndcg10": 1.0,
+        "rule_ndcg_all": 1.0,
+        "rule_exact_recall10": 1.0,
+        "rule_mrr": 1.0,
+        "delta": 0.3788097580094292,
+        "selection_tie_hash": 12759388272093714653,
+        "query": "quadlock case iphone 11",
+        "top_products": {
+          "baseline": [
+            {
+              "product_id": "B081J2MLK9",
+              "title": "Quad Lock Case for iPhone 11 Pro",
+              "label": "I",
+              "score": 1.1997606848765408,
+              "tie_order": 6022218572071219469,
+              "attribute_evidence": [
+                {
+                  "kind": "model",
+                  "query": {
+                    "text": "iphone 11",
+                    "span": [
+                      14,
+                      23
+                    ],
+                    "confidence": "high",
+                    "kind": "model",
+                    "value": "iphone11",
+                    "unit": null,
+                    "operator": "eq",
+                    "explicit": false,
+                    "role": "iphone",
+                    "coverage": false,
+                    "ambiguous": false,
+                    "uncertainty": null
+                  },
+                  "status": "conflict",
+                  "reason": "different identifiers in the same family or role",
+                  "product": [
+                    {
+                      "text": "iPhone 11 Pro",
+                      "span": [
+                        19,
+                        32
+                      ],
+                      "confidence": "high",
+                      "kind": "model",
+                      "value": "iphone11pro",
+                      "unit": null,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "iphone",
+                      "coverage": true,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "title"
+                    },
+                    {
+                      "text": "iPhone 11 Pro",
+                      "span": [
+                        19,
+                        32
+                      ],
+                      "confidence": "high",
+                      "kind": "model",
+                      "value": "iphone11pro",
+                      "unit": null,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "iphone",
+                      "coverage": true,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    },
+                    {
+                      "text": "iPhone 11 Pro",
+                      "span": [
+                        146,
+                        159
+                      ],
+                      "confidence": "high",
+                      "kind": "model",
+                      "value": "iphone11pro",
+                      "unit": null,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "iphone",
+                      "coverage": true,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "product_id": "B081H6STBJ",
+              "title": "Quad Lock Case for iPhone 11",
+              "label": "E",
+              "score": 1.1997606848765408,
+              "tie_order": 15710486981567243395,
+              "attribute_evidence": [
+                {
+                  "kind": "model",
+                  "query": {
+                    "text": "iphone 11",
+                    "span": [
+                      14,
+                      23
+                    ],
+                    "confidence": "high",
+                    "kind": "model",
+                    "value": "iphone11",
+                    "unit": null,
+                    "operator": "eq",
+                    "explicit": false,
+                    "role": "iphone",
+                    "coverage": false,
+                    "ambiguous": false,
+                    "uncertainty": null
+                  },
+                  "status": "match",
+                  "reason": "same identifier",
+                  "product": [
+                    {
+                      "text": "iPhone 11",
+                      "span": [
+                        19,
+                        28
+                      ],
+                      "confidence": "high",
+                      "kind": "model",
+                      "value": "iphone11",
+                      "unit": null,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "iphone",
+                      "coverage": true,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "title"
+                    },
+                    {
+                      "text": "iPhone 11",
+                      "span": [
+                        19,
+                        28
+                      ],
+                      "confidence": "high",
+                      "kind": "model",
+                      "value": "iphone11",
+                      "unit": null,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "iphone",
+                      "coverage": true,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    },
+                    {
+                      "text": "iPhone 11",
+                      "span": [
+                        142,
+                        151
+                      ],
+                      "confidence": "high",
+                      "kind": "model",
+                      "value": "iphone11",
+                      "unit": null,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "iphone",
+                      "coverage": true,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "product_id": "B081J687P5",
+              "title": "Quad Lock Case for iPhone 11 Pro Max",
+              "label": "I",
+              "score": 1.119457469753164,
+              "tie_order": 8835377307061062738,
+              "attribute_evidence": [
+                {
+                  "kind": "model",
+                  "query": {
+                    "text": "iphone 11",
+                    "span": [
+                      14,
+                      23
+                    ],
+                    "confidence": "high",
+                    "kind": "model",
+                    "value": "iphone11",
+                    "unit": null,
+                    "operator": "eq",
+                    "explicit": false,
+                    "role": "iphone",
+                    "coverage": false,
+                    "ambiguous": false,
+                    "uncertainty": null
+                  },
+                  "status": "conflict",
+                  "reason": "different identifiers in the same family or role",
+                  "product": [
+                    {
+                      "text": "iPhone 11 Pro Max",
+                      "span": [
+                        19,
+                        36
+                      ],
+                      "confidence": "high",
+                      "kind": "model",
+                      "value": "iphone11promax",
+                      "unit": null,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "iphone",
+                      "coverage": true,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "title"
+                    },
+                    {
+                      "text": "iPhone 11 Pro Max",
+                      "span": [
+                        19,
+                        36
+                      ],
+                      "confidence": "high",
+                      "kind": "model",
+                      "value": "iphone11promax",
+                      "unit": null,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "iphone",
+                      "coverage": true,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    },
+                    {
+                      "text": "iPhone 11 Pro Max",
+                      "span": [
+                        150,
+                        167
+                      ],
+                      "confidence": "high",
+                      "kind": "model",
+                      "value": "iphone11promax",
+                      "unit": null,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "iphone",
+                      "coverage": true,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "attribute": [
+            {
+              "product_id": "B081H6STBJ",
+              "title": "Quad Lock Case for iPhone 11",
+              "label": "E",
+              "score": 1.7478876441601503,
+              "tie_order": 15710486981567243395,
+              "attribute_evidence": [
+                {
+                  "kind": "model",
+                  "query": {
+                    "text": "iphone 11",
+                    "span": [
+                      14,
+                      23
+                    ],
+                    "confidence": "high",
+                    "kind": "model",
+                    "value": "iphone11",
+                    "unit": null,
+                    "operator": "eq",
+                    "explicit": false,
+                    "role": "iphone",
+                    "coverage": false,
+                    "ambiguous": false,
+                    "uncertainty": null
+                  },
+                  "status": "match",
+                  "reason": "same identifier",
+                  "product": [
+                    {
+                      "text": "iPhone 11",
+                      "span": [
+                        19,
+                        28
+                      ],
+                      "confidence": "high",
+                      "kind": "model",
+                      "value": "iphone11",
+                      "unit": null,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "iphone",
+                      "coverage": true,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "title"
+                    },
+                    {
+                      "text": "iPhone 11",
+                      "span": [
+                        19,
+                        28
+                      ],
+                      "confidence": "high",
+                      "kind": "model",
+                      "value": "iphone11",
+                      "unit": null,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "iphone",
+                      "coverage": true,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    },
+                    {
+                      "text": "iPhone 11",
+                      "span": [
+                        142,
+                        151
+                      ],
+                      "confidence": "high",
+                      "kind": "model",
+                      "value": "iphone11",
+                      "unit": null,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "iphone",
+                      "coverage": true,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "product_id": "B07X219MM4",
+              "title": "Spigen Gearlock Bike Mount Case Designed for iPhone 11 Case (2019) - Black",
+              "label": "S",
+              "score": 1.233516786797079,
+              "tie_order": 16988206756998391722,
+              "attribute_evidence": [
+                {
+                  "kind": "model",
+                  "query": {
+                    "text": "iphone 11",
+                    "span": [
+                      14,
+                      23
+                    ],
+                    "confidence": "high",
+                    "kind": "model",
+                    "value": "iphone11",
+                    "unit": null,
+                    "operator": "eq",
+                    "explicit": false,
+                    "role": "iphone",
+                    "coverage": false,
+                    "ambiguous": false,
+                    "uncertainty": null
+                  },
+                  "status": "match",
+                  "reason": "same identifier",
+                  "product": [
+                    {
+                      "text": "iPhone 11",
+                      "span": [
+                        45,
+                        54
+                      ],
+                      "confidence": "high",
+                      "kind": "model",
+                      "value": "iphone11",
+                      "unit": null,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "iphone",
+                      "coverage": true,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "title"
+                    },
+                    {
+                      "text": "iPhone 11",
+                      "span": [
+                        45,
+                        54
+                      ],
+                      "confidence": "high",
+                      "kind": "model",
+                      "value": "iphone11",
+                      "unit": null,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "iphone",
+                      "coverage": true,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "product_id": "B081J2MLK9",
+              "title": "Quad Lock Case for iPhone 11 Pro",
+              "label": "I",
+              "score": 0.7193024945637478,
+              "tie_order": 6022218572071219469,
+              "attribute_evidence": [
+                {
+                  "kind": "model",
+                  "query": {
+                    "text": "iphone 11",
+                    "span": [
+                      14,
+                      23
+                    ],
+                    "confidence": "high",
+                    "kind": "model",
+                    "value": "iphone11",
+                    "unit": null,
+                    "operator": "eq",
+                    "explicit": false,
+                    "role": "iphone",
+                    "coverage": false,
+                    "ambiguous": false,
+                    "uncertainty": null
+                  },
+                  "status": "conflict",
+                  "reason": "different identifiers in the same family or role",
+                  "product": [
+                    {
+                      "text": "iPhone 11 Pro",
+                      "span": [
+                        19,
+                        32
+                      ],
+                      "confidence": "high",
+                      "kind": "model",
+                      "value": "iphone11pro",
+                      "unit": null,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "iphone",
+                      "coverage": true,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "title"
+                    },
+                    {
+                      "text": "iPhone 11 Pro",
+                      "span": [
+                        19,
+                        32
+                      ],
+                      "confidence": "high",
+                      "kind": "model",
+                      "value": "iphone11pro",
+                      "unit": null,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "iphone",
+                      "coverage": true,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    },
+                    {
+                      "text": "iPhone 11 Pro",
+                      "span": [
+                        146,
+                        159
+                      ],
+                      "confidence": "high",
+                      "kind": "model",
+                      "value": "iphone11pro",
+                      "unit": null,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "iphone",
+                      "coverage": true,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "largest_losses": [
+      {
+        "query_id": "5142",
+        "family": "number inch table top desk",
+        "candidates": 16,
+        "has_exact": true,
+        "zero_idcg": false,
+        "baseline_ndcg10": 0.8564824213975558,
+        "baseline_ndcg_all": 0.9336277131013505,
+        "baseline_exact_recall10": 1.0,
+        "baseline_mrr": 1.0,
+        "attribute_ndcg10": 0.45258214864834545,
+        "attribute_ndcg_all": 0.5322597566319806,
+        "attribute_exact_recall10": 1.0,
+        "attribute_mrr": 0.3333333333333333,
+        "no_product_evidence_ndcg10": 0.5647176745073224,
+        "no_product_evidence_ndcg_all": 0.6428952457925328,
+        "no_product_evidence_exact_recall10": 1.0,
+        "no_product_evidence_mrr": 0.5,
+        "bm25_ndcg10": 0.47355884758060157,
+        "bm25_ndcg_all": 0.4972146051731512,
+        "bm25_exact_recall10": 1.0,
+        "bm25_mrr": 0.16666666666666666,
+        "tfidf_ndcg10": 0.5026176482069101,
+        "tfidf_ndcg_all": 0.5268342155984718,
+        "tfidf_exact_recall10": 1.0,
+        "tfidf_mrr": 0.16666666666666666,
+        "rule_ndcg10": 0.8564824213975558,
+        "rule_ndcg_all": 0.9331999445133285,
+        "rule_exact_recall10": 1.0,
+        "rule_mrr": 1.0,
+        "delta": -0.40390027274921037,
+        "selection_tie_hash": 503194067403329356,
+        "query": "70 inch table top desk",
+        "top_products": {
+          "baseline": [
+            {
+              "product_id": "B07VSF8GXK",
+              "title": "BEST BOARD 35x70 Inches Writing Computer Desk Modern Simple Study Desk Industrial Style Laptop Table for Home Office Brown Notebook Desk",
+              "label": "E",
+              "score": 0.305445847321008,
+              "tie_order": 7495563577113317082,
+              "attribute_evidence": [
+                {
+                  "kind": "length",
+                  "query": {
+                    "text": "70 inch",
+                    "span": [
+                      0,
+                      7
+                    ],
+                    "confidence": "high",
+                    "kind": "length",
+                    "value": 1778.0,
+                    "unit": "mm",
+                    "raw_unit": "inch",
+                    "lower": 1778.0,
+                    "upper": 1778.0,
+                    "operator": "eq",
+                    "explicit": false,
+                    "role": "unspecified",
+                    "coverage": false,
+                    "ambiguous": false,
+                    "uncertainty": null
+                  },
+                  "status": "unknown",
+                  "reason": "description-only disagreement is insufficient for a hard conflict",
+                  "product": [
+                    {
+                      "text": "1.18\"",
+                      "span": [
+                        630,
+                        635
+                      ],
+                      "confidence": "high",
+                      "kind": "length",
+                      "value": 29.971999999999998,
+                      "unit": "mm",
+                      "raw_unit": "\"",
+                      "lower": 29.971999999999998,
+                      "upper": 29.971999999999998,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "unspecified",
+                      "coverage": false,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "product_id": "B08BFCFX8D",
+              "title": "NEKKA Round Tablecloth, Decorative Solid Color Table Cover, Cotton Linen Tassel Desk Cover for Kitchen Dining Tabletop Decoration, Diameter 70\", Gray",
+              "label": "C",
+              "score": 0.29920253202341096,
+              "tie_order": 529488366793464534,
+              "attribute_evidence": [
+                {
+                  "kind": "length",
+                  "query": {
+                    "text": "70 inch",
+                    "span": [
+                      0,
+                      7
+                    ],
+                    "confidence": "high",
+                    "kind": "length",
+                    "value": 1778.0,
+                    "unit": "mm",
+                    "raw_unit": "inch",
+                    "lower": 1778.0,
+                    "upper": 1778.0,
+                    "operator": "eq",
+                    "explicit": false,
+                    "role": "unspecified",
+                    "coverage": false,
+                    "ambiguous": false,
+                    "uncertainty": null
+                  },
+                  "status": "unknown",
+                  "reason": "product text contains contradictory or multiple variant specifications",
+                  "product": [
+                    {
+                      "text": "70 inch",
+                      "span": [
+                        200,
+                        207
+                      ],
+                      "confidence": "high",
+                      "kind": "length",
+                      "value": 1778.0,
+                      "unit": "mm",
+                      "raw_unit": "inch",
+                      "lower": 1778.0,
+                      "upper": 1778.0,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "unspecified",
+                      "coverage": false,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    },
+                    {
+                      "text": "30\" - 54\"",
+                      "span": [
+                        273,
+                        282
+                      ],
+                      "confidence": "high",
+                      "kind": "length",
+                      "value": 762.0,
+                      "unit": "mm",
+                      "raw_unit": "\"",
+                      "lower": 762.0,
+                      "upper": 1371.6,
+                      "operator": "range",
+                      "explicit": true,
+                      "role": "unspecified",
+                      "coverage": false,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    },
+                    {
+                      "text": "70-inch",
+                      "span": [
+                        322,
+                        329
+                      ],
+                      "confidence": "high",
+                      "kind": "length",
+                      "value": 1778.0,
+                      "unit": "mm",
+                      "raw_unit": "inch",
+                      "lower": 1778.0,
+                      "upper": 1778.0,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "unspecified",
+                      "coverage": false,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    },
+                    {
+                      "text": "70-inch",
+                      "span": [
+                        1796,
+                        1803
+                      ],
+                      "confidence": "high",
+                      "kind": "length",
+                      "value": 1778.0,
+                      "unit": "mm",
+                      "raw_unit": "inch",
+                      "lower": 1778.0,
+                      "upper": 1778.0,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "unspecified",
+                      "coverage": false,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    },
+                    {
+                      "text": "16\"",
+                      "span": [
+                        2695,
+                        2698
+                      ],
+                      "confidence": "high",
+                      "kind": "length",
+                      "value": 406.4,
+                      "unit": "mm",
+                      "raw_unit": "\"",
+                      "lower": 406.4,
+                      "upper": 406.4,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "unspecified",
+                      "coverage": false,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    },
+                    {
+                      "text": "24\"",
+                      "span": [
+                        2701,
+                        2704
+                      ],
+                      "confidence": "high",
+                      "kind": "length",
+                      "value": 609.5999999999999,
+                      "unit": "mm",
+                      "raw_unit": "\"",
+                      "lower": 609.5999999999999,
+                      "upper": 609.5999999999999,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "unspecified",
+                      "coverage": false,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    },
+                    {
+                      "text": "60 cm",
+                      "span": [
+                        2711,
+                        2716
+                      ],
+                      "confidence": "high",
+                      "kind": "length",
+                      "value": 600.0,
+                      "unit": "mm",
+                      "raw_unit": "cm",
+                      "lower": 600.0,
+                      "upper": 600.0,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "unspecified",
+                      "coverage": false,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    },
+                    {
+                      "text": "16\"",
+                      "span": [
+                        2751,
+                        2754
+                      ],
+                      "confidence": "high",
+                      "kind": "length",
+                      "value": 406.4,
+                      "unit": "mm",
+                      "raw_unit": "\"",
+                      "lower": 406.4,
+                      "upper": 406.4,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "unspecified",
+                      "coverage": false,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    },
+                    {
+                      "text": "24\"",
+                      "span": [
+                        2757,
+                        2760
+                      ],
+                      "confidence": "high",
+                      "kind": "length",
+                      "value": 609.5999999999999,
+                      "unit": "mm",
+                      "raw_unit": "\"",
+                      "lower": 609.5999999999999,
+                      "upper": 609.5999999999999,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "unspecified",
+                      "coverage": false,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    },
+                    {
+                      "text": "60 cm",
+                      "span": [
+                        2767,
+                        2772
+                      ],
+                      "confidence": "high",
+                      "kind": "length",
+                      "value": 600.0,
+                      "unit": "mm",
+                      "raw_unit": "cm",
+                      "lower": 600.0,
+                      "upper": 600.0,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "unspecified",
+                      "coverage": false,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    },
+                    {
+                      "text": "8\"",
+                      "span": [
+                        2803,
+                        2805
+                      ],
+                      "confidence": "high",
+                      "kind": "length",
+                      "value": 203.2,
+                      "unit": "mm",
+                      "raw_unit": "\"",
+                      "lower": 203.2,
+                      "upper": 203.2,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "unspecified",
+                      "coverage": false,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    },
+                    {
+                      "text": "12\"",
+                      "span": [
+                        2808,
+                        2811
+                      ],
+                      "confidence": "high",
+                      "kind": "length",
+                      "value": 304.79999999999995,
+                      "unit": "mm",
+                      "raw_unit": "\"",
+                      "lower": 304.79999999999995,
+                      "upper": 304.79999999999995,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "unspecified",
+                      "coverage": false,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    },
+                    {
+                      "text": "30 cm",
+                      "span": [
+                        2818,
+                        2823
+                      ],
+                      "confidence": "high",
+                      "kind": "length",
+                      "value": 300.0,
+                      "unit": "mm",
+                      "raw_unit": "cm",
+                      "lower": 300.0,
+                      "upper": 300.0,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "unspecified",
+                      "coverage": false,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    },
+                    {
+                      "text": "8\"",
+                      "span": [
+                        2877,
+                        2879
+                      ],
+                      "confidence": "high",
+                      "kind": "length",
+                      "value": 203.2,
+                      "unit": "mm",
+                      "raw_unit": "\"",
+                      "lower": 203.2,
+                      "upper": 203.2,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "unspecified",
+                      "coverage": false,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    },
+                    {
+                      "text": "16\"",
+                      "span": [
+                        2882,
+                        2885
+                      ],
+                      "confidence": "high",
+                      "kind": "length",
+                      "value": 406.4,
+                      "unit": "mm",
+                      "raw_unit": "\"",
+                      "lower": 406.4,
+                      "upper": 406.4,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "unspecified",
+                      "coverage": false,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    },
+                    {
+                      "text": "40 cm",
+                      "span": [
+                        2892,
+                        2897
+                      ],
+                      "confidence": "high",
+                      "kind": "length",
+                      "value": 400.0,
+                      "unit": "mm",
+                      "raw_unit": "cm",
+                      "lower": 400.0,
+                      "upper": 400.0,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "unspecified",
+                      "coverage": false,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "product_id": "B07KC5KVYR",
+              "title": "LUCKYHOUSEHOME Checked Lattice Tablecloth Embroidery Tassel Table Cover for Home Kitchen Dinning Tabletop Rectangle 55 x 70 Inch, Gray",
+              "label": "C",
+              "score": 0.28261992403782354,
+              "tie_order": 2486844532719323743,
+              "attribute_evidence": [
+                {
+                  "kind": "length",
+                  "query": {
+                    "text": "70 inch",
+                    "span": [
+                      0,
+                      7
+                    ],
+                    "confidence": "high",
+                    "kind": "length",
+                    "value": 1778.0,
+                    "unit": "mm",
+                    "raw_unit": "inch",
+                    "lower": 1778.0,
+                    "upper": 1778.0,
+                    "operator": "eq",
+                    "explicit": false,
+                    "role": "unspecified",
+                    "coverage": false,
+                    "ambiguous": false,
+                    "uncertainty": null
+                  },
+                  "status": "unknown",
+                  "reason": "bundle, dimensions or alternatives have unresolved scope",
+                  "product": [
+                    {
+                      "text": "70 Inch",
+                      "span": [
+                        121,
+                        128
+                      ],
+                      "confidence": "high",
+                      "kind": "length",
+                      "value": 1778.0,
+                      "unit": "mm",
+                      "raw_unit": "Inch",
+                      "lower": 1778.0,
+                      "upper": 1778.0,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "unspecified",
+                      "coverage": false,
+                      "ambiguous": true,
+                      "uncertainty": "bundle, dimensions or alternatives have unresolved scope",
+                      "source": "title"
+                    },
+                    {
+                      "text": "70 Inch",
+                      "span": [
+                        121,
+                        128
+                      ],
+                      "confidence": "high",
+                      "kind": "length",
+                      "value": 1778.0,
+                      "unit": "mm",
+                      "raw_unit": "Inch",
+                      "lower": 1778.0,
+                      "upper": 1778.0,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "unspecified",
+                      "coverage": false,
+                      "ambiguous": true,
+                      "uncertainty": "bundle, dimensions or alternatives have unresolved scope",
+                      "source": "description"
+                    },
+                    {
+                      "text": "70 inches",
+                      "span": [
+                        169,
+                        178
+                      ],
+                      "confidence": "high",
+                      "kind": "length",
+                      "value": 1778.0,
+                      "unit": "mm",
+                      "raw_unit": "inches",
+                      "lower": 1778.0,
+                      "upper": 1778.0,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "unspecified",
+                      "coverage": false,
+                      "ambiguous": true,
+                      "uncertainty": "bundle, dimensions or alternatives have unresolved scope",
+                      "source": "description"
+                    },
+                    {
+                      "text": "180 cm",
+                      "span": [
+                        186,
+                        192
+                      ],
+                      "confidence": "high",
+                      "kind": "length",
+                      "value": 1800.0,
+                      "unit": "mm",
+                      "raw_unit": "cm",
+                      "lower": 1800.0,
+                      "upper": 1800.0,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "unspecified",
+                      "coverage": false,
+                      "ambiguous": true,
+                      "uncertainty": "bundle, dimensions or alternatives have unresolved scope",
+                      "source": "description"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "attribute": [
+            {
+              "product_id": "B07XLMQ39D",
+              "title": "PERLESMITH Universal TV Stand Table Top TV Base for 37-70 inch LCD LED OLED 4K Flat Screen TVs-Height Adjustable TV Mount Stand with Tempered Glass Base, VESA 600x400mm, Holds up to 99lbs PSTVS11",
+              "label": "I",
+              "score": 0.37674119771436765,
+              "tie_order": 13114074456506968309,
+              "attribute_evidence": [
+                {
+                  "kind": "length",
+                  "query": {
+                    "text": "70 inch",
+                    "span": [
+                      0,
+                      7
+                    ],
+                    "confidence": "high",
+                    "kind": "length",
+                    "value": 1778.0,
+                    "unit": "mm",
+                    "raw_unit": "inch",
+                    "lower": 1778.0,
+                    "upper": 1778.0,
+                    "operator": "eq",
+                    "explicit": false,
+                    "role": "unspecified",
+                    "coverage": false,
+                    "ambiguous": false,
+                    "uncertainty": null
+                  },
+                  "status": "match",
+                  "reason": "query lies in an explicitly supported range",
+                  "product": [
+                    {
+                      "text": "37\" - 70\"",
+                      "span": [
+                        281,
+                        290
+                      ],
+                      "confidence": "high",
+                      "kind": "length",
+                      "value": 939.8,
+                      "unit": "mm",
+                      "raw_unit": "\"",
+                      "lower": 939.8,
+                      "upper": 1778.0,
+                      "operator": "range",
+                      "explicit": true,
+                      "role": "unspecified",
+                      "coverage": true,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "product_id": "B07KC5KVYR",
+              "title": "LUCKYHOUSEHOME Checked Lattice Tablecloth Embroidery Tassel Table Cover for Home Kitchen Dinning Tabletop Rectangle 55 x 70 Inch, Gray",
+              "label": "C",
+              "score": 0.30813576999458464,
+              "tie_order": 2486844532719323743,
+              "attribute_evidence": [
+                {
+                  "kind": "length",
+                  "query": {
+                    "text": "70 inch",
+                    "span": [
+                      0,
+                      7
+                    ],
+                    "confidence": "high",
+                    "kind": "length",
+                    "value": 1778.0,
+                    "unit": "mm",
+                    "raw_unit": "inch",
+                    "lower": 1778.0,
+                    "upper": 1778.0,
+                    "operator": "eq",
+                    "explicit": false,
+                    "role": "unspecified",
+                    "coverage": false,
+                    "ambiguous": false,
+                    "uncertainty": null
+                  },
+                  "status": "unknown",
+                  "reason": "bundle, dimensions or alternatives have unresolved scope",
+                  "product": [
+                    {
+                      "text": "70 Inch",
+                      "span": [
+                        121,
+                        128
+                      ],
+                      "confidence": "high",
+                      "kind": "length",
+                      "value": 1778.0,
+                      "unit": "mm",
+                      "raw_unit": "Inch",
+                      "lower": 1778.0,
+                      "upper": 1778.0,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "unspecified",
+                      "coverage": false,
+                      "ambiguous": true,
+                      "uncertainty": "bundle, dimensions or alternatives have unresolved scope",
+                      "source": "title"
+                    },
+                    {
+                      "text": "70 Inch",
+                      "span": [
+                        121,
+                        128
+                      ],
+                      "confidence": "high",
+                      "kind": "length",
+                      "value": 1778.0,
+                      "unit": "mm",
+                      "raw_unit": "Inch",
+                      "lower": 1778.0,
+                      "upper": 1778.0,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "unspecified",
+                      "coverage": false,
+                      "ambiguous": true,
+                      "uncertainty": "bundle, dimensions or alternatives have unresolved scope",
+                      "source": "description"
+                    },
+                    {
+                      "text": "70 inches",
+                      "span": [
+                        169,
+                        178
+                      ],
+                      "confidence": "high",
+                      "kind": "length",
+                      "value": 1778.0,
+                      "unit": "mm",
+                      "raw_unit": "inches",
+                      "lower": 1778.0,
+                      "upper": 1778.0,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "unspecified",
+                      "coverage": false,
+                      "ambiguous": true,
+                      "uncertainty": "bundle, dimensions or alternatives have unresolved scope",
+                      "source": "description"
+                    },
+                    {
+                      "text": "180 cm",
+                      "span": [
+                        186,
+                        192
+                      ],
+                      "confidence": "high",
+                      "kind": "length",
+                      "value": 1800.0,
+                      "unit": "mm",
+                      "raw_unit": "cm",
+                      "lower": 1800.0,
+                      "upper": 1800.0,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "unspecified",
+                      "coverage": false,
+                      "ambiguous": true,
+                      "uncertainty": "bundle, dimensions or alternatives have unresolved scope",
+                      "source": "description"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "product_id": "B07VSF8GXK",
+              "title": "BEST BOARD 35x70 Inches Writing Computer Desk Modern Simple Study Desk Industrial Style Laptop Table for Home Office Brown Notebook Desk",
+              "label": "E",
+              "score": 0.25923808400013665,
+              "tie_order": 7495563577113317082,
+              "attribute_evidence": [
+                {
+                  "kind": "length",
+                  "query": {
+                    "text": "70 inch",
+                    "span": [
+                      0,
+                      7
+                    ],
+                    "confidence": "high",
+                    "kind": "length",
+                    "value": 1778.0,
+                    "unit": "mm",
+                    "raw_unit": "inch",
+                    "lower": 1778.0,
+                    "upper": 1778.0,
+                    "operator": "eq",
+                    "explicit": false,
+                    "role": "unspecified",
+                    "coverage": false,
+                    "ambiguous": false,
+                    "uncertainty": null
+                  },
+                  "status": "unknown",
+                  "reason": "description-only disagreement is insufficient for a hard conflict",
+                  "product": [
+                    {
+                      "text": "1.18\"",
+                      "span": [
+                        630,
+                        635
+                      ],
+                      "confidence": "high",
+                      "kind": "length",
+                      "value": 29.971999999999998,
+                      "unit": "mm",
+                      "raw_unit": "\"",
+                      "lower": 29.971999999999998,
+                      "upper": 29.971999999999998,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "unspecified",
+                      "coverage": false,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "query_id": "7034",
+        "family": "aeramax number small room",
+        "candidates": 15,
+        "has_exact": true,
+        "zero_idcg": false,
+        "baseline_ndcg10": 0.9999999999999999,
+        "baseline_ndcg_all": 1.0,
+        "baseline_exact_recall10": 1.0,
+        "baseline_mrr": 1.0,
+        "attribute_ndcg10": 0.6216717592893348,
+        "attribute_ndcg_all": 0.6552189627734801,
+        "attribute_exact_recall10": 1.0,
+        "attribute_mrr": 0.25,
+        "no_product_evidence_ndcg10": 0.9999999999999999,
+        "no_product_evidence_ndcg_all": 1.0,
+        "no_product_evidence_exact_recall10": 1.0,
+        "no_product_evidence_mrr": 1.0,
+        "bm25_ndcg10": 0.3354774933728508,
+        "bm25_ndcg_all": 0.5494097993259681,
+        "bm25_exact_recall10": 0.0,
+        "bm25_mrr": 0.07142857142857142,
+        "tfidf_ndcg10": 0.3354774933728508,
+        "tfidf_ndcg_all": 0.5494097993259681,
+        "tfidf_exact_recall10": 0.0,
+        "tfidf_mrr": 0.07142857142857142,
+        "rule_ndcg10": 0.9999999999999999,
+        "rule_ndcg_all": 1.0,
+        "rule_exact_recall10": 1.0,
+        "rule_mrr": 1.0,
+        "delta": -0.37832824071066506,
+        "selection_tie_hash": 16358161757122273000,
+        "query": "aeramax 290 small room",
+        "top_products": {
+          "baseline": [
+            {
+              "product_id": "B00D8Y1YIM",
+              "title": "Fellowes Carbon Filters for AeraMax Air Purifiers - 4 Pack (9324201),Black, 16.1\" x 12.4\" x 0.2\"",
+              "label": "E",
+              "score": -0.8406657774599204,
+              "tie_order": 9994410701530167960,
+              "attribute_evidence": []
+            },
+            {
+              "product_id": "B00D52E2XG",
+              "title": "Fellowes AeraMax 100 Air Purifier for Mold, Odors, Dust, Smoke, Allergens and Germs with True HEPA Filter and 4-Stage Purification - 9320301, White, Small",
+              "label": "S",
+              "score": -0.9048587687846078,
+              "tie_order": 16132433451546957226,
+              "attribute_evidence": []
+            },
+            {
+              "product_id": "B00D8Y1YNC",
+              "title": "Fellowes AeraMax 300 Large Room Air Purifier Mold, Odors, Dust, Smoke, Allergens and Germs with True HEPA Filter and 4-Stage Purification, White (",
+              "label": "S",
+              "score": -0.9119353149437184,
+              "tie_order": 16864474013249833051,
+              "attribute_evidence": []
+            }
+          ],
+          "attribute": [
+            {
+              "product_id": "B00D52E2XG",
+              "title": "Fellowes AeraMax 100 Air Purifier for Mold, Odors, Dust, Smoke, Allergens and Germs with True HEPA Filter and 4-Stage Purification - 9320301, White, Small",
+              "label": "S",
+              "score": -0.9610899095285305,
+              "tie_order": 16132433451546957226,
+              "attribute_evidence": []
+            },
+            {
+              "product_id": "B00D8Y1YNC",
+              "title": "Fellowes AeraMax 300 Large Room Air Purifier Mold, Odors, Dust, Smoke, Allergens and Germs with True HEPA Filter and 4-Stage Purification, White (",
+              "label": "S",
+              "score": -0.9805731899462476,
+              "tie_order": 16864474013249833051,
+              "attribute_evidence": []
+            },
+            {
+              "product_id": "B00EDTKEE6",
+              "title": "Holmes Small Room 3-Speed HEPA Air Purifier with Quiet Operation, White",
+              "label": "S",
+              "score": -1.019168179981563,
+              "tie_order": 14754907073247168303,
+              "attribute_evidence": []
+            }
+          ]
+        }
+      },
+      {
+        "query_id": "47493",
+        "family": "grey pocket book",
+        "candidates": 16,
+        "has_exact": true,
+        "zero_idcg": false,
+        "baseline_ndcg10": 1.0,
+        "baseline_ndcg_all": 1.0,
+        "baseline_exact_recall10": 1.0,
+        "baseline_mrr": 1.0,
+        "attribute_ndcg10": 0.6309297535714575,
+        "attribute_ndcg_all": 0.6309297535714575,
+        "attribute_exact_recall10": 1.0,
+        "attribute_mrr": 0.5,
+        "no_product_evidence_ndcg10": 1.0,
+        "no_product_evidence_ndcg_all": 1.0,
+        "no_product_evidence_exact_recall10": 1.0,
+        "no_product_evidence_mrr": 1.0,
+        "bm25_ndcg10": 1.0,
+        "bm25_ndcg_all": 1.0,
+        "bm25_exact_recall10": 1.0,
+        "bm25_mrr": 1.0,
+        "tfidf_ndcg10": 1.0,
+        "tfidf_ndcg_all": 1.0,
+        "tfidf_exact_recall10": 1.0,
+        "tfidf_mrr": 1.0,
+        "rule_ndcg10": 1.0,
+        "rule_ndcg_all": 1.0,
+        "rule_exact_recall10": 1.0,
+        "rule_mrr": 1.0,
+        "delta": -0.36907024642854247,
+        "selection_tie_hash": 8345165496941254642,
+        "query": "grey pocket book",
+        "top_products": {
+          "baseline": [
+            {
+              "product_id": "B00DUF3BA8",
+              "title": "DocIt 8 Pocket Folder, Multi Pocket Folder Perfect for School, Office and Project Organization, Expanding Folder Holds 200 Letter Size Papers, Grey (00908-GY)",
+              "label": "E",
+              "score": -0.346796728588462,
+              "tie_order": 4013607191908396905,
+              "attribute_evidence": []
+            },
+            {
+              "product_id": "B0151E6P4E",
+              "title": "Hanes Men's Jersey Short with Pockets, Light Steel, Small",
+              "label": "I",
+              "score": -0.36299045337421987,
+              "tie_order": 1385907244049601884,
+              "attribute_evidence": []
+            },
+            {
+              "product_id": "B07192Q1M4",
+              "title": "JanSport Cool Student, Grey Letterman Poly, One Size",
+              "label": "I",
+              "score": -0.4276126957372891,
+              "tie_order": 4989707377074079571,
+              "attribute_evidence": []
+            }
+          ],
+          "attribute": [
+            {
+              "product_id": "B0151E6P4E",
+              "title": "Hanes Men's Jersey Short with Pockets, Light Steel, Small",
+              "label": "I",
+              "score": -0.3515130894335849,
+              "tie_order": 1385907244049601884,
+              "attribute_evidence": []
+            },
+            {
+              "product_id": "B00DUF3BA8",
+              "title": "DocIt 8 Pocket Folder, Multi Pocket Folder Perfect for School, Office and Project Organization, Expanding Folder Holds 200 Letter Size Papers, Grey (00908-GY)",
+              "label": "E",
+              "score": -0.3722882960801004,
+              "tie_order": 4013607191908396905,
+              "attribute_evidence": []
+            },
+            {
+              "product_id": "B07192Q1M4",
+              "title": "JanSport Cool Student, Grey Letterman Poly, One Size",
+              "label": "I",
+              "score": -0.49089691301195165,
+              "tie_order": 4989707377074079571,
+              "attribute_evidence": []
+            }
+          ]
+        }
+      },
+      {
+        "query_id": "75759",
+        "family": "onses for men",
+        "candidates": 16,
+        "has_exact": true,
+        "zero_idcg": false,
+        "baseline_ndcg10": 1.0,
+        "baseline_ndcg_all": 1.0,
+        "baseline_exact_recall10": 1.0,
+        "baseline_mrr": 1.0,
+        "attribute_ndcg10": 0.6309297535714575,
+        "attribute_ndcg_all": 0.6309297535714575,
+        "attribute_exact_recall10": 1.0,
+        "attribute_mrr": 0.5,
+        "no_product_evidence_ndcg10": 0.6309297535714575,
+        "no_product_evidence_ndcg_all": 0.6309297535714575,
+        "no_product_evidence_exact_recall10": 1.0,
+        "no_product_evidence_mrr": 0.5,
+        "bm25_ndcg10": 1.0,
+        "bm25_ndcg_all": 1.0,
+        "bm25_exact_recall10": 1.0,
+        "bm25_mrr": 1.0,
+        "tfidf_ndcg10": 1.0,
+        "tfidf_ndcg_all": 1.0,
+        "tfidf_exact_recall10": 1.0,
+        "tfidf_mrr": 1.0,
+        "rule_ndcg10": 1.0,
+        "rule_ndcg_all": 1.0,
+        "rule_exact_recall10": 1.0,
+        "rule_mrr": 1.0,
+        "delta": -0.36907024642854247,
+        "selection_tie_hash": 16224453039991926902,
+        "query": "onses for men",
+        "top_products": {
+          "baseline": [
+            {
+              "product_id": "B01JHBCBEU",
+              "title": "Disney Men's Finding Dory Uniform Union Suit, Blue, L",
+              "label": "E",
+              "score": -0.5209001294518686,
+              "tie_order": 17124795594084921731,
+              "attribute_evidence": []
+            },
+            {
+              "product_id": "B089LSKQ61",
+              "title": "Onse Upon A Time There Was A Girl Who Really Loved Elephants And Dogs Unisex Short Long Sleeve Ladies V-Neck Tank Men Women Tee Gifts",
+              "label": "I",
+              "score": -0.5268963958569828,
+              "tie_order": 1563187152387927756,
+              "attribute_evidence": []
+            },
+            {
+              "product_id": "B08FBDC461",
+              "title": "Alph-onse Full Me-tal Alche-mist Face Coverfor Kids Teens Upgrade Dust Washable Reusable Adjustable Earring Double Layer",
+              "label": "I",
+              "score": -0.6435001318895875,
+              "tie_order": 15432170685961182961,
+              "attribute_evidence": []
+            }
+          ],
+          "attribute": [
+            {
+              "product_id": "B089LSKQ61",
+              "title": "Onse Upon A Time There Was A Girl Who Really Loved Elephants And Dogs Unisex Short Long Sleeve Ladies V-Neck Tank Men Women Tee Gifts",
+              "label": "I",
+              "score": -0.5690427054054604,
+              "tie_order": 1563187152387927756,
+              "attribute_evidence": []
+            },
+            {
+              "product_id": "B01JHBCBEU",
+              "title": "Disney Men's Finding Dory Uniform Union Suit, Blue, L",
+              "label": "E",
+              "score": -0.6678552626006278,
+              "tie_order": 17124795594084921731,
+              "attribute_evidence": []
+            },
+            {
+              "product_id": "B08FBDC461",
+              "title": "Alph-onse Full Me-tal Alche-mist Face Coverfor Kids Teens Upgrade Dust Washable Reusable Adjustable Earring Double Layer",
+              "label": "I",
+              "score": -0.698623017215887,
+              "tie_order": 15432170685961182961,
+              "attribute_evidence": []
+            }
+          ]
+        }
+      },
+      {
+        "query_id": "53906",
+        "family": "ipad pro number inch glitter skin",
+        "candidates": 16,
+        "has_exact": true,
+        "zero_idcg": false,
+        "baseline_ndcg10": 0.3922471282451144,
+        "baseline_ndcg_all": 0.4195642485996288,
+        "baseline_exact_recall10": 1.0,
+        "baseline_mrr": 0.2,
+        "attribute_ndcg10": 0.041599333191464354,
+        "attribute_ndcg_all": 0.32270049098461606,
+        "attribute_exact_recall10": 0.0,
+        "attribute_mrr": 0.09090909090909091,
+        "no_product_evidence_ndcg10": 0.3922471282451144,
+        "no_product_evidence_ndcg_all": 0.4195642485996288,
+        "no_product_evidence_exact_recall10": 1.0,
+        "no_product_evidence_mrr": 0.2,
+        "bm25_ndcg10": 0.6134812551686888,
+        "bm25_ndcg_all": 0.6375701948216429,
+        "bm25_exact_recall10": 1.0,
+        "bm25_mrr": 0.5,
+        "tfidf_ndcg10": 0.4293228932814768,
+        "tfidf_ndcg_all": 0.4584993117509949,
+        "tfidf_exact_recall10": 1.0,
+        "tfidf_mrr": 0.25,
+        "rule_ndcg10": 0.3922471282451144,
+        "rule_ndcg_all": 0.4195642485996288,
+        "rule_exact_recall10": 1.0,
+        "rule_mrr": 0.2,
+        "delta": -0.35064779505365,
+        "selection_tie_hash": 12416041536518067956,
+        "query": "ipad pro 11 inch glitter skin",
+        "top_products": {
+          "baseline": [
+            {
+              "product_id": "B07KXMKTMZ",
+              "title": "iPad Pro 11 Case Compatible with New Apple Pencil Charging Soft TPU Slim Cover for iPad Pro 11 inch 2018 & 2020 Clear",
+              "label": "C",
+              "score": 0.4998466896306739,
+              "tie_order": 6243833662296388271,
+              "attribute_evidence": [
+                {
+                  "kind": "length",
+                  "query": {
+                    "text": "11 inch",
+                    "span": [
+                      9,
+                      16
+                    ],
+                    "confidence": "high",
+                    "kind": "length",
+                    "value": 279.4,
+                    "unit": "mm",
+                    "raw_unit": "inch",
+                    "lower": 279.4,
+                    "upper": 279.4,
+                    "operator": "eq",
+                    "explicit": false,
+                    "role": "unspecified",
+                    "coverage": false,
+                    "ambiguous": false,
+                    "uncertainty": null
+                  },
+                  "status": "match",
+                  "reason": "equal canonical values",
+                  "product": [
+                    {
+                      "text": "11 inch",
+                      "span": [
+                        92,
+                        99
+                      ],
+                      "confidence": "high",
+                      "kind": "length",
+                      "value": 279.4,
+                      "unit": "mm",
+                      "raw_unit": "inch",
+                      "lower": 279.4,
+                      "upper": 279.4,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "unspecified",
+                      "coverage": true,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "title"
+                    },
+                    {
+                      "text": "11 inch",
+                      "span": [
+                        92,
+                        99
+                      ],
+                      "confidence": "high",
+                      "kind": "length",
+                      "value": 279.4,
+                      "unit": "mm",
+                      "raw_unit": "inch",
+                      "lower": 279.4,
+                      "upper": 279.4,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "unspecified",
+                      "coverage": true,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    },
+                    {
+                      "text": "11 inch",
+                      "span": [
+                        179,
+                        186
+                      ],
+                      "confidence": "high",
+                      "kind": "length",
+                      "value": 279.4,
+                      "unit": "mm",
+                      "raw_unit": "inch",
+                      "lower": 279.4,
+                      "upper": 279.4,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "unspecified",
+                      "coverage": false,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    },
+                    {
+                      "text": "11 inch",
+                      "span": [
+                        426,
+                        433
+                      ],
+                      "confidence": "high",
+                      "kind": "length",
+                      "value": 279.4,
+                      "unit": "mm",
+                      "raw_unit": "inch",
+                      "lower": 279.4,
+                      "upper": 279.4,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "unspecified",
+                      "coverage": true,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "product_id": "B07JZHDMRM",
+              "title": "iPad Pro 11 inch 2018 Case, Anban Glitter Sparkle Bling Folio Stand Case Smart Protective Cover with Auto Sleep/Wake, Mirror, Hand Strap, Pen Holder Compatible for Apple iPad Pro 11\",Purple",
+              "label": "C",
+              "score": 0.4312751149931799,
+              "tie_order": 14639456710407692782,
+              "attribute_evidence": [
+                {
+                  "kind": "length",
+                  "query": {
+                    "text": "11 inch",
+                    "span": [
+                      9,
+                      16
+                    ],
+                    "confidence": "high",
+                    "kind": "length",
+                    "value": 279.4,
+                    "unit": "mm",
+                    "raw_unit": "inch",
+                    "lower": 279.4,
+                    "upper": 279.4,
+                    "operator": "eq",
+                    "explicit": false,
+                    "role": "unspecified",
+                    "coverage": false,
+                    "ambiguous": false,
+                    "uncertainty": null
+                  },
+                  "status": "match",
+                  "reason": "equal canonical values",
+                  "product": [
+                    {
+                      "text": "11 inch",
+                      "span": [
+                        9,
+                        16
+                      ],
+                      "confidence": "high",
+                      "kind": "length",
+                      "value": 279.4,
+                      "unit": "mm",
+                      "raw_unit": "inch",
+                      "lower": 279.4,
+                      "upper": 279.4,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "unspecified",
+                      "coverage": false,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "title"
+                    },
+                    {
+                      "text": "11\"",
+                      "span": [
+                        179,
+                        182
+                      ],
+                      "confidence": "high",
+                      "kind": "length",
+                      "value": 279.4,
+                      "unit": "mm",
+                      "raw_unit": "\"",
+                      "lower": 279.4,
+                      "upper": 279.4,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "unspecified",
+                      "coverage": true,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "title"
+                    },
+                    {
+                      "text": "11 inch",
+                      "span": [
+                        9,
+                        16
+                      ],
+                      "confidence": "high",
+                      "kind": "length",
+                      "value": 279.4,
+                      "unit": "mm",
+                      "raw_unit": "inch",
+                      "lower": 279.4,
+                      "upper": 279.4,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "unspecified",
+                      "coverage": false,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    },
+                    {
+                      "text": "11\"",
+                      "span": [
+                        179,
+                        182
+                      ],
+                      "confidence": "high",
+                      "kind": "length",
+                      "value": 279.4,
+                      "unit": "mm",
+                      "raw_unit": "\"",
+                      "lower": 279.4,
+                      "upper": 279.4,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "unspecified",
+                      "coverage": true,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "product_id": "B088LLHKCR",
+              "title": "Lapogy Case Compatible with New iPad Pro 11 Case Glitter(2nd Generation) 2020 with Pencil Holder&Camera Lens Screen Protector&Charging, Magnetic Trifold Stand Protector Back Cover for 11 inch,Pink",
+              "label": "C",
+              "score": 0.3454579190398833,
+              "tie_order": 11389318052612913946,
+              "attribute_evidence": [
+                {
+                  "kind": "length",
+                  "query": {
+                    "text": "11 inch",
+                    "span": [
+                      9,
+                      16
+                    ],
+                    "confidence": "high",
+                    "kind": "length",
+                    "value": 279.4,
+                    "unit": "mm",
+                    "raw_unit": "inch",
+                    "lower": 279.4,
+                    "upper": 279.4,
+                    "operator": "eq",
+                    "explicit": false,
+                    "role": "unspecified",
+                    "coverage": false,
+                    "ambiguous": false,
+                    "uncertainty": null
+                  },
+                  "status": "match",
+                  "reason": "equal canonical values",
+                  "product": [
+                    {
+                      "text": "11 inch",
+                      "span": [
+                        184,
+                        191
+                      ],
+                      "confidence": "high",
+                      "kind": "length",
+                      "value": 279.4,
+                      "unit": "mm",
+                      "raw_unit": "inch",
+                      "lower": 279.4,
+                      "upper": 279.4,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "unspecified",
+                      "coverage": true,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "title"
+                    },
+                    {
+                      "text": "11 inch",
+                      "span": [
+                        184,
+                        191
+                      ],
+                      "confidence": "high",
+                      "kind": "length",
+                      "value": 279.4,
+                      "unit": "mm",
+                      "raw_unit": "inch",
+                      "lower": 279.4,
+                      "upper": 279.4,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "unspecified",
+                      "coverage": true,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    },
+                    {
+                      "text": "11-inch",
+                      "span": [
+                        397,
+                        404
+                      ],
+                      "confidence": "high",
+                      "kind": "length",
+                      "value": 279.4,
+                      "unit": "mm",
+                      "raw_unit": "inch",
+                      "lower": 279.4,
+                      "upper": 279.4,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "unspecified",
+                      "coverage": false,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "attribute": [
+            {
+              "product_id": "B07KXMKTMZ",
+              "title": "iPad Pro 11 Case Compatible with New Apple Pencil Charging Soft TPU Slim Cover for iPad Pro 11 inch 2018 & 2020 Clear",
+              "label": "C",
+              "score": 0.8623919180938279,
+              "tie_order": 6243833662296388271,
+              "attribute_evidence": [
+                {
+                  "kind": "length",
+                  "query": {
+                    "text": "11 inch",
+                    "span": [
+                      9,
+                      16
+                    ],
+                    "confidence": "high",
+                    "kind": "length",
+                    "value": 279.4,
+                    "unit": "mm",
+                    "raw_unit": "inch",
+                    "lower": 279.4,
+                    "upper": 279.4,
+                    "operator": "eq",
+                    "explicit": false,
+                    "role": "unspecified",
+                    "coverage": false,
+                    "ambiguous": false,
+                    "uncertainty": null
+                  },
+                  "status": "match",
+                  "reason": "equal canonical values",
+                  "product": [
+                    {
+                      "text": "11 inch",
+                      "span": [
+                        92,
+                        99
+                      ],
+                      "confidence": "high",
+                      "kind": "length",
+                      "value": 279.4,
+                      "unit": "mm",
+                      "raw_unit": "inch",
+                      "lower": 279.4,
+                      "upper": 279.4,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "unspecified",
+                      "coverage": true,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "title"
+                    },
+                    {
+                      "text": "11 inch",
+                      "span": [
+                        92,
+                        99
+                      ],
+                      "confidence": "high",
+                      "kind": "length",
+                      "value": 279.4,
+                      "unit": "mm",
+                      "raw_unit": "inch",
+                      "lower": 279.4,
+                      "upper": 279.4,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "unspecified",
+                      "coverage": true,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    },
+                    {
+                      "text": "11 inch",
+                      "span": [
+                        179,
+                        186
+                      ],
+                      "confidence": "high",
+                      "kind": "length",
+                      "value": 279.4,
+                      "unit": "mm",
+                      "raw_unit": "inch",
+                      "lower": 279.4,
+                      "upper": 279.4,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "unspecified",
+                      "coverage": false,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    },
+                    {
+                      "text": "11 inch",
+                      "span": [
+                        426,
+                        433
+                      ],
+                      "confidence": "high",
+                      "kind": "length",
+                      "value": 279.4,
+                      "unit": "mm",
+                      "raw_unit": "inch",
+                      "lower": 279.4,
+                      "upper": 279.4,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "unspecified",
+                      "coverage": true,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "product_id": "B07JZHDMRM",
+              "title": "iPad Pro 11 inch 2018 Case, Anban Glitter Sparkle Bling Folio Stand Case Smart Protective Cover with Auto Sleep/Wake, Mirror, Hand Strap, Pen Holder Compatible for Apple iPad Pro 11\",Purple",
+              "label": "C",
+              "score": 0.6999009524659778,
+              "tie_order": 14639456710407692782,
+              "attribute_evidence": [
+                {
+                  "kind": "length",
+                  "query": {
+                    "text": "11 inch",
+                    "span": [
+                      9,
+                      16
+                    ],
+                    "confidence": "high",
+                    "kind": "length",
+                    "value": 279.4,
+                    "unit": "mm",
+                    "raw_unit": "inch",
+                    "lower": 279.4,
+                    "upper": 279.4,
+                    "operator": "eq",
+                    "explicit": false,
+                    "role": "unspecified",
+                    "coverage": false,
+                    "ambiguous": false,
+                    "uncertainty": null
+                  },
+                  "status": "match",
+                  "reason": "equal canonical values",
+                  "product": [
+                    {
+                      "text": "11 inch",
+                      "span": [
+                        9,
+                        16
+                      ],
+                      "confidence": "high",
+                      "kind": "length",
+                      "value": 279.4,
+                      "unit": "mm",
+                      "raw_unit": "inch",
+                      "lower": 279.4,
+                      "upper": 279.4,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "unspecified",
+                      "coverage": false,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "title"
+                    },
+                    {
+                      "text": "11\"",
+                      "span": [
+                        179,
+                        182
+                      ],
+                      "confidence": "high",
+                      "kind": "length",
+                      "value": 279.4,
+                      "unit": "mm",
+                      "raw_unit": "\"",
+                      "lower": 279.4,
+                      "upper": 279.4,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "unspecified",
+                      "coverage": true,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "title"
+                    },
+                    {
+                      "text": "11 inch",
+                      "span": [
+                        9,
+                        16
+                      ],
+                      "confidence": "high",
+                      "kind": "length",
+                      "value": 279.4,
+                      "unit": "mm",
+                      "raw_unit": "inch",
+                      "lower": 279.4,
+                      "upper": 279.4,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "unspecified",
+                      "coverage": false,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    },
+                    {
+                      "text": "11\"",
+                      "span": [
+                        179,
+                        182
+                      ],
+                      "confidence": "high",
+                      "kind": "length",
+                      "value": 279.4,
+                      "unit": "mm",
+                      "raw_unit": "\"",
+                      "lower": 279.4,
+                      "upper": 279.4,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "unspecified",
+                      "coverage": true,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "product_id": "B07SM563CD",
+              "title": "HBorna Case for iPad Pro 11 inch 2nd Generation 2020 Release, Support Apple Pencil 2nd Gen Charging, Slim Lightweight TPU Silicon Protective Cover Compatible with 2018 iPad Pro 11\" 1st Gen",
+              "label": "C",
+              "score": 0.637190916684946,
+              "tie_order": 1739760470544981032,
+              "attribute_evidence": [
+                {
+                  "kind": "length",
+                  "query": {
+                    "text": "11 inch",
+                    "span": [
+                      9,
+                      16
+                    ],
+                    "confidence": "high",
+                    "kind": "length",
+                    "value": 279.4,
+                    "unit": "mm",
+                    "raw_unit": "inch",
+                    "lower": 279.4,
+                    "upper": 279.4,
+                    "operator": "eq",
+                    "explicit": false,
+                    "role": "unspecified",
+                    "coverage": false,
+                    "ambiguous": false,
+                    "uncertainty": null
+                  },
+                  "status": "match",
+                  "reason": "equal canonical values",
+                  "product": [
+                    {
+                      "text": "11 inch",
+                      "span": [
+                        25,
+                        32
+                      ],
+                      "confidence": "high",
+                      "kind": "length",
+                      "value": 279.4,
+                      "unit": "mm",
+                      "raw_unit": "inch",
+                      "lower": 279.4,
+                      "upper": 279.4,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "unspecified",
+                      "coverage": true,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "title"
+                    },
+                    {
+                      "text": "11\"",
+                      "span": [
+                        177,
+                        180
+                      ],
+                      "confidence": "high",
+                      "kind": "length",
+                      "value": 279.4,
+                      "unit": "mm",
+                      "raw_unit": "\"",
+                      "lower": 279.4,
+                      "upper": 279.4,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "unspecified",
+                      "coverage": true,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "title"
+                    },
+                    {
+                      "text": "11 inch",
+                      "span": [
+                        25,
+                        32
+                      ],
+                      "confidence": "high",
+                      "kind": "length",
+                      "value": 279.4,
+                      "unit": "mm",
+                      "raw_unit": "inch",
+                      "lower": 279.4,
+                      "upper": 279.4,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "unspecified",
+                      "coverage": true,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    },
+                    {
+                      "text": "11\"",
+                      "span": [
+                        177,
+                        180
+                      ],
+                      "confidence": "high",
+                      "kind": "length",
+                      "value": 279.4,
+                      "unit": "mm",
+                      "raw_unit": "\"",
+                      "lower": 279.4,
+                      "upper": 279.4,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "unspecified",
+                      "coverage": true,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    },
+                    {
+                      "text": "11 inches",
+                      "span": [
+                        654,
+                        663
+                      ],
+                      "confidence": "high",
+                      "kind": "length",
+                      "value": 279.4,
+                      "unit": "mm",
+                      "raw_unit": "inches",
+                      "lower": 279.4,
+                      "upper": 279.4,
+                      "operator": "eq",
+                      "explicit": false,
+                      "role": "unspecified",
+                      "coverage": false,
+                      "ambiguous": false,
+                      "uncertainty": null,
+                      "source": "description"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

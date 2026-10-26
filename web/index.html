@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f5f2eb" />
+    <meta
+      name="description"
+      content="Поиск по английскому каталогу с разбором совпадений по атрибутам и сравнением режимов."
+    />
+    <title>Catalog — поиск в деталях</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23262623'/%3E%3Ccircle cx='28' cy='27' r='13' fill='none' stroke='%23f5f2eb' stroke-width='4'/%3E%3Cpath d='m38 37 12 13' stroke='%23bb5d3d' stroke-width='5'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <script type="module" src="/app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#search-input">Перейти к поиску</a>
+    <svg
+      class="svg-library"
+      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <symbol id="icon-search" viewBox="0 0 24 24">
+        <circle cx="10.7" cy="10.7" r="6.7" />
+        <path d="m16 16 4.4 4.4" />
+      </symbol>
+      <symbol id="icon-arrow" viewBox="0 0 24 24">
+        <path d="M4 12h15m-6-6 6 6-6 6" />
+      </symbol>
+      <symbol id="icon-close" viewBox="0 0 24 24">
+        <path d="m6 6 12 12M18 6 6 18" />
+      </symbol>
+      <symbol id="icon-check" viewBox="0 0 24 24">
+        <path d="m5 12 4 4L19 6" />
+      </symbol>
+      <symbol id="icon-conflict" viewBox="0 0 24 24">
+        <path d="m7 7 10 10M17 7 7 17" />
+      </symbol>
+      <symbol id="icon-unknown" viewBox="0 0 24 24">
+        <path d="M7 12h10" />
+      </symbol>
+      <symbol id="icon-compare" viewBox="0 0 24 24">
+        <rect x="3.5" y="5" width="17" height="14" rx="2" />
+        <path d="M12 5v14" />
+      </symbol>
+      <symbol id="icon-chevron" viewBox="0 0 24 24">
+        <path d="m9 5 7 7-7 7" />
+      </symbol>
+      <symbol id="icon-external" viewBox="0 0 24 24">
+        <path d="M14 4h6v6m0-6-9 9M10 5H5v14h14v-5" />
+      </symbol>
+      <symbol id="icon-info" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" />
+        <path d="M12 11v6m0-10v.1" />
+      </symbol>
+      <symbol id="icon-tag" viewBox="0 0 24 24">
+        <path d="M3 4h8l10 10-8 8L3 12V4Z" />
+        <circle cx="7.5" cy="8.5" r=".8" />
+      </symbol>
+    </svg>
+
+    <header class="site-header page-width">
+      <a class="wordmark" href="/" aria-label="Catalog — главная"
+        ><span class="wordmark-symbol" aria-hidden="true"></span>catalog<span
+          class="wordmark-period"
+          >.</span
+        ></a
+      >
+      <span class="header-caption">Поиск в деталях</span>
+      <nav aria-label="Главная навигация">
+        <a class="quiet-link" href="#about"
+          >О проекте
+          <svg class="icon icon-small" aria-hidden="true">
+            <use href="#icon-arrow" /></svg
+        ></a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero page-width" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <div class="eyebrow">
+            <span class="eyebrow-line"></span> Продуктовый поиск
+          </div>
+          <h1 id="hero-title">Поиск, который<br />замечает <em>детали.</em></h1>
+          <p class="hero-description">
+            Английский каталог. Три режима поиска.<br class="desktop-break" />
+            Совпадения по свойствам — рядом с каждым результатом.
+          </p>
+          <div class="catalog-status" id="catalog-status">
+            <span class="status-dot is-pending" aria-hidden="true"></span
+            ><span id="catalog-count">Подключаем каталог</span
+            ><span class="status-divider" aria-hidden="true"></span
+            ><span>English catalog</span>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="art-topline">
+            <span>THE DETAILS MATTER</span><span>01 — 03</span>
+          </div>
+          <div class="viewfinder">
+            <i></i><i></i><i></i><i></i><span class="viewfinder-ring"></span
+            ><span class="viewfinder-handle"></span
+            ><span class="art-cross art-cross-one">+</span
+            ><span class="art-cross art-cross-two">+</span>
+          </div>
+          <div class="art-word">A closer<br /><em>look.</em></div>
+          <div class="art-bottomline">
+            <span>Запрос → Товар → Разбор</span
+            ><span class="art-coordinate">↗</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="search-section page-width" aria-label="Поиск по каталогу">
+        <form id="search-form" class="search-form" role="search">
+          <div class="search-label-row">
+            <label for="search-input">Что ищем?</label
+            ><span class="shortcut-hint"><kbd>/</kbd> быстрый переход</span>
+          </div>
+          <div class="search-input-row">
+            <svg class="icon search-icon" aria-hidden="true">
+              <use href="#icon-search" />
+            </svg>
+            <input
+              id="search-input"
+              name="q"
+              type="search"
+              placeholder="Введите запрос на английском"
+              autocomplete="off"
+              spellcheck="false"
+              enterkeyhint="search"
+              maxlength="256"
+              aria-describedby="search-language"
+            />
+            <button class="search-submit" type="submit">
+              <span>Найти</span
+              ><svg class="icon" aria-hidden="true">
+                <use href="#icon-arrow" />
+              </svg>
+            </button>
+          </div>
+          <div class="search-control-row">
+            <fieldset class="mode-picker">
+              <legend class="sr-only">Режим поиска</legend>
+              <label class="mode-option"
+                ><input
+                  type="radio"
+                  name="mode"
+                  value="attribute"
+                  checked
+                /><span>По атрибутам</span></label
+              >
+              <label class="mode-option"
+                ><input type="radio" name="mode" value="baseline" /><span
+                  >Базовая модель</span
+                ></label
+              >
+              <label class="mode-option"
+                ><input type="radio" name="mode" value="bm25" /><span
+                  >BM25</span
+                ></label
+              >
+            </fieldset>
+            <button
+              id="compare-toggle"
+              class="compare-toggle"
+              type="button"
+              aria-pressed="false"
+            >
+              <svg class="icon icon-small" aria-hidden="true">
+                <use href="#icon-compare" /></svg
+              ><span>Сравнить режимы</span
+              ><span class="toggle-track" aria-hidden="true"
+                ><span></span
+              ></span>
+            </button>
+          </div>
+          <p class="sr-only" id="search-language">
+            Введите запрос на английском: каталог содержит англоязычные товары.
+          </p>
+        </form>
+        <div class="examples-row" id="examples-row" hidden>
+          <span class="examples-label">Попробуйте</span>
+          <div id="examples" class="examples"></div>
+        </div>
+        <div class="connection-notice" id="connection-notice" hidden>
+          <svg class="icon icon-small" aria-hidden="true">
+            <use href="#icon-info" /></svg
+          ><span>Сведения о каталоге пока недоступны.</span
+          ><button id="meta-retry" class="text-button" type="button">
+            Повторить
+          </button>
+        </div>
+      </section>
+
+      <section
+        class="results-section page-width"
+        id="results-section"
+        aria-labelledby="results-title"
+      >
+        <div class="results-heading-row">
+          <div>
+            <div class="eyebrow results-eyebrow" id="results-eyebrow">
+              Ваш следующий запрос
+            </div>
+            <h2 id="results-title">Начните с детали.</h2>
+          </div>
+          <div class="results-statistics" id="results-statistics"></div>
+        </div>
+        <div class="results-layout" id="results-layout">
+          <div
+            id="results"
+            class="results-content"
+            aria-live="polite"
+            aria-busy="false"
+          >
+            <div class="welcome-state">
+              <div class="welcome-glyph" aria-hidden="true">
+                <svg class="icon"><use href="#icon-search" /></svg><span></span>
+              </div>
+              <div>
+                <h3>Какой товар вам нужен?</h3>
+                <p>
+                  Введите запрос на английском или выберите пример выше. У
+                  каждого результата можно открыть разбор совпадений.
+                </p>
+              </div>
+            </div>
+          </div>
+          <aside
+            class="results-guide"
+            id="results-guide"
+            aria-label="Обозначения в выдаче"
+          >
+            <span class="guide-index">READ THE DETAILS</span>
+            <h3>Почему этот<br />товар в выдаче?</h3>
+            <p>Откройте карточку и сопоставьте запрос с данными каталога.</p>
+            <ul class="evidence-legend">
+              <li>
+                <span class="legend-mark match"
+                  ><svg class="icon icon-small" aria-hidden="true">
+                    <use href="#icon-check" /></svg></span
+                ><span
+                  ><strong>Совпало</strong
+                  ><small>Значение найдено в товаре</small></span
+                >
+              </li>
+              <li>
+                <span class="legend-mark conflict"
+                  ><svg class="icon icon-small" aria-hidden="true">
+                    <use href="#icon-conflict" /></svg></span
+                ><span
+                  ><strong>Расхождение</strong
+                  ><small>Указано другое значение</small></span
+                >
+              </li>
+              <li>
+                <span class="legend-mark unknown"
+                  ><svg class="icon icon-small" aria-hidden="true">
+                    <use href="#icon-unknown" /></svg></span
+                ><span
+                  ><strong>Неопределено</strong
+                  ><small>Данных недостаточно для сравнения</small></span
+                >
+              </li>
+            </ul>
+            <p class="guide-footnote">
+              Объяснение показывает найденные признаки. Проверьте описание перед
+              выбором.
+            </p>
+          </aside>
+        </div>
+        <div id="more-container" class="more-container" hidden>
+          <button id="load-more" class="outline-button" type="button">
+            Показать ещё
+            <svg class="icon icon-small" aria-hidden="true">
+              <use href="#icon-arrow" />
+            </svg>
+          </button>
+        </div>
+      </section>
+
+      <section class="about-section" id="about" aria-labelledby="about-title">
+        <div class="page-width about-inner">
+          <div class="about-copy">
+            <div class="eyebrow">О проекте</div>
+            <h2 id="about-title">Результат —<br />с объяснением.</h2>
+            <p>
+              Один запрос можно проверить в трёх режимах: лексический поиск
+              BM25, базовая модель и ранжирование с учётом атрибутов.
+            </p>
+            <p>
+              Сравнение показывает обе выдачи рядом. В разборе товара видны
+              совпадения, расхождения и свойства, о которых в каталоге нет
+              данных.
+            </p>
+            <a id="report-link" class="inline-link" hidden
+              >Посмотреть отчёт
+              <svg class="icon icon-small" aria-hidden="true">
+                <use href="#icon-arrow" /></svg
+            ></a>
+          </div>
+          <div class="project-facts">
+            <div class="project-facts-topline">
+              <span>В ЭТОМ КАТАЛОГЕ</span
+              ><span class="facts-asterisk" aria-hidden="true">✳</span>
+            </div>
+            <dl id="project-facts-list">
+              <div>
+                <dt>Язык товаров</dt>
+                <dd>Английский</dd>
+              </div>
+              <div>
+                <dt>Данные о товарах</dt>
+                <dd>Название и описание</dd>
+              </div>
+              <div id="source-fact" hidden>
+                <dt>Источник</dt>
+                <dd><a id="source-link"></a></dd>
+              </div>
+              <div id="version-fact" hidden>
+                <dt>Версия модели</dt>
+                <dd id="model-version"></dd>
+              </div>
+            </dl>
+            <p class="facts-note" id="meta-description">
+              В интерфейсе используются данные каталога. Фотографии, цены и
+              оценки покупателей не добавлены.
+            </p>
+          </div>
+          <div class="metrics-block" id="metrics-block" hidden>
+            <div class="metrics-heading">
+              <h3>Измерения проекта</h3>
+              <p id="metrics-note"></p>
+            </div>
+            <div class="metrics-grid" id="metrics-grid"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer page-width">
+      <a class="wordmark wordmark-small" href="/"
+        >catalog<span class="wordmark-period">.</span></a
+      >
+      <p>Детали помогают выбрать.</p>
+      <a class="quiet-link back-to-top" href="#search-input"
+        >К поиску
+        <svg class="icon icon-small" aria-hidden="true">
+          <use href="#icon-arrow" /></svg
+      ></a>
+    </footer>
+    <div
+      id="announcer"
+      class="sr-only"
+      role="status"
+      aria-live="polite"
+      aria-atomic="true"
+    ></div>
+
+    <dialog
+      class="product-dialog"
+      id="product-dialog"
+      aria-labelledby="drawer-title"
+    >
+      <div class="drawer-shell">
+        <header class="drawer-header">
+          <span class="eyebrow">Разбор результата</span
+          ><button
+            class="icon-button"
+            id="drawer-close"
+            type="button"
+            aria-label="Закрыть разбор"
+          >
+            <svg class="icon" aria-hidden="true">
+              <use href="#icon-close" />
+            </svg>
+          </button>
+        </header>
+        <div id="drawer-content" class="drawer-content"></div>
+      </div>
+    </dialog>
+  </body>
+</html>

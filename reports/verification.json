@@ -1,0 +1,48 @@
+{
+  "verified_at_utc": "2026-10-26T12:40:27.891969+00:00",
+  "unit_and_integration_tests": {
+    "passed": 144,
+    "failed": 0,
+    "command": "python -m pytest -q",
+    "known_warning": "Upstream Starlette/httpx TestClient deprecation"
+  },
+  "installed_wheel": {
+    "outside_checkout": true,
+    "pythonpath_present": false,
+    "real_model_searches": 18,
+    "all_five_web_assets_match_source": true,
+    "details": "packaged_verification.json"
+  },
+  "release_archive": {
+    "checksum_and_per_file_verification": "passed",
+    "unpacked_real_model_engine_smoke": "passed"
+  },
+  "browser": {
+    "desktop_viewport": [
+      1440,
+      1000
+    ],
+    "mobile_viewport": [
+      390,
+      844
+    ],
+    "real_search": "passed",
+    "attribute_evidence_drawer": "passed",
+    "mode_comparison": "passed",
+    "experiment_report": "passed",
+    "mobile_report_horizontal_overflow": false,
+    "console_errors": 0
+  },
+  "real_tcp_http": {
+    "health": {
+      "status": "ok",
+      "model_version": "catalog-v1-9840018ee12a",
+      "catalog_size": 30000
+    },
+    "query": "24 inch monitor",
+    "returned": 3,
+    "first_product": "B07HKV5RLG"
+  },
+  "docker_build": "not run locally; Dockerfile reviewed; installed wheel and API tested",
+  "note": "Quality results are from the frozen experiment. These are functional/package/UI checks, not new model quality selection."
+}

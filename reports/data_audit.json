@@ -1,0 +1,65 @@
+{
+  "scope": "Descriptive audit of prepared metadata and released judgments; no model scores used",
+  "manifest_sha256": "9773e4984fab02857e6c3b523e76e47e56413b51b8ab8d1ea72bb90217c46daa",
+  "products": 481483,
+  "empty_field_fraction": {
+    "title": 0.0,
+    "brand": 0.05642151436291624,
+    "description": 0.47789018511557,
+    "attributes": 0.1320046606006858
+  },
+  "partitions": {
+    "train": {
+      "pairs": 354335,
+      "queries": 17663,
+      "label_counts": {
+        "C": 16392,
+        "E": 153690,
+        "I": 59869,
+        "S": 124384
+      },
+      "candidates_per_query": {
+        "min": 8,
+        "median": 16.0,
+        "p90": 40.0,
+        "max": 188
+      },
+      "numeric_query_fraction": 0.20562758308328144
+    },
+    "dev": {
+      "pairs": 63566,
+      "queries": 3145,
+      "label_counts": {
+        "C": 2570,
+        "E": 27371,
+        "I": 11015,
+        "S": 22610
+      },
+      "candidates_per_query": {
+        "min": 8,
+        "median": 16.0,
+        "p90": 40.0,
+        "max": 69
+      },
+      "numeric_query_fraction": 0.21748807631160572
+    },
+    "test": {
+      "pairs": 181701,
+      "queries": 8956,
+      "label_counts": {
+        "C": 8099,
+        "E": 79708,
+        "I": 30331,
+        "S": 63563
+      },
+      "candidates_per_query": {
+        "min": 8,
+        "median": 16.0,
+        "p90": 40.0,
+        "max": 95
+      },
+      "numeric_query_fraction": 0.20477891916033944
+    }
+  },
+  "note": "Fields are shortened under the fixed source limits; empty is not a contradictory specification."
+}

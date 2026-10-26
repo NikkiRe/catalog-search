@@ -1,0 +1,39 @@
+name: checks
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install uv
+      - run: uv sync --locked --extra dev --no-editable
+      - run: uv run --no-sync pytest -q
+      - name: Verify published model bundle
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          uv run --no-sync python scripts/download_demo.py
+          uv run --no-sync python scripts/verify_demo.py
+      - run: uv build
+      - name: Check installed wheel assets
+        run: |
+          python -m venv /tmp/catalog-wheel
+          /tmp/catalog-wheel/bin/pip install dist/*.whl
+          cd /tmp
+          /tmp/catalog-wheel/bin/catalog-search --help
+          /tmp/catalog-wheel/bin/python - <<'PY'
+          from pathlib import Path
+          from catalog_search.api import create_app
+          app = create_app(artifact_dir="/tmp/catalog-wheel-missing-models")
+          web = next(route for route in app.routes if getattr(route, "name", None) == "web")
+          for name in ("index.html", "styles.css", "app.js", "experiment.html", "report.js"):
+              assert (Path(web.app.directory) / name).is_file(), name
+          assert app.state.engine is None
+          PY

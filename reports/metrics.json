@@ -1,0 +1,834 @@
+{
+  "esci": {
+    "baseline": {
+      "ndcg10": 0.7350054604206361,
+      "ndcg_all": 0.8446218520421521,
+      "exact_recall10": 0.6958736949405833,
+      "mrr": 0.7974569849870595,
+      "ndcg_at_10": 0.7350054604206361
+    },
+    "attribute": {
+      "ndcg10": 0.7364232255288593,
+      "ndcg_all": 0.8455567243103762,
+      "exact_recall10": 0.6967040667817695,
+      "mrr": 0.7981679100401069,
+      "ndcg_at_10": 0.7364232255288593
+    },
+    "no_product_evidence": {
+      "ndcg10": 0.7348485537125354,
+      "ndcg_all": 0.8445076663178006,
+      "exact_recall10": 0.6956800179060393,
+      "mrr": 0.7970868518354842,
+      "ndcg_at_10": 0.7348485537125354
+    },
+    "bm25": {
+      "ndcg10": 0.6875871219508719,
+      "ndcg_all": 0.8154925147273466,
+      "exact_recall10": 0.656758582294263,
+      "mrr": 0.7392483403801597,
+      "ndcg_at_10": 0.6875871219508719
+    },
+    "tfidf": {
+      "ndcg10": 0.667631841410359,
+      "ndcg_all": 0.8014585146486249,
+      "exact_recall10": 0.6466634814664409,
+      "mrr": 0.7109595027206354,
+      "ndcg_at_10": 0.667631841410359
+    },
+    "rule": {
+      "ndcg10": 0.7351896813458725,
+      "ndcg_all": 0.8447655770455333,
+      "exact_recall10": 0.6956826986717666,
+      "mrr": 0.7975103616510884,
+      "ndcg_at_10": 0.7351896813458725
+    }
+  },
+  "primary_difference": {
+    "difference": 0.0014177651082230836,
+    "ci_low": 0.00044372781425344797,
+    "ci_high": 0.0023975805187740184,
+    "families": 8938,
+    "queries": 8956,
+    "bootstrap_repeats": 5000,
+    "unit": "normalized query family",
+    "metric": "mean query NDCG@10"
+  },
+  "slices": {
+    "attribute_mentioned": {
+      "queries": 606,
+      "families": 602,
+      "metrics": {
+        "baseline": {
+          "ndcg10": 0.760232054673972,
+          "ndcg_all": 0.8552325746711612,
+          "exact_recall10": 0.7556594388129605,
+          "mrr": 0.8218390176929781
+        },
+        "attribute": {
+          "ndcg10": 0.769296079325782,
+          "ndcg_all": 0.860729373756236,
+          "exact_recall10": 0.7620108116599039,
+          "mrr": 0.8337834561844462
+        },
+        "no_product_evidence": {
+          "ndcg10": 0.7608349105429745,
+          "ndcg_all": 0.8553537432969002,
+          "exact_recall10": 0.7580010713278602,
+          "mrr": 0.8237171038532426
+        },
+        "bm25": {
+          "ndcg10": 0.6640466418707548,
+          "ndcg_all": 0.7939924401496709,
+          "exact_recall10": 0.6705825492527443,
+          "mrr": 0.7096725102913223
+        },
+        "tfidf": {
+          "ndcg10": 0.6426325547626082,
+          "ndcg_all": 0.778291074882248,
+          "exact_recall10": 0.6596038240929465,
+          "mrr": 0.6740643981980617
+        },
+        "rule": {
+          "ndcg10": 0.7629546332324152,
+          "ndcg_all": 0.8573566689455534,
+          "exact_recall10": 0.7528370434544576,
+          "mrr": 0.8226278648927164
+        }
+      },
+      "status": "predeclared descriptive slice; no multiple-testing claim"
+    },
+    "no_attribute_mentioned": {
+      "queries": 8350,
+      "families": 8336,
+      "metrics": {
+        "baseline": {
+          "ndcg10": 0.7331746441191366,
+          "ndcg_all": 0.8438517804357832,
+          "exact_recall10": 0.691534233833066,
+          "mrr": 0.7956874626134324
+        },
+        "attribute": {
+          "ndcg10": 0.7340374830856335,
+          "ndcg_all": 0.8444555715481975,
+          "exact_recall10": 0.6919638718606832,
+          "mrr": 0.7955831171103501
+        },
+        "no_product_evidence": {
+          "ndcg10": 0.7329625977557395,
+          "ndcg_all": 0.8437205139047067,
+          "exact_recall10": 0.6911565350489758,
+          "mrr": 0.79515416528186
+        },
+        "bm25": {
+          "ndcg10": 0.6892955687686625,
+          "ndcg_all": 0.8170528794212473,
+          "exact_recall10": 0.655755189794941,
+          "mrr": 0.7413948018213374
+        },
+        "tfidf": {
+          "ndcg10": 0.6694461608964113,
+          "ndcg_all": 0.8031398881214902,
+          "exact_recall10": 0.645724225551761,
+          "mrr": 0.713637159408142
+        },
+        "rule": {
+          "ndcg10": 0.7331746441191366,
+          "ndcg_all": 0.8438517804357832,
+          "exact_recall10": 0.691534233833066,
+          "mrr": 0.7956874626134324
+        }
+      },
+      "status": "predeclared descriptive slice; no multiple-testing claim"
+    },
+    "all_candidates_new_to_final_fit": {
+      "queries": 1507,
+      "families": 1506,
+      "metrics": {
+        "baseline": {
+          "ndcg10": 0.767809589360179,
+          "ndcg_all": 0.8583747441427956,
+          "exact_recall10": 0.7662767552193183,
+          "mrr": 0.815057236872101
+        },
+        "attribute": {
+          "ndcg10": 0.7672467840272001,
+          "ndcg_all": 0.8578383928988783,
+          "exact_recall10": 0.7657776268771981,
+          "mrr": 0.8149455480742805
+        },
+        "no_product_evidence": {
+          "ndcg10": 0.7669352293358604,
+          "ndcg_all": 0.8572250827565937,
+          "exact_recall10": 0.7668994045097787,
+          "mrr": 0.8128716450547904
+        },
+        "bm25": {
+          "ndcg10": 0.7212277658604725,
+          "ndcg_all": 0.8276892240744612,
+          "exact_recall10": 0.7287622836604698,
+          "mrr": 0.7630162232517906
+        },
+        "tfidf": {
+          "ndcg10": 0.7054435276365721,
+          "ndcg_all": 0.8157302914801102,
+          "exact_recall10": 0.7222310705520893,
+          "mrr": 0.7348703488136137
+        },
+        "rule": {
+          "ndcg10": 0.7676388797470268,
+          "ndcg_all": 0.8586638633338031,
+          "exact_recall10": 0.7646882867604555,
+          "mrr": 0.8159419968809484
+        }
+      },
+      "status": "predeclared descriptive slice; no multiple-testing claim"
+    },
+    "some_candidate_seen_in_final_fit": {
+      "queries": 7449,
+      "families": 7432,
+      "metrics": {
+        "baseline": {
+          "ndcg10": 0.7283688887584142,
+          "ndcg_all": 0.8418395177159782,
+          "exact_recall10": 0.6816286074217789,
+          "mrr": 0.7938962950164922
+        },
+        "attribute": {
+          "ndcg10": 0.7301873411608903,
+          "ndcg_all": 0.843072031792874,
+          "exact_recall10": 0.6827279852748133,
+          "mrr": 0.7947736422836966
+        },
+        "no_product_evidence": {
+          "ndcg10": 0.72835712933821,
+          "ndcg_all": 0.8419348180733033,
+          "exact_recall10": 0.6812697580226029,
+          "mrr": 0.793893445555246
+        },
+        "bm25": {
+          "ndcg10": 0.6807813157524871,
+          "ndcg_all": 0.8130250102319644,
+          "exact_recall10": 0.6421896271440383,
+          "mrr": 0.7344398829378791
+        },
+        "tfidf": {
+          "ndcg10": 0.6599821956669166,
+          "ndcg_all": 0.7985712052533976,
+          "exact_recall10": 0.6313734228262593,
+          "mrr": 0.7061221225270364
+        },
+        "rule": {
+          "ndcg10": 0.7286249153382821,
+          "ndcg_all": 0.8419538281615995,
+          "exact_recall10": 0.6817203703621998,
+          "mrr": 0.7937814753185067
+        }
+      },
+      "status": "predeclared descriptive slice; no multiple-testing claim"
+    }
+  },
+  "wands": {
+    "status": "frozen external evaluation; no target fitting/selection",
+    "primary": "consensus_main/exact_binary",
+    "scenarios": {
+      "consensus_main": {
+        "exact_binary": {
+          "models": {
+            "baseline": {
+              "ndcg10": 0.5060552606786024,
+              "ndcg_all": 0.6120118511252218,
+              "exact_recall10": 0.29688573376070604,
+              "mrr": 0.5890263545427648,
+              "ndcg_at_10": 0.5060552606786024
+            },
+            "attribute": {
+              "ndcg10": 0.505911971303253,
+              "ndcg_all": 0.6119101672166742,
+              "exact_recall10": 0.29373878418692956,
+              "mrr": 0.5901269397991411,
+              "ndcg_at_10": 0.505911971303253
+            },
+            "no_product_evidence": {
+              "ndcg10": 0.5062886375476489,
+              "ndcg_all": 0.6113617602739272,
+              "exact_recall10": 0.29848109894659686,
+              "mrr": 0.5878105839199125,
+              "ndcg_at_10": 0.5062886375476489
+            },
+            "bm25": {
+              "ndcg10": 0.4120164135095691,
+              "ndcg_all": 0.5381152315802533,
+              "exact_recall10": 0.19359830772014433,
+              "mrr": 0.4925265517376853,
+              "ndcg_at_10": 0.4120164135095691
+            },
+            "tfidf": {
+              "ndcg10": 0.3049256306587035,
+              "ndcg_all": 0.48573053728675897,
+              "exact_recall10": 0.1396697336916094,
+              "mrr": 0.38676229958354896,
+              "ndcg_at_10": 0.3049256306587035
+            },
+            "rule": {
+              "ndcg10": 0.5060552606786024,
+              "ndcg_all": 0.6120120295567837,
+              "exact_recall10": 0.29688573376070604,
+              "mrr": 0.5890263545427648,
+              "ndcg_at_10": 0.5060552606786024
+            }
+          },
+          "primary_difference": {
+            "difference": -0.0001432893753493588,
+            "ci_low": -0.004371331031102119,
+            "ci_high": 0.003969681773620154,
+            "families": 480,
+            "queries": 480,
+            "bootstrap_repeats": 5000,
+            "unit": "normalized query family",
+            "metric": "mean query NDCG@10"
+          },
+          "gain_map": {
+            "Irrelevant": 0,
+            "Partial": 0,
+            "Exact": 1
+          },
+          "queries": 480,
+          "families": 480,
+          "pairs": 231859,
+          "zero_idcg_queries": 101
+        },
+        "partial_0.1": {
+          "models": {
+            "baseline": {
+              "ndcg10": 0.724885757429466,
+              "ndcg_all": 0.8907921613262102,
+              "exact_recall10": 0.29688573376070604,
+              "mrr": 0.5890263545427648,
+              "ndcg_at_10": 0.724885757429466
+            },
+            "attribute": {
+              "ndcg10": 0.7251025934071248,
+              "ndcg_all": 0.8907290792059712,
+              "exact_recall10": 0.29373878418692956,
+              "mrr": 0.5901269397991411,
+              "ndcg_at_10": 0.7251025934071248
+            },
+            "no_product_evidence": {
+              "ndcg10": 0.7254144040784128,
+              "ndcg_all": 0.8906302734252329,
+              "exact_recall10": 0.29848109894659686,
+              "mrr": 0.5878105839199125,
+              "ndcg_at_10": 0.7254144040784128
+            },
+            "bm25": {
+              "ndcg10": 0.6520767473542433,
+              "ndcg_all": 0.8649677610855823,
+              "exact_recall10": 0.19359830772014433,
+              "mrr": 0.4925265517376853,
+              "ndcg_at_10": 0.6520767473542433
+            },
+            "tfidf": {
+              "ndcg10": 0.5572895893270549,
+              "ndcg_all": 0.8363123093555788,
+              "exact_recall10": 0.1396697336916094,
+              "mrr": 0.38676229958354896,
+              "ndcg_at_10": 0.5572895893270549
+            },
+            "rule": {
+              "ndcg10": 0.724885757429466,
+              "ndcg_all": 0.8907956046461958,
+              "exact_recall10": 0.29688573376070604,
+              "mrr": 0.5890263545427648,
+              "ndcg_at_10": 0.724885757429466
+            }
+          },
+          "primary_difference": {
+            "difference": 0.00021683597765883021,
+            "ci_low": -0.003618996833460557,
+            "ci_high": 0.004030445722435083,
+            "families": 480,
+            "queries": 480,
+            "bootstrap_repeats": 5000,
+            "unit": "normalized query family",
+            "metric": "mean query NDCG@10"
+          },
+          "gain_map": {
+            "Irrelevant": 0.0,
+            "Partial": 0.1,
+            "Exact": 1.0
+          },
+          "queries": 480,
+          "families": 480,
+          "pairs": 231859,
+          "zero_idcg_queries": 1
+        },
+        "partial_0.5": {
+          "models": {
+            "baseline": {
+              "ndcg10": 0.8275550950030733,
+              "ndcg_all": 0.9449636966175655,
+              "exact_recall10": 0.29688573376070604,
+              "mrr": 0.5890263545427648,
+              "ndcg_at_10": 0.8275550950030733
+            },
+            "attribute": {
+              "ndcg10": 0.8283954190331245,
+              "ndcg_all": 0.9449341865288214,
+              "exact_recall10": 0.29373878418692956,
+              "mrr": 0.5901269397991411,
+              "ndcg_at_10": 0.8283954190331245
+            },
+            "no_product_evidence": {
+              "ndcg10": 0.8283440506226143,
+              "ndcg_all": 0.9450023440030975,
+              "exact_recall10": 0.29848109894659686,
+              "mrr": 0.5878105839199125,
+              "ndcg_at_10": 0.8283440506226143
+            },
+            "bm25": {
+              "ndcg10": 0.7912365076272317,
+              "ndcg_all": 0.9375978672677625,
+              "exact_recall10": 0.19359830772014433,
+              "mrr": 0.4925265517376853,
+              "ndcg_at_10": 0.7912365076272317
+            },
+            "tfidf": {
+              "ndcg10": 0.7304646771584267,
+              "ndcg_all": 0.9272085141424189,
+              "exact_recall10": 0.1396697336916094,
+              "mrr": 0.38676229958354896,
+              "ndcg_at_10": 0.7304646771584267
+            },
+            "rule": {
+              "ndcg10": 0.8275550950030733,
+              "ndcg_all": 0.9449679022094091,
+              "exact_recall10": 0.29688573376070604,
+              "mrr": 0.5890263545427648,
+              "ndcg_at_10": 0.8275550950030733
+            }
+          },
+          "primary_difference": {
+            "difference": 0.0008403240300511292,
+            "ci_low": -0.00181306054380378,
+            "ci_high": 0.0035741072654586334,
+            "families": 480,
+            "queries": 480,
+            "bootstrap_repeats": 5000,
+            "unit": "normalized query family",
+            "metric": "mean query NDCG@10"
+          },
+          "gain_map": {
+            "Irrelevant": 0.0,
+            "Partial": 0.5,
+            "Exact": 1.0
+          },
+          "queries": 480,
+          "families": 480,
+          "pairs": 231859,
+          "zero_idcg_queries": 1
+        }
+      },
+      "ambiguous_min": {
+        "exact_binary": {
+          "models": {
+            "baseline": {
+              "ndcg10": 0.5060552606786024,
+              "ndcg_all": 0.6119885429072671,
+              "exact_recall10": 0.29688573376070604,
+              "mrr": 0.5890263545427648,
+              "ndcg_at_10": 0.5060552606786024
+            },
+            "attribute": {
+              "ndcg10": 0.505911971303253,
+              "ndcg_all": 0.6118864131884203,
+              "exact_recall10": 0.29373878418692956,
+              "mrr": 0.5901269397991411,
+              "ndcg_at_10": 0.505911971303253
+            },
+            "no_product_evidence": {
+              "ndcg10": 0.5062886375476489,
+              "ndcg_all": 0.6113370224678716,
+              "exact_recall10": 0.29848109894659686,
+              "mrr": 0.5878105839199125,
+              "ndcg_at_10": 0.5062886375476489
+            },
+            "bm25": {
+              "ndcg10": 0.4120164135095691,
+              "ndcg_all": 0.5381060919114584,
+              "exact_recall10": 0.19359830772014433,
+              "mrr": 0.4925265517376853,
+              "ndcg_at_10": 0.4120164135095691
+            },
+            "tfidf": {
+              "ndcg10": 0.3049256306587035,
+              "ndcg_all": 0.48572153209208896,
+              "exact_recall10": 0.1396697336916094,
+              "mrr": 0.38676229958354896,
+              "ndcg_at_10": 0.3049256306587035
+            },
+            "rule": {
+              "ndcg10": 0.5060552606786024,
+              "ndcg_all": 0.6119887213388289,
+              "exact_recall10": 0.29688573376070604,
+              "mrr": 0.5890263545427648,
+              "ndcg_at_10": 0.5060552606786024
+            }
+          },
+          "primary_difference": {
+            "difference": -0.0001432893753493588,
+            "ci_low": -0.004371331031102119,
+            "ci_high": 0.003969681773620154,
+            "families": 480,
+            "queries": 480,
+            "bootstrap_repeats": 5000,
+            "unit": "normalized query family",
+            "metric": "mean query NDCG@10"
+          },
+          "gain_map": {
+            "Irrelevant": 0,
+            "Partial": 0,
+            "Exact": 1
+          },
+          "queries": 480,
+          "families": 480,
+          "pairs": 231873,
+          "zero_idcg_queries": 101
+        },
+        "partial_0.1": {
+          "models": {
+            "baseline": {
+              "ndcg10": 0.724885757429466,
+              "ndcg_all": 0.8907756939528627,
+              "exact_recall10": 0.29688573376070604,
+              "mrr": 0.5890263545427648,
+              "ndcg_at_10": 0.724885757429466
+            },
+            "attribute": {
+              "ndcg10": 0.7251025934071248,
+              "ndcg_all": 0.8907128104592222,
+              "exact_recall10": 0.29373878418692956,
+              "mrr": 0.5901269397991411,
+              "ndcg_at_10": 0.7251025934071248
+            },
+            "no_product_evidence": {
+              "ndcg10": 0.7254144040784128,
+              "ndcg_all": 0.8906126703263826,
+              "exact_recall10": 0.29848109894659686,
+              "mrr": 0.5878105839199125,
+              "ndcg_at_10": 0.7254144040784128
+            },
+            "bm25": {
+              "ndcg10": 0.6520767473542433,
+              "ndcg_all": 0.8649640830667708,
+              "exact_recall10": 0.19359830772014433,
+              "mrr": 0.4925265517376853,
+              "ndcg_at_10": 0.6520767473542433
+            },
+            "tfidf": {
+              "ndcg10": 0.5572895893270549,
+              "ndcg_all": 0.836308413106038,
+              "exact_recall10": 0.1396697336916094,
+              "mrr": 0.38676229958354896,
+              "ndcg_at_10": 0.5572895893270549
+            },
+            "rule": {
+              "ndcg10": 0.724885757429466,
+              "ndcg_all": 0.8907791372728485,
+              "exact_recall10": 0.29688573376070604,
+              "mrr": 0.5890263545427648,
+              "ndcg_at_10": 0.724885757429466
+            }
+          },
+          "primary_difference": {
+            "difference": 0.00021683597765883021,
+            "ci_low": -0.003618996833460557,
+            "ci_high": 0.004030445722435083,
+            "families": 480,
+            "queries": 480,
+            "bootstrap_repeats": 5000,
+            "unit": "normalized query family",
+            "metric": "mean query NDCG@10"
+          },
+          "gain_map": {
+            "Irrelevant": 0.0,
+            "Partial": 0.1,
+            "Exact": 1.0
+          },
+          "queries": 480,
+          "families": 480,
+          "pairs": 231873,
+          "zero_idcg_queries": 1
+        },
+        "partial_0.5": {
+          "models": {
+            "baseline": {
+              "ndcg10": 0.8275550950030733,
+              "ndcg_all": 0.9449545607691735,
+              "exact_recall10": 0.29688573376070604,
+              "mrr": 0.5890263545427648,
+              "ndcg_at_10": 0.8275550950030733
+            },
+            "attribute": {
+              "ndcg10": 0.8283954190331245,
+              "ndcg_all": 0.9449253814982611,
+              "exact_recall10": 0.29373878418692956,
+              "mrr": 0.5901269397991411,
+              "ndcg_at_10": 0.8283954190331245
+            },
+            "no_product_evidence": {
+              "ndcg10": 0.8283440506226143,
+              "ndcg_all": 0.9449927496883394,
+              "exact_recall10": 0.29848109894659686,
+              "mrr": 0.5878105839199125,
+              "ndcg_at_10": 0.8283440506226143
+            },
+            "bm25": {
+              "ndcg10": 0.7912365076272317,
+              "ndcg_all": 0.9375980862492159,
+              "exact_recall10": 0.19359830772014433,
+              "mrr": 0.4925265517376853,
+              "ndcg_at_10": 0.7912365076272317
+            },
+            "tfidf": {
+              "ndcg10": 0.7304646771584267,
+              "ndcg_all": 0.9272060089660615,
+              "exact_recall10": 0.1396697336916094,
+              "mrr": 0.38676229958354896,
+              "ndcg_at_10": 0.7304646771584267
+            },
+            "rule": {
+              "ndcg10": 0.8275550950030733,
+              "ndcg_all": 0.9449587663610169,
+              "exact_recall10": 0.29688573376070604,
+              "mrr": 0.5890263545427648,
+              "ndcg_at_10": 0.8275550950030733
+            }
+          },
+          "primary_difference": {
+            "difference": 0.0008403240300511292,
+            "ci_low": -0.00181306054380378,
+            "ci_high": 0.0035741072654586334,
+            "families": 480,
+            "queries": 480,
+            "bootstrap_repeats": 5000,
+            "unit": "normalized query family",
+            "metric": "mean query NDCG@10"
+          },
+          "gain_map": {
+            "Irrelevant": 0.0,
+            "Partial": 0.5,
+            "Exact": 1.0
+          },
+          "queries": 480,
+          "families": 480,
+          "pairs": 231873,
+          "zero_idcg_queries": 1
+        }
+      },
+      "ambiguous_max": {
+        "exact_binary": {
+          "models": {
+            "baseline": {
+              "ndcg10": 0.5060440365536101,
+              "ndcg_all": 0.6120699385023037,
+              "exact_recall10": 0.296781861656329,
+              "mrr": 0.5890263545427648,
+              "ndcg_at_10": 0.5060440365536101
+            },
+            "attribute": {
+              "ndcg10": 0.505911971303253,
+              "ndcg_all": 0.6119756424168498,
+              "exact_recall10": 0.29366976130746525,
+              "mrr": 0.5901269397991411,
+              "ndcg_at_10": 0.505911971303253
+            },
+            "no_product_evidence": {
+              "ndcg10": 0.5062774134226566,
+              "ndcg_all": 0.6114212391015208,
+              "exact_recall10": 0.2983748025857977,
+              "mrr": 0.5878105839199125,
+              "ndcg_at_10": 0.5062774134226566
+            },
+            "bm25": {
+              "ndcg10": 0.4119609645139763,
+              "ndcg_all": 0.5381158805058436,
+              "exact_recall10": 0.19340630540002537,
+              "mrr": 0.4925265517376853,
+              "ndcg_at_10": 0.4119609645139763
+            },
+            "tfidf": {
+              "ndcg10": 0.30491320207998596,
+              "ndcg_all": 0.4857757681673063,
+              "exact_recall10": 0.13954513749145359,
+              "mrr": 0.38676229958354896,
+              "ndcg_at_10": 0.30491320207998596
+            },
+            "rule": {
+              "ndcg10": 0.5060440365536101,
+              "ndcg_all": 0.6120701169338655,
+              "exact_recall10": 0.296781861656329,
+              "mrr": 0.5890263545427648,
+              "ndcg_at_10": 0.5060440365536101
+            }
+          },
+          "primary_difference": {
+            "difference": -0.0001320652503570612,
+            "ci_low": -0.0043502124596320624,
+            "ci_high": 0.003975842384432962,
+            "families": 480,
+            "queries": 480,
+            "bootstrap_repeats": 5000,
+            "unit": "normalized query family",
+            "metric": "mean query NDCG@10"
+          },
+          "gain_map": {
+            "Irrelevant": 0,
+            "Partial": 0,
+            "Exact": 1
+          },
+          "queries": 480,
+          "families": 480,
+          "pairs": 231873,
+          "zero_idcg_queries": 101
+        },
+        "partial_0.1": {
+          "models": {
+            "baseline": {
+              "ndcg10": 0.7248619387578853,
+              "ndcg_all": 0.8908080214223298,
+              "exact_recall10": 0.296781861656329,
+              "mrr": 0.5890263545427648,
+              "ndcg_at_10": 0.7248619387578853
+            },
+            "attribute": {
+              "ndcg10": 0.7250876721201045,
+              "ndcg_all": 0.890747551572527,
+              "exact_recall10": 0.29366976130746525,
+              "mrr": 0.5901269397991411,
+              "ndcg_at_10": 0.7250876721201045
+            },
+            "no_product_evidence": {
+              "ndcg10": 0.7253905854068324,
+              "ndcg_all": 0.8906472154732824,
+              "exact_recall10": 0.2983748025857977,
+              "mrr": 0.5878105839199125,
+              "ndcg_at_10": 0.7253905854068324
+            },
+            "bm25": {
+              "ndcg10": 0.6520178715462595,
+              "ndcg_all": 0.8649541970203157,
+              "exact_recall10": 0.19340630540002537,
+              "mrr": 0.4925265517376853,
+              "ndcg_at_10": 0.6520178715462595
+            },
+            "tfidf": {
+              "ndcg10": 0.5572648158827871,
+              "ndcg_all": 0.8363219718693767,
+              "exact_recall10": 0.13954513749145359,
+              "mrr": 0.38676229958354896,
+              "ndcg_at_10": 0.5572648158827871
+            },
+            "rule": {
+              "ndcg10": 0.7248619387578853,
+              "ndcg_all": 0.8908114647423154,
+              "exact_recall10": 0.296781861656329,
+              "mrr": 0.5890263545427648,
+              "ndcg_at_10": 0.7248619387578853
+            }
+          },
+          "primary_difference": {
+            "difference": 0.00022573336221911252,
+            "ci_low": -0.003609877014286268,
+            "ci_high": 0.004038549047421998,
+            "families": 480,
+            "queries": 480,
+            "bootstrap_repeats": 5000,
+            "unit": "normalized query family",
+            "metric": "mean query NDCG@10"
+          },
+          "gain_map": {
+            "Irrelevant": 0.0,
+            "Partial": 0.1,
+            "Exact": 1.0
+          },
+          "queries": 480,
+          "families": 480,
+          "pairs": 231873,
+          "zero_idcg_queries": 1
+        },
+        "partial_0.5": {
+          "models": {
+            "baseline": {
+              "ndcg10": 0.8275144532857983,
+              "ndcg_all": 0.9449642376754883,
+              "exact_recall10": 0.296781861656329,
+              "mrr": 0.5890263545427648,
+              "ndcg_at_10": 0.8275144532857983
+            },
+            "attribute": {
+              "ndcg10": 0.8283573026849018,
+              "ndcg_all": 0.9449333084882452,
+              "exact_recall10": 0.29366976130746525,
+              "mrr": 0.5901269397991411,
+              "ndcg_at_10": 0.8283573026849018
+            },
+            "no_product_evidence": {
+              "ndcg10": 0.828303408905339,
+              "ndcg_all": 0.9450033908860236,
+              "exact_recall10": 0.2983748025857977,
+              "mrr": 0.5878105839199125,
+              "ndcg_at_10": 0.828303408905339
+            },
+            "bm25": {
+              "ndcg10": 0.7911859155468203,
+              "ndcg_all": 0.9375891884413154,
+              "exact_recall10": 0.19340630540002537,
+              "mrr": 0.4925265517376853,
+              "ndcg_at_10": 0.7911859155468203
+            },
+            "tfidf": {
+              "ndcg10": 0.7304237644454024,
+              "ndcg_all": 0.9272041340731657,
+              "exact_recall10": 0.13954513749145359,
+              "mrr": 0.38676229958354896,
+              "ndcg_at_10": 0.7304237644454024
+            },
+            "rule": {
+              "ndcg10": 0.8275144532857983,
+              "ndcg_all": 0.9449684432673318,
+              "exact_recall10": 0.296781861656329,
+              "mrr": 0.5890263545427648,
+              "ndcg_at_10": 0.8275144532857983
+            }
+          },
+          "primary_difference": {
+            "difference": 0.0008428493991035402,
+            "ci_low": -0.001811157807531111,
+            "ci_high": 0.0035778262903116745,
+            "families": 480,
+            "queries": 480,
+            "bootstrap_repeats": 5000,
+            "unit": "normalized query family",
+            "metric": "mean query NDCG@10"
+          },
+          "gain_map": {
+            "Irrelevant": 0.0,
+            "Partial": 0.5,
+            "Exact": 1.0
+          },
+          "queries": 480,
+          "families": 480,
+          "pairs": 231873,
+          "zero_idcg_queries": 1
+        }
+      }
+    },
+    "feature_compute": {
+      "rows": 231859,
+      "features": 58,
+      "seconds": 72.26172454200423,
+      "sha256": "f0ad89a1a2ca4c6a24ad82811c9b23201b405c4085212514cb81cea205a8c8a9"
+    },
+    "ambiguity_note": "Min/max are predetermined label scenarios, not adjudicated truth or sharp metric bounds."
+  }
+}

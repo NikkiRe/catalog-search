@@ -1,0 +1,312 @@
+{
+  "dataset": "WANDS",
+  "repository": "https://github.com/wayfair/WANDS",
+  "requested_revision": "3b74dcf4ba29ab8ff3e6a50b5b09fc627cb882b5",
+  "resolved_revision": "3b74dcf4ba29ab8ff3e6a50b5b09fc627cb882b5",
+  "provenance_verification": "local bytes hashed; source commit supplied by caller; remote association not checked",
+  "prepared_at_utc": "2026-10-26T11:58:18.876663+00:00",
+  "raw_files_saved": false,
+  "license": {
+    "identifier": "MIT",
+    "text": "MIT License\n\nCopyright (c) 2021 ecir2022\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "notice": "Preserve this license notice with copies or substantial portions."
+  },
+  "sources": [
+    {
+      "source_id": "wands_query_csv",
+      "path": "dataset/query.csv",
+      "url": "https://raw.githubusercontent.com/wayfair/WANDS/3b74dcf4ba29ab8ff3e6a50b5b09fc627cb882b5/dataset/query.csv",
+      "bytes": 19942,
+      "sha256": "63b61660560fecc33ec490804c7e2b81402ee3e7c31a9cbb5e03736639f68e95"
+    },
+    {
+      "source_id": "wands_product_csv",
+      "path": "dataset/product.csv",
+      "url": "https://raw.githubusercontent.com/wayfair/WANDS/3b74dcf4ba29ab8ff3e6a50b5b09fc627cb882b5/dataset/product.csv",
+      "bytes": 90621131,
+      "sha256": "d993926254572e6eba96c8fd87cc549a17fb91ad3748308036eee4cf92b10ac6"
+    },
+    {
+      "source_id": "wands_label_csv",
+      "path": "dataset/label.csv",
+      "url": "https://raw.githubusercontent.com/wayfair/WANDS/3b74dcf4ba29ab8ff3e6a50b5b09fc627cb882b5/dataset/label.csv",
+      "bytes": 5736234,
+      "sha256": "c11fe81ad62f17f56f316b0ec9630ebe8fbe1393578cb0ca4f05c17253a180ef"
+    },
+    {
+      "source_id": "wands_license",
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/wayfair/WANDS/3b74dcf4ba29ab8ff3e6a50b5b09fc627cb882b5/LICENSE",
+      "bytes": 1065,
+      "sha256": "e3ce14610132897db9f64e21d7871a7a60c0bc04364ec61e4faa99643c5072d6"
+    }
+  ],
+  "counts": {
+    "queries": 480,
+    "products": 42994,
+    "pairs": 231859
+  },
+  "annotation_audit": {
+    "raw_annotation_rows": 233448,
+    "unique_candidate_pairs": 231873,
+    "duplicate_pair_groups": 1467,
+    "extra_duplicate_annotation_rows": 1575,
+    "same_label_duplicate_groups": 1453,
+    "ambiguous_pair_count": 14,
+    "ambiguity_ledger": [
+      {
+        "query_id": "0",
+        "product_id": "31306",
+        "annotations": [
+          {
+            "annotation_id": "65",
+            "label": "Irrelevant"
+          },
+          {
+            "annotation_id": "21650",
+            "label": "Partial"
+          }
+        ]
+      },
+      {
+        "query_id": "12",
+        "product_id": "34349",
+        "annotations": [
+          {
+            "annotation_id": "1325",
+            "label": "Exact"
+          },
+          {
+            "annotation_id": "21761",
+            "label": "Partial"
+          },
+          {
+            "annotation_id": "21764",
+            "label": "Partial"
+          }
+        ]
+      },
+      {
+        "query_id": "24",
+        "product_id": "696",
+        "annotations": [
+          {
+            "annotation_id": "2380",
+            "label": "Exact"
+          },
+          {
+            "annotation_id": "21853",
+            "label": "Partial"
+          }
+        ]
+      },
+      {
+        "query_id": "89",
+        "product_id": "24413",
+        "annotations": [
+          {
+            "annotation_id": "11489",
+            "label": "Exact"
+          },
+          {
+            "annotation_id": "22346",
+            "label": "Partial"
+          }
+        ]
+      },
+      {
+        "query_id": "106",
+        "product_id": "1990",
+        "annotations": [
+          {
+            "annotation_id": "13869",
+            "label": "Partial"
+          },
+          {
+            "annotation_id": "22448",
+            "label": "Irrelevant"
+          }
+        ]
+      },
+      {
+        "query_id": "243",
+        "product_id": "5766",
+        "annotations": [
+          {
+            "annotation_id": "30861",
+            "label": "Exact"
+          },
+          {
+            "annotation_id": "51996",
+            "label": "Partial"
+          }
+        ]
+      },
+      {
+        "query_id": "246",
+        "product_id": "38402",
+        "annotations": [
+          {
+            "annotation_id": "31151",
+            "label": "Partial"
+          },
+          {
+            "annotation_id": "52061",
+            "label": "Irrelevant"
+          }
+        ]
+      },
+      {
+        "query_id": "293",
+        "product_id": "19210",
+        "annotations": [
+          {
+            "annotation_id": "34721",
+            "label": "Partial"
+          },
+          {
+            "annotation_id": "53266",
+            "label": "Exact"
+          }
+        ]
+      },
+      {
+        "query_id": "313",
+        "product_id": "602",
+        "annotations": [
+          {
+            "annotation_id": "35805",
+            "label": "Partial"
+          },
+          {
+            "annotation_id": "53801",
+            "label": "Irrelevant"
+          },
+          {
+            "annotation_id": "53804",
+            "label": "Irrelevant"
+          }
+        ]
+      },
+      {
+        "query_id": "327",
+        "product_id": "22268",
+        "annotations": [
+          {
+            "annotation_id": "36794",
+            "label": "Exact"
+          },
+          {
+            "annotation_id": "54237",
+            "label": "Partial"
+          }
+        ]
+      },
+      {
+        "query_id": "421",
+        "product_id": "29138",
+        "annotations": [
+          {
+            "annotation_id": "44039",
+            "label": "Exact"
+          },
+          {
+            "annotation_id": "56683",
+            "label": "Partial"
+          }
+        ]
+      },
+      {
+        "query_id": "425",
+        "product_id": "40107",
+        "annotations": [
+          {
+            "annotation_id": "44958",
+            "label": "Partial"
+          },
+          {
+            "annotation_id": "56852",
+            "label": "Exact"
+          }
+        ]
+      },
+      {
+        "query_id": "444",
+        "product_id": "15033",
+        "annotations": [
+          {
+            "annotation_id": "47531",
+            "label": "Partial"
+          },
+          {
+            "annotation_id": "57361",
+            "label": "Irrelevant"
+          }
+        ]
+      },
+      {
+        "query_id": "258",
+        "product_id": "2076",
+        "annotations": [
+          {
+            "annotation_id": "52421",
+            "label": "Exact"
+          },
+          {
+            "annotation_id": "52424",
+            "label": "Partial"
+          }
+        ]
+      }
+    ]
+  },
+  "ambiguity_policy": "Frozen before model evaluation: collapse identical-label duplicate pairs; exclude label-conflicting pairs from primary. ambiguous_pairs.parquet retains every original label/ID and min/max assignments for sensitivity, never favourable-label selection.",
+  "label_counts": {
+    "Exact": 25470,
+    "Irrelevant": 60719,
+    "Partial": 145670
+  },
+  "columns": {
+    "query_id": "String",
+    "query": "String",
+    "product_id": "String",
+    "title": "String",
+    "brand": "String",
+    "description": "String",
+    "label": "String",
+    "is_exact": "Int8",
+    "domain": "String",
+    "split": "String",
+    "attributes": "String",
+    "category": "String",
+    "query_category": "String",
+    "annotation_id": "String",
+    "annotation_ids": "List(String)"
+  },
+  "split": "all WANDS labels held out as external-domain test; no official WANDS split asserted",
+  "label_semantics": "Exact/Partial/Irrelevant preserved; no implicit Partial-to-ESCI mapping",
+  "feature_limits": [
+    "brand has no dedicated source field and is empty",
+    "query_category, label, is_exact and annotation_id are not inference features",
+    "Unjudged query-product pairs have no inferred relevance label",
+    "Catalogue and CSV row order do not supply event chronology"
+  ],
+  "artifacts": {
+    "pairs.parquet": {
+      "bytes": 28171030,
+      "sha256": "c2d671237c41b4e4ac9e8e01d1277f5c6797e184f209348e69de6aa3e4bbc557"
+    },
+    "queries.parquet": {
+      "bytes": 10108,
+      "sha256": "65f29e3a01545e964b1259b3b44040833f37ff748027315cd6117688fd55b3c3"
+    },
+    "products.parquet": {
+      "bytes": 16326865,
+      "sha256": "3e63c682ed3453cfd93420b6f0bf0fe41c69790fc84e4f9e9d8604c7d1fec56d"
+    },
+    "ambiguous_pairs.parquet": {
+      "bytes": 15707,
+      "sha256": "39c29d165605a59da36d2ce7ad54a52f3382a2e9466ae7f8888abf08ceabeaac"
+    }
+  }
+}
