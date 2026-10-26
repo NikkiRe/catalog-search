@@ -1,0 +1,53 @@
+{
+  "purpose": "Final installed v0.1.1 package: report bundle isolation and release assets, after independent ML runtime audit",
+  "version": "0.1.1",
+  "outside_source_checkout": true,
+  "pythonpath_present": false,
+  "source_equals_installed": {
+    "engine.py": {
+      "same": true,
+      "sha256": "f2cb07b3b076450c4d278bf1dcb6abcf02419a7a984ded8bbd78f6dd1d4f4c1a"
+    },
+    "api.py": {
+      "same": true,
+      "sha256": "2b7ea5d24262bacc4e975b28361d8e8b4226515184104c63b2fb1f328c2f817f"
+    }
+  },
+  "web_assets": {
+    "index.html": {
+      "status": 200,
+      "source_equals_installed": true,
+      "sha256": "8f7941c43b5de0e83a93a45383b3441e137332231a34bce4838205a4e9ebbe82",
+      "bytes": 15782
+    },
+    "styles.css": {
+      "status": 200,
+      "source_equals_installed": true,
+      "sha256": "f912c9ab45098996f537946961f8d7eef9748999e4e0ddfd7e4a73ec0f3115d1",
+      "bytes": 55490
+    },
+    "app.js": {
+      "status": 200,
+      "source_equals_installed": true,
+      "sha256": "58b2313d524289826cbe0280ca8a4e8adbe9d1086ec6a192864865d7c6c85618",
+      "bytes": 34740
+    },
+    "experiment.html": {
+      "status": 200,
+      "source_equals_installed": true,
+      "sha256": "ff5659ddc9ba47802594f79c72cca36feb6a237d1cf8fa524023084caeedf329",
+      "bytes": 13981
+    },
+    "report.js": {
+      "status": 200,
+      "source_equals_installed": true,
+      "sha256": "7a99701ed7b82a9e8aa926616db4ae5b560dfb312f1d6e40cbf72f87989782e4",
+      "bytes": 16148
+    }
+  },
+  "unrelated_bundle_report_status": 404,
+  "missing_models_status": 503,
+  "actual_report_bytes_match_saved": true,
+  "cli_help_status": 0,
+  "new_ml_section_present": true
+}

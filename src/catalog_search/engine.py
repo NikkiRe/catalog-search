@@ -64,6 +64,10 @@ def _encoder_signature(encoder: FeatureEncoder) -> str:
         digest.update(np.asarray(vectorizer.idf_, dtype="<f8").tobytes())
     digest.update(np.asarray(encoder.bm25_idf, dtype="<f8").tobytes())
     digest.update(np.asarray([encoder.avg_title, encoder.avg_body], dtype="<f8").tobytes())
+    # transform() also reads this lookup for IDF-weighted token coverage. A
+    # matching sparse index alone cannot detect a different coverage transform.
+    digest.update(_digest_json({str(token): float(value)
+                               for token, value in encoder.idf_lookup.items()}).encode())
     digest.update(_digest_json(list(ALL_NAMES)).encode())
     return digest.hexdigest()
 
@@ -209,7 +213,9 @@ class SearchEngine:
             raise ValueError("Feature implementation differs from the saved catalogue bundle")
         for name in ("catalog.parquet", "retrieval.joblib"):
             expected = self.manifest.get("files", {}).get(name, {}).get("sha256")
-            if expected and sha256(self.artifact_dir / name) != expected:
+            if not isinstance(expected, str) or len(expected) != 64:
+                raise ValueError(f"Missing search artifact checksum: {name}")
+            if sha256(self.artifact_dir / name) != expected:
                 raise ValueError(f"Search artifact checksum mismatch: {name}")
         self.encoder = joblib.load(self.artifact_dir / "encoder.joblib")
         self.catalogue = _products(pl.read_parquet(self.artifact_dir / "catalog.parquet"))

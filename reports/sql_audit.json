@@ -1,0 +1,69 @@
+{
+  "status": "passed",
+  "scope": "Independent SQL verification of all six ESCI ranking methods and optional split/foreign-key contracts; no training or model selection",
+  "sqlite_version": "3.53.1",
+  "math_backend": "native SQLite log2",
+  "pairs": 181701,
+  "queries": 8956,
+  "contracts": {
+    "duplicate_scored_pair": 0,
+    "invalid_label": 0,
+    "inconsistent_query_family": 0,
+    "duplicate_tie_within_query": 0,
+    "family_crosses_partitions": 0,
+    "query_crosses_partitions": 0,
+    "scored_query_not_in_test": 0,
+    "scored_family_differs_from_split": 0,
+    "missing_product_metadata": 0
+  },
+  "models": {
+    "bm25": {
+      "ndcg10": 0.6875871219508719,
+      "max_per_query_absolute_error": 4.440892098500626e-16,
+      "mean_absolute_error": 0.0,
+      "queries": 8956
+    },
+    "tfidf": {
+      "ndcg10": 0.667631841410359,
+      "max_per_query_absolute_error": 4.440892098500626e-16,
+      "mean_absolute_error": 0.0,
+      "queries": 8956
+    },
+    "baseline": {
+      "ndcg10": 0.7350054604206361,
+      "max_per_query_absolute_error": 4.440892098500626e-16,
+      "mean_absolute_error": 0.0,
+      "queries": 8956
+    },
+    "rule": {
+      "ndcg10": 0.7351896813458725,
+      "max_per_query_absolute_error": 4.440892098500626e-16,
+      "mean_absolute_error": 0.0,
+      "queries": 8956
+    },
+    "no_product_evidence": {
+      "ndcg10": 0.7348485537125354,
+      "max_per_query_absolute_error": 4.440892098500626e-16,
+      "mean_absolute_error": 0.0,
+      "queries": 8956
+    },
+    "attribute": {
+      "ndcg10": 0.7364232255288593,
+      "max_per_query_absolute_error": 4.440892098500626e-16,
+      "mean_absolute_error": 0.0,
+      "queries": 8956
+    }
+  },
+  "tolerance": 1e-12,
+  "seconds": 3.587820540999985,
+  "inputs_sha256": {
+    "test_scores.parquet": "193331a18a73a8262fa48111c7745d0c114f62f39cb5514de322a594e5525b35",
+    "per_query.parquet": "3cd37c2eff9cdb68acb58fb904b2842f954de6e729a58306866543721086a995",
+    "summary.json": "6408202b7f25f635547ac0583e06310831ae3b67e17d21cf02bca8b2d14d0c07"
+  },
+  "sql_sha256": {
+    "contracts.sql": "cc8bf9dc5393871bfb36cbf7f6ce910f30d8857358e00b24712e55d22082dadc",
+    "ndcg.sql": "06d9b1cd96c4a90d164cfcd587e13b24d1b9d7ab0de9ff1ddeb491b39ed11678",
+    "split_contracts.sql": "1dd259339c43060d90749c42e36d52c043d2517135f3a364e51ec5f11abf403f"
+  }
+}

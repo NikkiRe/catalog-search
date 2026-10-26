@@ -90,6 +90,28 @@ function sampleFact(label, value) {
   return element;
 }
 
+function renderLearning(report) {
+  const descriptions = ["baseline", "attribute"].map((name) => {
+    const model = report.models?.[name];
+    const features = number(model?.features);
+    const trees = number(model?.trees);
+    if (features === null || trees === null) return null;
+    return `${LABELS[name]}: ${integer.format(features)} признаков, ${integer.format(trees)} деревьев`;
+  });
+  $("#ml-model-facts").textContent = descriptions.filter(Boolean).join(". ");
+  const splits = Array.isArray(report.splits) ? report.splits : [];
+  const fitSplits = ["train", "dev"].map((partition) =>
+    splits.find((split) => split.partition === partition),
+  );
+  const fitRows = fitSplits.every((split) => number(split?.pairs) !== null)
+    ? fitSplits.reduce((sum, split) => sum + split.pairs, 0)
+    : null;
+  $("#ml-training-fact").textContent =
+    fitRows === null
+      ? "Модели обучены на человеческой разметке релевантности пар «запрос — товар». Число обучающих пар в отчёте не указано."
+      : `Финальные модели обучены на ${integer.format(fitRows)} парах «запрос — товар» с человеческой разметкой релевантности: train + dev после выбора настроек. Test в обучение не входит.`;
+}
+
 function renderComparison(comparison, target, primary = false) {
   const difference = number(comparison?.difference);
   const lower = number(comparison?.ci_low);
@@ -347,6 +369,7 @@ async function loadReport() {
       !report.primary_difference
     )
       throw new Error("В отчёте нет результатов основной проверки.");
+    renderLearning(report);
     renderComparison(report.primary_difference, "#primary-ci", true);
     renderBars(report.esci);
     renderSplits(report);

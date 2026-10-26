@@ -1,17 +1,17 @@
 {
-  "verified_at_utc": "2026-10-26T12:40:27.891969+00:00",
+  "verified_at_utc": "2026-10-26T13:41:19.345569+00:00",
   "unit_and_integration_tests": {
-    "passed": 144,
+    "passed": 185,
     "failed": 0,
     "command": "python -m pytest -q",
-    "known_warning": "Upstream Starlette/httpx TestClient deprecation"
+    "known_warning": "Upstream Starlette/httpx and LightGBM eval_set deprecations; pinned APIs still supported"
   },
   "installed_wheel": {
     "outside_checkout": true,
     "pythonpath_present": false,
     "real_model_searches": 18,
     "all_five_web_assets_match_source": true,
-    "details": "packaged_verification.json"
+    "details": "installed_release_audit.json"
   },
   "release_archive": {
     "checksum_and_per_file_verification": "passed",
@@ -31,7 +31,14 @@
     "mode_comparison": "passed",
     "experiment_report": "passed",
     "mobile_report_horizontal_overflow": false,
-    "console_errors": 0
+    "console_errors": 0,
+    "new_ml_section_dynamic_facts": {
+      "features": 58,
+      "trees": 217,
+      "training_pairs": 417901,
+      "mobile_width": 390,
+      "horizontal_overflow": false
+    }
   },
   "real_tcp_http": {
     "health": {
@@ -43,17 +50,37 @@
     "returned": 3,
     "first_product": "B07HKV5RLG"
   },
-  "docker_build": "not run locally; Dockerfile reviewed; installed wheel and API tested",
+  "docker_build": "pending new manual GitHub Actions Docker job; local Docker daemon unavailable",
   "note": "Quality results are from the frozen experiment. These are functional/package/UI checks, not new model quality selection.",
-  "github_actions": {
+  "published_release": {
+    "url": "https://github.com/NikkiRe/catalog-search/releases/tag/v0.1.0",
+    "download_and_checksum_verification": "passed",
+    "installed_model_smoke": "passed"
+  },
+  "package_version": "0.1.1",
+  "additional_checks": {
+    "deep_ml_audit": "deep_audit.json",
+    "retrained_model_byte_parity": "replay_training.json",
+    "independent_sql_metrics_and_contracts": "sql_audit.json",
+    "independent_runtime_predictions": "model_wiring.json",
+    "actual_training_pairs": 417901,
+    "replayed_models": 3,
+    "test_predictions_per_model": 181701,
+    "replay_max_error": 0
+  },
+  "fixes": [
+    "Encoder/index signature covers IDF lookup used by predictive coverage features",
+    "Artifact checksums are mandatory",
+    "Report lookup stays within the selected artifact run, without unrelated checkout fallback"
+  ],
+  "github_actions_previous_release": {
     "run_url": "https://github.com/NikkiRe/catalog-search/actions/runs/40324530097",
     "status": "success",
     "event": "workflow_dispatch",
     "includes": "Ubuntu Python 3.12 tests, download published bundle, real-model smoke, build and installed-wheel assets"
   },
-  "published_release": {
-    "url": "https://github.com/NikkiRe/catalog-search/releases/tag/v0.1.0",
-    "download_and_checksum_verification": "passed",
-    "installed_model_smoke": "passed"
+  "github_actions": {
+    "status": "pending_new_release_ci",
+    "note": "Current local checks passed; new workflow also includes real Docker HTTP smoke on manual dispatch"
   }
 }

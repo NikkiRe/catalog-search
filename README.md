@@ -133,12 +133,35 @@ checks real searches, product lookup, HTTP endpoints and the experiment report.
 `scripts/benchmark.py` records sequential warm-engine timings on the six declared
 demo queries; its timings exclude HTTP and are not a production traffic test.
 
+The analytical SQL audit independently recalculates all six methods' per-query
+NDCG using `ROW_NUMBER`, `CASE` and grouped DCG/IDCG in SQLite. It does not call
+the Python metric implementation. With prepared data it also checks query-family
+leakage and product/query foreign keys with joins. All 8,956 query results match
+the saved Python evaluation within floating-point tolerance.
+
+```bash
+uv run --no-sync python scripts/sql_audit.py --data data/esci
+```
+
+Omit `--data` to verify metrics using the evaluation files already in this repo.
+See [`sql/`](sql/) and [`reports/sql_audit.json`](reports/sql_audit.json).
+
+For a training replay using the original verified feature caches, run
+`scripts/replay_training.py` with explicit `--data`, `--artifacts`, `--reports`
+and a new `--output` directory. It refits the three sealed configurations without
+tuning and compares every held-out prediction and model hash. The recorded replay
+reconstructed all three model files byte for byte; it reuses caches rather than
+repeating their complete extraction. See [`reports/replay_training.json`](reports/replay_training.json).
+
 - `src/catalog_search/`: data checks, shared features, parser, metrics, experiment,
   search engine, HTTP API and CLI.
 - `web/`: buildless interface, mode comparison, evidence drawer and experiment page.
 - `reports/`: protocol, selection, scores, per-query metrics and result interpretation.
 - `docs/design.md`: retrieval/ranking boundary, serving and artifact decisions.
 - `docs/interview.md`: questions to explain using the actual code and results.
+- `docs/role_fit.md`: evidence against the supplied internship's technical criteria.
+- `docs/production_evaluation.md`: proposed labeling, online testing and release work,
+  clearly separated from the implemented offline experiment.
 - `docs/references.md`: original papers, dataset releases and ranking documentation.
 
 Project code: MIT. ESCI excerpt: Apache-2.0. WANDS: its MIT license.

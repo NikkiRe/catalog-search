@@ -7,6 +7,7 @@ import shutil
 import tempfile
 import zipfile
 
+from catalog_search import __version__
 from catalog_search.data import save_json, sha256
 
 
@@ -32,6 +33,19 @@ def main():
         (staged / "reports").mkdir()
         for name in REPORTS:
             shutil.copy2(project / "reports" / name, staged / "reports" / name)
+        for name in ("sql_audit.json", "replay_training.json", "deep_audit.json",
+                     "model_wiring.json", "installed_release_audit.json"):
+            if (project / "reports" / name).is_file():
+                shutil.copy2(project / "reports" / name, staged / "reports" / name)
+        # The bundled Markdown report keeps its relative documentation links.
+        # Include those sources and scientific figures in the runtime bundle.
+        (staged / "docs/figures").mkdir(parents=True)
+        for name in ("attribute_contract.md", "evaluation_protocol.md"):
+            shutil.copy2(project / "docs" / name, staged / "docs" / name)
+        for name in ("esci_results.png", "wands_transfer.png"):
+            shutil.copy2(project / "docs/figures" / name, staged / "docs/figures" / name)
+        for name in ("protocol.json", "selection.json"):
+            shutil.copy2(project / "artifacts" / name, staged / "reports" / name)
         shutil.copytree(project / "licenses", staged / "licenses")
         shutil.copy2(project / "LICENSE", staged / "licenses/PROJECT-LICENSE")
         shutil.copy2(project / "THIRD_PARTY_NOTICES.md", staged / "THIRD_PARTY_NOTICES.md")
@@ -45,7 +59,7 @@ def main():
                     info.compress_type = zipfile.ZIP_DEFLATED
                     info.external_attr = 0o100644 << 16
                     bundle.writestr(info, path.read_bytes())
-    manifest = {"version": "0.1.0", "url": args.url, "sha256": sha256(args.output),
+    manifest = {"version": __version__, "url": args.url, "sha256": sha256(args.output),
                 "bytes": args.output.stat().st_size,
                 "scope": "Trained models, fitted encoder, 30000-product historical ESCI excerpt, index, reports and licenses; no raw full data or training cache"}
     save_json(args.manifest, manifest)

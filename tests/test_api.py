@@ -30,7 +30,7 @@ def project(tmp_path, monkeypatch):
     source_web = Path(__file__).resolve().parents[1] / "web"
     web = tmp_path / "web"
     web.mkdir()
-    for name in ("index.html", "styles.css", "app.js"):
+    for name in ("index.html", "styles.css", "app.js", "experiment.html", "report.js"):
         shutil.copyfile(source_web / name, web / name)
     (tmp_path / "private-model.bin").write_text("must not be served")
     monkeypatch.setattr(api, "PROJECT_ROOT", tmp_path)
@@ -95,6 +95,8 @@ def test_actual_frontend_assets_and_no_model_file_access(client):
     assert 'id="search-input"' in index.text
     assert client.get("/app.js").status_code == 200
     assert client.get("/styles.css").status_code == 200
+    assert client.get("/experiment.html").status_code == 200
+    assert client.get("/report.js").status_code == 200
     assert client.get("/private-model.bin").status_code == 404
     assert client.get("/%2e%2e/private-model.bin").status_code == 404
     assert client.get("/src/catalog_search/api.py").status_code == 404
@@ -122,6 +124,16 @@ def test_report_serves_existing_json_and_is_not_a_placeholder(project, provider)
 def test_missing_report_is_404(client):
     assert client.get("/api/report").status_code == 404
     assert "report_url" not in client.get("/api/meta").json()
+
+
+def test_explicit_artifact_bundle_does_not_inherit_another_checkout_report(project, provider):
+    report_dir = project / "reports"
+    report_dir.mkdir()
+    (report_dir / "summary.json").write_text(json.dumps({"source": "different-model-bundle"}))
+    other_bundle = project / "other-release" / "artifacts"
+    with TestClient(api.create_app(other_bundle, engine=provider)) as client:
+        assert client.get("/api/report").status_code == 404
+        assert "report_url" not in client.get("/api/meta").json()
 
 
 def test_missing_model_is_503_but_frontend_still_loads(project, monkeypatch):
@@ -169,3 +181,41 @@ def test_model_failure_does_not_silently_fall_back_or_expose_query(client, provi
     assert "/private" not in response.text
     assert "sensitive-query" not in caplog.text
     assert "catalog_search_failed" in caplog.text
+
+
+@pytest.mark.parametrize("query", ['<script>alert("charger")</script>', "65 W 🔌 зарядка テーブル", "a\u202eb charger"])
+def test_unusual_printable_queries_remain_literal_json(client, provider, query):
+    response = client.get("/api/search", params={"q": query, "mode": "attribute"})
+    assert response.status_code == 200
+    assert response.headers["content-type"].startswith("application/json")
+    assert response.headers["x-content-type-options"] == "nosniff"
+    assert response.json()["query"] == query
+    assert provider.calls == [(query, "attribute", 12)]
+
+
+@pytest.mark.parametrize("limit", ["1.5", "NaN", "inf", "true", "-1"])
+def test_noninteger_or_out_of_range_limits_do_not_reach_engine(client, provider, limit):
+    response = client.get("/api/search", params={"q": "charger", "limit": limit})
+    assert response.status_code == 400
+    assert provider.calls == []
+    assert "Traceback" not in response.text
+
+
+def test_repeated_queries_and_mode_changes_each_reach_provider(client, provider):
+    requests = [("charger", "baseline", 1), ("charger", "attribute", 40), ("shelf", "bm25", 12), ("charger", "baseline", 1)]
+    for query, mode, limit in requests:
+        response = client.get("/api/search", params={"q": query, "mode": mode, "limit": limit})
+        assert response.status_code == 200
+        assert response.json()["mode"] == mode
+    assert provider.calls == requests
+
+
+def test_static_assets_and_report_do_not_follow_symlinks_outside_root(project, provider):
+    secret = project / "private-model.bin"
+    (project / "web" / "linked-model.bin").symlink_to(secret)
+    report_dir = project / "reports"
+    report_dir.mkdir()
+    (report_dir / "summary.json").symlink_to(secret)
+    with TestClient(api.create_app(project / "artifacts", engine=provider)) as client:
+        assert client.get("/linked-model.bin").status_code == 404
+        assert client.get("/api/report").status_code == 404

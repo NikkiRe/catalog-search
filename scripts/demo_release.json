@@ -1,7 +1,7 @@
 {
-  "version": "0.1.0",
-  "url": "https://github.com/NikkiRe/catalog-search/releases/download/v0.1.0/catalog-search-demo-v0.1.0.zip",
-  "sha256": "0ec95f2104d1d56910757c0b4d8ca9db70f459381f09c438376b72db7b01ed2c",
-  "bytes": 32491209,
+  "version": "0.1.1",
+  "url": "https://github.com/NikkiRe/catalog-search/releases/download/v0.1.1/catalog-search-demo-v0.1.1.zip",
+  "sha256": "664d631cb5e849678aed58b396ae1012147a860c79e72f8778cd44453e92bfb2",
+  "bytes": 32719812,
   "scope": "Trained models, fitted encoder, 30000-product historical ESCI excerpt, index, reports and licenses; no raw full data or training cache"
 }

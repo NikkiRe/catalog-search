@@ -71,6 +71,29 @@
         </button>
       </div>
       <div id="report-content" hidden>
+        <section class="report-data" aria-labelledby="ml-title">
+          <div class="report-section-heading">
+            <div>
+              <div class="eyebrow">Обучение и поиск</div>
+              <h2 id="ml-title">Где работает модель</h2>
+            </div>
+          </div>
+          <p class="report-section-intro">
+            Режимы «По атрибутам» и «Базовая модель» используют цепочку:
+            <strong>BM25 → до 150 кандидатов → LightGBM LambdaRank → выдача.</strong>
+            Для найденных кандидатов обученный ранжировщик вычисляет оценки при
+            каждом запросе. В режиме BM25 порядок определяется только лексическим
+            поиском.
+          </p>
+          <p class="report-section-intro" id="ml-model-facts"></p>
+          <p class="report-section-intro" id="ml-training-fact"></p>
+          <p class="report-footnote">
+            Метки «Совпало», «Расхождение» и «Неопределено» показывают результат
+            сравнения характеристик в текстах. Признаки этого сравнения получает
+            модель с атрибутами. Метки не объясняют вклад отдельных деревьев в
+            место товара.
+          </p>
+        </section>
         <section class="report-primary" aria-labelledby="primary-title">
           <div class="report-section-heading">
             <div>

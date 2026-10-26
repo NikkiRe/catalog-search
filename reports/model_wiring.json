@@ -1,0 +1,336 @@
+{
+  "purpose": "Independent saved-Booster predictions versus actual installed-wheel ASGI responses; runtime correctness, not quality or statistical re-evaluation",
+  "outside_source_checkout": true,
+  "installed_package": "site-packages/catalog_search",
+  "package_version": "0.1.1",
+  "pythonpath_present": false,
+  "model_version": "catalog-v1-9840018ee12a",
+  "artifact_files_sha256": {
+    "encoder.joblib": "c3e31d131ca1e91a2f456b490082377f281f2254841a0a8d980ab01dd3d28dd4",
+    "baseline.txt": "720a07445ae114dbb02f52e22b0eab02bf64a6f7367c9c31f164c97b1b5697f2",
+    "attribute.txt": "75ba6e48ddcac199a5c8305f82dd3160b7f73a9e5c74e9d59fb35769ad4cb0db",
+    "catalog.parquet": "2c610ac878b27167f98d4a6c992e524d8732d75fdb9fb14beaec7f51cad5c675",
+    "retrieval.joblib": "9c5b436957f981069692d12c5f81649a1534e07ee9b945d062e4688258e6c74d",
+    "index_manifest.json": "b4c879eb214c61032f2101166a526429f9ef000fea932fb9ce519fc7d9c0ff85"
+  },
+  "report_sha256": "6408202b7f25f635547ac0583e06310831ae3b67e17d21cf02bca8b2d14d0c07",
+  "catalog_size": 30000,
+  "index_rebuilt_from_catalogue_max_abs_error": 0.0,
+  "models": {
+    "baseline": {
+      "features": 28,
+      "trees": 150,
+      "sha256": "720a07445ae114dbb02f52e22b0eab02bf64a6f7367c9c31f164c97b1b5697f2"
+    },
+    "attribute": {
+      "features": 58,
+      "trees": 217,
+      "sha256": "75ba6e48ddcac199a5c8305f82dd3160b7f73a9e5c74e9d59fb35769ad4cb0db",
+      "attribute_feature_split_count": 190
+    }
+  },
+  "queries": [
+    {
+      "query": "15w wireless charger white",
+      "positive_matches": 4608,
+      "candidates": 150,
+      "modes": {
+        "bm25": {
+          "ids_exact": true,
+          "scores_max_abs_error": 0.0,
+          "returned": 40
+        },
+        "baseline": {
+          "ids_exact": true,
+          "scores_max_abs_error": 0.0,
+          "returned": 40
+        },
+        "attribute": {
+          "ids_exact": true,
+          "scores_max_abs_error": 0.0,
+          "returned": 40
+        }
+      }
+    },
+    {
+      "query": "vena iphone 11 pro max wallet case",
+      "positive_matches": 4411,
+      "candidates": 150,
+      "modes": {
+        "bm25": {
+          "ids_exact": true,
+          "scores_max_abs_error": 0.0,
+          "returned": 40
+        },
+        "baseline": {
+          "ids_exact": true,
+          "scores_max_abs_error": 0.0,
+          "returned": 40
+        },
+        "attribute": {
+          "ids_exact": true,
+          "scores_max_abs_error": 0.0,
+          "returned": 40
+        }
+      }
+    },
+    {
+      "query": "2tb internal ssd hard drive",
+      "positive_matches": 1911,
+      "candidates": 150,
+      "modes": {
+        "bm25": {
+          "ids_exact": true,
+          "scores_max_abs_error": 0.0,
+          "returned": 40
+        },
+        "baseline": {
+          "ids_exact": true,
+          "scores_max_abs_error": 0.0,
+          "returned": 40
+        },
+        "attribute": {
+          "ids_exact": true,
+          "scores_max_abs_error": 0.0,
+          "returned": 40
+        }
+      }
+    },
+    {
+      "query": "floating glass shelf 10 inches wide",
+      "positive_matches": 7844,
+      "candidates": 150,
+      "modes": {
+        "bm25": {
+          "ids_exact": true,
+          "scores_max_abs_error": 0.0,
+          "returned": 40
+        },
+        "baseline": {
+          "ids_exact": true,
+          "scores_max_abs_error": 0.0,
+          "returned": 40
+        },
+        "attribute": {
+          "ids_exact": true,
+          "scores_max_abs_error": 0.0,
+          "returned": 40
+        }
+      }
+    },
+    {
+      "query": "24 inch monitor",
+      "positive_matches": 4876,
+      "candidates": 150,
+      "modes": {
+        "bm25": {
+          "ids_exact": true,
+          "scores_max_abs_error": 0.0,
+          "returned": 40
+        },
+        "baseline": {
+          "ids_exact": true,
+          "scores_max_abs_error": 0.0,
+          "returned": 40
+        },
+        "attribute": {
+          "ids_exact": true,
+          "scores_max_abs_error": 0.0,
+          "returned": 40
+        }
+      }
+    },
+    {
+      "query": "asus laptop charger ux305c",
+      "positive_matches": 936,
+      "candidates": 150,
+      "modes": {
+        "bm25": {
+          "ids_exact": true,
+          "scores_max_abs_error": 0.0,
+          "returned": 40
+        },
+        "baseline": {
+          "ids_exact": true,
+          "scores_max_abs_error": 0.0,
+          "returned": 40
+        },
+        "attribute": {
+          "ids_exact": true,
+          "scores_max_abs_error": 0.0,
+          "returned": 40
+        }
+      }
+    },
+    {
+      "query": "65 W charger",
+      "positive_matches": 2699,
+      "candidates": 150,
+      "modes": {
+        "bm25": {
+          "ids_exact": true,
+          "scores_max_abs_error": 0.0,
+          "returned": 40
+        },
+        "baseline": {
+          "ids_exact": true,
+          "scores_max_abs_error": 0.0,
+          "returned": 40
+        },
+        "attribute": {
+          "ids_exact": true,
+          "scores_max_abs_error": 0.0,
+          "returned": 40
+        }
+      }
+    },
+    {
+      "query": "charger ⚡",
+      "positive_matches": 517,
+      "candidates": 150,
+      "modes": {
+        "bm25": {
+          "ids_exact": true,
+          "scores_max_abs_error": 0.0,
+          "returned": 40
+        },
+        "baseline": {
+          "ids_exact": true,
+          "scores_max_abs_error": 0.0,
+          "returned": 40
+        },
+        "attribute": {
+          "ids_exact": true,
+          "scores_max_abs_error": 0.0,
+          "returned": 40
+        }
+      }
+    },
+    {
+      "query": "<b>24 inch</b> monitor",
+      "positive_matches": 4876,
+      "candidates": 150,
+      "modes": {
+        "bm25": {
+          "ids_exact": true,
+          "scores_max_abs_error": 0.0,
+          "returned": 40
+        },
+        "baseline": {
+          "ids_exact": true,
+          "scores_max_abs_error": 0.0,
+          "returned": 40
+        },
+        "attribute": {
+          "ids_exact": true,
+          "scores_max_abs_error": 0.0,
+          "returned": 40
+        }
+      }
+    },
+    {
+      "query": "not 65w charger",
+      "positive_matches": 8911,
+      "candidates": 150,
+      "modes": {
+        "bm25": {
+          "ids_exact": true,
+          "scores_max_abs_error": 0.0,
+          "returned": 40
+        },
+        "baseline": {
+          "ids_exact": true,
+          "scores_max_abs_error": 0.0,
+          "returned": 40
+        },
+        "attribute": {
+          "ids_exact": true,
+          "scores_max_abs_error": 0.0,
+          "returned": 40
+        }
+      }
+    }
+  ],
+  "invalid_requests": [
+    {
+      "kind": "invalid query/mode/limit",
+      "status": 400
+    },
+    {
+      "kind": "invalid query/mode/limit",
+      "status": 400
+    },
+    {
+      "kind": "invalid query/mode/limit",
+      "status": 400
+    },
+    {
+      "kind": "invalid query/mode/limit",
+      "status": 400
+    },
+    {
+      "kind": "invalid query/mode/limit",
+      "status": 400
+    },
+    {
+      "kind": "invalid query/mode/limit",
+      "status": 400
+    },
+    {
+      "kind": "invalid query/mode/limit",
+      "status": 400
+    },
+    {
+      "kind": "invalid query/mode/limit",
+      "status": 400
+    },
+    {
+      "kind": "invalid query/mode/limit",
+      "status": 400
+    },
+    {
+      "kind": "invalid query/mode/limit",
+      "status": 400
+    },
+    {
+      "kind": "invalid query/mode/limit",
+      "status": 400
+    },
+    {
+      "kind": "invalid query/mode/limit",
+      "status": 400
+    },
+    {
+      "kind": "invalid query/mode/limit",
+      "status": 400
+    }
+  ],
+  "printable_queries": [
+    {
+      "query": "<script>alert(\"charger\")</script>",
+      "status": 200,
+      "returned": 12
+    },
+    {
+      "query": "зарядка テーブル 🔌",
+      "status": 200,
+      "returned": 0
+    },
+    {
+      "query": "‮charger",
+      "status": 200,
+      "returned": 12
+    },
+    {
+      "query": "zzzzunknownword20261026",
+      "status": 200,
+      "returned": 0
+    }
+  ],
+  "independent_search_requests_passed": 40,
+  "invalid_requests_rejected": 13,
+  "printable_requests_passed": 4,
+  "actual_booster_calls_observed": 32,
+  "attribute_feature_ablation_changed_candidate_scores": 1478,
+  "artifacts_unchanged": true
+}

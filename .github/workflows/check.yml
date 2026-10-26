@@ -12,10 +12,12 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: "3.12"
       - run: pip install uv
       - run: uv sync --locked --extra dev --no-editable
       - run: uv run --no-sync pytest -q
+      - name: Independently verify ranking metrics in SQL
+        run: uv run --no-sync python scripts/sql_audit.py --output /tmp/catalog-sql-audit
       - name: Verify published model bundle
         if: github.event_name == 'workflow_dispatch'
         run: |
@@ -37,3 +39,40 @@ jobs:
               assert (Path(web.app.directory) / name).is_file(), name
           assert app.state.engine is None
           PY
+  docker-smoke:
+    if: github.event_name == 'workflow_dispatch'
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build the complete runtime image
+        run: docker build --tag catalog-search:smoke .
+      - name: Exercise the container through real HTTP
+        run: |
+          docker run --detach --name catalog-search-smoke --publish 127.0.0.1:8766:8765 catalog-search:smoke
+          python3 - <<'PY'
+          import json
+          import time
+          import urllib.request
+          for attempt in range(60):
+              try:
+                  with urllib.request.urlopen('http://127.0.0.1:8766/health', timeout=2) as response:
+                      health = json.load(response)
+                  assert health['status'] == 'ok' and health['catalog_size'] == 30000
+                  break
+              except (OSError, AssertionError):
+                  if attempt == 59:
+                      raise
+                  time.sleep(1)
+          with urllib.request.urlopen('http://127.0.0.1:8766/api/search?q=24%20inch%20monitor&mode=attribute&limit=3') as response:
+              search = json.load(response)
+          assert len(search['results']) == 3 and search['results'][0]['evidence']
+          with urllib.request.urlopen('http://127.0.0.1:8766/api/report') as response:
+              report = json.load(response)
+          assert report['status'] == 'completed' and report['models']['attribute']['features'] == 58
+          PY
+      - name: Container logs and cleanup
+        if: always()
+        run: |
+          docker logs catalog-search-smoke || true
+          docker rm --force catalog-search-smoke || true

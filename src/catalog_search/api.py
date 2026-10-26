@@ -116,7 +116,6 @@ def create_app(artifact_dir: Path | str | None = None, engine: Any = None) -> Fa
         candidates = (
             artifacts / "reports" / "summary.json",
             artifacts.parent / "reports" / "summary.json",
-            PROJECT_ROOT / "reports" / "summary.json",
         )
         for candidate in candidates:
             if candidate.is_file() and not candidate.is_symlink():
